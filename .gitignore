@@ -1,7 +1,9 @@
 *.class
+nohup.out
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+target/
 
 # Package Files #
 *.jar
@@ -10,3 +12,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+.classpath
+.project
+.pydevproject
+.settings/
+/data/
+*~
+/target/
+cendari_resources.json.gz
+cendari.py
+cendari.dump
