@@ -4,10 +4,10 @@ Tika extensions for CENDARI
 Extensions of Tika to parse files and return textual contents plus metadata. 
 
 Right now, the following XML files are supported:
-. EAD
-. EAG
-. TEI
-. OAI-PMH
+* EAD
+* EAG
+* TEI
+* OAI-PMH
 
 
 To create a specific parser for a new XML schema, do the following steps:
