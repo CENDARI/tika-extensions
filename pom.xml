@@ -26,7 +26,7 @@
     <repository>
       <id>dariah-repo</id>
       <name>Dariah nexus repository</name>
-      <url>http://dev.dariah.eu/nexus/content/repositories/snapshots/</url>
+      <url>http://dev.dariah.eu/nexus/content/repositories/releases/</url>
     </repository>
   </repositories>
   
