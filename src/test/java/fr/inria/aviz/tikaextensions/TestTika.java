@@ -19,8 +19,8 @@ public class TestTika extends TestCase {
         "/data/library-of-castle-mikulov_draft;ead.xml",
         "/data/B360446201_B343_2_tei.xml",
         "/data/package.json",
-        "/data/D9.1.docx",
-        "/data/D9.1.pdf",
+	"/data/D9.1.docx",
+	"/data/D9.1.pdf",
     };
 
     /**

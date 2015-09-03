@@ -28,4 +28,8 @@
      <acronym>OAI-PMH/XML</acronym>
      <glob pattern="*.oai"/>
    </mime-type>   
+  <mime-type type="application/json">
+     <acronym>JSON</acronym>
+     <glob pattern="*.json"/>
+  </mime-type>
 </mime-info>
