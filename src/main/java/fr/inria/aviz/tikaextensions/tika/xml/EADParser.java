@@ -126,7 +126,9 @@ public class EADParser extends AbstractXMLParser {
                 new AttributeMetadataHandler(NAMESPACE_URI_XML, "lang", metadata, 
                         CendariProperties.LANG),
                 new AttributeMetadataHandler(NAMESPACE_URI_EAD, "langcode", metadata, 
-                        CendariProperties.LANG)
+                        CendariProperties.LANG),
+                new AttributeMetadataHandler("", "url", metadata, 
+                            CendariProperties.REFERENCE)
         );
     }
 
