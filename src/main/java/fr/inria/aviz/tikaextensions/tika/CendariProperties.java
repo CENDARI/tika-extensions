@@ -50,6 +50,7 @@ public class CendariProperties {
     public static final Property EVENT = Property.internalTextBag(
             PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "event");
     
+    
     /**
      * Name of organizations
      */
@@ -68,5 +69,10 @@ public class CendariProperties {
     public static final Property TAG = Property.internalTextBag(
             PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "tag");
     
-    //TODO finish adding all the Cendari properties
+    /**
+     * NERDing names.
+     */
+    public static final Property NERD = Property.internalTextBag(
+            PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "nerd");
+
 }

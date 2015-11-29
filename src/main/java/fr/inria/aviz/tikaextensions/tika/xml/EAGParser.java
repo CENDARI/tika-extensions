@@ -49,6 +49,8 @@ private static final String NAMESPACE_URI_EAG = "http://www.ministryculture.es/"
                 defaultContentHandler,
                 getEAGHandler(metadata, TikaCoreProperties.TITLE, 
                         "autform", "identity"),
+                        getEAGHandler(metadata, TikaCoreProperties.TITLE, 
+                            "parform", "identity"),
                 //TODO check the specific EAD elements
                 getEAGHandler(metadata, TikaCoreProperties.KEYWORDS, 
                         "subject", "controlaccess"),
@@ -59,17 +61,25 @@ private static final String NAMESPACE_URI_EAG = "http://www.ministryculture.es/"
                 //getEADHandler(metadata, TikaCoreProperties.CREATED, "date"),
                 //getEADHandler(metadata, TikaCoreProperties.TYPE, "type"),
                 //getEADHandler(metadata, TikaCoreProperties.FORMAT, "format"),
-                getEAGHandler(metadata, TikaCoreProperties.IDENTIFIER, "repositoryid"),
+                getEAGHandler(metadata, TikaCoreProperties.IDENTIFIER, "repositorid"),
                 //getEAGHandler(metadata, TikaCoreProperties.RIGHTS, "licence"),
-                getEAGHandler(metadata, CendariProperties.PLACE, "location", "desc"),
+                getEAGHandler(metadata, CendariProperties.PLACE, "country", "location"),
+                getEAGHandler(metadata, CendariProperties.PLACE, "municipality", "location"),
+                getEAGHandler(metadata, CendariProperties.PLACE, "street", "location"),
                 TEIParser.getTEIHandler(metadata, TikaCoreProperties.CONTRIBUTOR,
                         "persName", "respevent", "person"),
-                TEIParser.getTEIHandler(metadata, CendariProperties.ORGANIZATION, 
-                        "orgName"),
-                getEAGHandler(metadata, CendariProperties.ORGANIZATION, "autform"),
-                getEAGHandler(metadata, CendariProperties.REFERENCE, "source"),
+                getEAGHandler(metadata, CendariProperties.ORGANIZATION, "autform", "identity"),
+                getEAGHandler(metadata, CendariProperties.NERD, "repositorhist"),
+                getEAGHandler(metadata, CendariProperties.NERD, "holdings"),
+                getEAGHandler(metadata, CendariProperties.NERD, "autform"),
+                getEAGHandler(metadata, CendariProperties.NERD, "parform"),
+                //getEAGHandler(metadata, CendariProperties.REFERENCE, "source"),
                 new AttributeMetadataHandler(NAMESPACE_URI_XML, "lang", metadata, 
-                        CendariProperties.LANG)
+                CendariProperties.LANG),
+                new AttributeMetadataHandler("", "url", metadata, 
+                            CendariProperties.REFERENCE)
+
         );
-    }
+
+    }     
 }

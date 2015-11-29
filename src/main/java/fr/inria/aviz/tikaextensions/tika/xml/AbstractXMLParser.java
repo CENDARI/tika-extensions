@@ -84,6 +84,7 @@ public abstract class AbstractXMLParser extends AbstractParser
                             getContentHandler(tagged, metadata, context)));
             
             if (transformer != null) {
+
                 transformer.transform(
                         new StreamSource(in), 
                         new SAXResult(out));
