@@ -128,7 +128,16 @@ public class EADParser extends AbstractXMLParser {
                 new AttributeMetadataHandler(NAMESPACE_URI_EAD, "langcode", metadata, 
                         CendariProperties.LANG),
                 new AttributeMetadataHandler("", "url", metadata, 
-                            CendariProperties.REFERENCE)
+                            CendariProperties.REFERENCE) {
+                  protected void addMetadata(String url) {
+                    String cendariUrl = url;
+                    if (url.contains(CendariProperties.DOMAIN_CENDARI)){
+                      super.addMetadata(url);
+                    }
+                    
+                  };
+
+                }
         );
     }
 

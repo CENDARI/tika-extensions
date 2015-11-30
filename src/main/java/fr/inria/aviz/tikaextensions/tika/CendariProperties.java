@@ -16,6 +16,9 @@ public class CendariProperties {
     
     private static final String PREFIX_CENDARI = "cendari";
     
+    public static final String DOMAIN_CENDARI = "cendari.dariah.eu";
+
+    
     /**
      * A language of the intellectual content of the resource. Recommended
      * best practice is to use RFC 3066 [RFC3066], which, in conjunction
