@@ -12,6 +12,7 @@ import org.apache.tika.parser.xml.AttributeMetadataHandler;
 import org.apache.tika.sax.TeeContentHandler;
 import org.apache.tika.sax.TextContentHandler;
 import org.xml.sax.ContentHandler;
+
 import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 
 /**
@@ -77,7 +78,15 @@ private static final String NAMESPACE_URI_EAG = "http://www.ministryculture.es/"
                 new AttributeMetadataHandler(NAMESPACE_URI_XML, "lang", metadata, 
                 CendariProperties.LANG),
                 new AttributeMetadataHandler("", "url", metadata, 
-                            CendariProperties.REFERENCE)
+                    CendariProperties.REFERENCE) {
+                      protected void addMetadata(String url) {
+                        String cendariUrl = url;
+                        if (url.contains(CendariProperties.DOMAIN_CENDARI)){
+                          super.addMetadata(url);
+                        }
+                        
+                      };
+        }
 
         );
 
