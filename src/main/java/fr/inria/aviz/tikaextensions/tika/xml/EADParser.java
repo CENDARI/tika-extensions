@@ -73,6 +73,7 @@ public class EADParser extends AbstractXMLParser {
                 //getEADHandler(metadata, TikaCoreProperties.FORMAT, "format"),
                 //getEADHandler(metadata, TikaCoreProperties.IDENTIFIER, "identifier"),
                 getEADHandler(metadata, TikaCoreProperties.RIGHTS, "licence"),
+                
                 getEADHandler(metadata, CendariProperties.NERD, "did"),
                 getEADHandler(metadata, CendariProperties.NERD, "archref"),
                 getEADHandler(metadata, CendariProperties.NERD, "eventgrp"),
@@ -122,7 +123,7 @@ public class EADParser extends AbstractXMLParser {
                 getEADHandler(metadata, CendariProperties.NERD, "name", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.NERD, "geogname", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.NERD, "subject", "controlaccess"),
-                
+             
                 new AttributeMetadataHandler(NAMESPACE_URI_XML, "lang", metadata, 
                         CendariProperties.LANG),
                 new AttributeMetadataHandler(NAMESPACE_URI_EAD, "langcode", metadata, 

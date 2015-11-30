@@ -2,8 +2,11 @@ package fr.inria.aviz.tikaextensions;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.Arrays;
 
+import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 import fr.inria.aviz.tikaextensions.utils.TextCleaner;
+
 import org.apache.log4j.Logger;
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
@@ -67,6 +70,12 @@ public class TikaExtensions {
         try {
             String parsedContent = tika.parseToString(content, metadata, maxLength);
             metadata.add("text", TextCleaner.cleanup(parsedContent));
+            
+            String nerdString =
+                metadata.getValues(CendariProperties.NERD).length > 0 ?
+                   Arrays.toString(metadata.getValues(CendariProperties.NERD)) :"";
+            if (!nerdString.equals("")) 
+               metadata.set(CendariProperties.NERD, TextCleaner.cleanup(nerdString));
         }
         catch (TikaException e) {
             logger.error("Tika parse exception for document "+name, e);
