@@ -73,7 +73,8 @@ public class TikaExtensions {
             
             String nerdString =
                 metadata.getValues(CendariProperties.NERD).length > 0 ?
-                   Arrays.toString(metadata.getValues(CendariProperties.NERD)) :"";
+                   getString(metadata.getValues(CendariProperties.NERD)) :"";
+            
             if (!nerdString.equals("")) 
                metadata.set(CendariProperties.NERD, TextCleaner.cleanup(nerdString));
         }
@@ -86,6 +87,15 @@ public class TikaExtensions {
             return null;
         }
         return metadata;
+    }
+    
+    private String getString(String [] nerdArray){
+      StringBuilder builder = new StringBuilder();
+      for (String value : nerdArray) {
+          builder.append(value);
+      }
+      String text = builder.toString();
+      return text;
     }
 
 }
