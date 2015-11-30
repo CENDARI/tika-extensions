@@ -32,6 +32,7 @@ public class JSONParser extends AbstractParser {
     /**
      * {@inheritDoc}
      */
+    @Override
     public void parse(
             InputStream stream,
             ContentHandler handler,
