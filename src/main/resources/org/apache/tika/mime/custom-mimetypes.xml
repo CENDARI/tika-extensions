@@ -29,6 +29,7 @@
      <glob pattern="*.oai"/>
    </mime-type>   
   <mime-type type="application/json">
+  	 <sub-class-of type="text/plain"/>
      <acronym>JSON</acronym>
      <glob pattern="*.json"/>
   </mime-type>
