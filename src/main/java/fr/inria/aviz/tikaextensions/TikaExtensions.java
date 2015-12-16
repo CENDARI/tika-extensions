@@ -58,25 +58,38 @@ public class TikaExtensions {
      * @return org.apache.tika.metadata.Metadata structure filled with the right contents of null if tika has not been able to parse it.
      */
     public Metadata parseDocument(String name, String contentType, InputStream content, int maxLength) {
+      
+
         Metadata metadata = new Metadata();
+
 
         if (name != null) {
             metadata.add(Metadata.RESOURCE_NAME_KEY, name);
         }
+        
+     
         if (contentType != null) {
             metadata.add(Metadata.CONTENT_TYPE, contentType);
         }
-
+        
+        
         try {
-            String parsedContent = tika.parseToString(content, metadata, maxLength);
-            metadata.add("text", TextCleaner.cleanup(parsedContent));
             
+            String parsedContent = tika.parseToString(content, metadata, maxLength);
             String nerdString =
                 metadata.getValues(CendariProperties.NERD).length > 0 ?
                    getString(metadata.getValues(CendariProperties.NERD)) :"";
             
-            if (!nerdString.equals("")) 
-               metadata.set(CendariProperties.NERD, TextCleaner.cleanup(nerdString));
+            if (!nerdString.equals("")) {
+               nerdString = TextCleaner.cleanup(nerdString);
+               metadata.set(CendariProperties.NERD, nerdString);
+               metadata.add("text", nerdString);
+            }
+            else
+            {
+               metadata.add("text", TextCleaner.cleanup(parsedContent));
+              
+            }
         }
         catch (TikaException e) {
             logger.error("Tika parse exception for document "+name, e);
@@ -92,7 +105,7 @@ public class TikaExtensions {
     private String getString(String [] nerdArray){
       StringBuilder builder = new StringBuilder();
       for (String value : nerdArray) {
-          builder.append(value);
+          builder.append(value+" ");
       }
       String text = builder.toString();
       return text;

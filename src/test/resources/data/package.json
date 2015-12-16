@@ -1,105 +1,100 @@
 {
   "language": [
-    "it"
+    "sr"
   ],
-  "type": "IMAGE",
+  "type": "TEXT",
   "title": [
-    "Dopo l'armistizio. Attenti all'Austria con gli Asburgo non si tratta!  / Comitato di Propaganda Patriottica Cantiere Oralndo, Livorno"
+    "Beogradske novi(22.08.1916)"
   ],
-  "about": "/9200203/BibliographicResource_3000093837651_source",
+  "about": "/9200236/BibliographicResource_3000073847852",
   "proxies": [
     {
-      "about": "/proxy/provider/9200203/BibliographicResource_3000093837651_source",
-      "dcCreator": {
+      "about": "/proxy/provider/9200236/BibliographicResource_3000073847852",
+      "dcDate": {
         "def": [
-          "Comitato di propaganda patriottica Cantiere Orlando & C. <Livorno>"
+          "22.08.1916"
         ]
       },
-      "dcFormat": {
+      "dcDescription": {
         "def": [
-          "1 foglio  : litografia b/n  ; 40x31 cm"
+          "god. II, br. 189"
         ]
       },
       "dcIdentifier": {
         "def": [
-          "oai:14-18.it:foglio/IEI0361087_01"
+          "http://velikirat.nb.rs/items/show/3185"
         ]
       },
-      "dcPublisher": {
+      "dcLanguage": {
         "def": [
-          "[Livorno]  : tip. del Corriere di Livorno, 1918"
-        ]
-      },
-      "dcSource": {
-        "def": [
-          "Biblioteca di storia moderna e contemporanea"
+          "sr"
         ]
       },
       "dcSubject": {
         "def": [
-          "http://data.europeana.eu/concept/loc/sh85148236"
+          "http://data.europeana.eu/concept/loc/sh2008113856",
+          "World War, 1914-1918--Serbia"
         ],
         "en": [
           "World War I"
         ]
       },
       "dcTitle": {
-        "it": [
-          "Dopo l'armistizio. Attenti all'Austria con gli Asburgo non si tratta!  / Comitato di Propaganda Patriottica Cantiere Oralndo, Livorno"
+        "def": [
+          "Beogradske novine (22.08.1916)"
         ]
       },
       "dcType": {
-        "en": [
-          "Still image",
-          "Leaf"
+        "def": [
+          "newspaper"
         ]
       },
       "dctermsIsPartOf": {
         "def": [
-          "http://data.theeuropeanlibrary.org/Collection/a1132b"
+          "http://data.theeuropeanlibrary.org/Collection/a0567"
         ],
         "en": [
           "Europeana Collections 1914-1918"
         ]
       },
+      "dctermsIssued": {
+        "def": [
+          "1914"
+        ]
+      },
       "proxyIn": [
-        "/aggregation/provider/9200203/BibliographicResource_3000093837651_source"
+        "/aggregation/provider/9200236/BibliographicResource_3000073847852"
       ],
-      "proxyFor": "/item/9200203/BibliographicResource_3000093837651_source",
-      "edmType": "IMAGE",
+      "proxyFor": "/item/9200236/BibliographicResource_3000073847852",
+      "edmType": "TEXT",
       "europeanaProxy": false
     },
     {
-      "about": "/proxy/europeana/9200203/BibliographicResource_3000093837651_source",
+      "about": "/proxy/europeana/9200236/BibliographicResource_3000073847852",
       "dcSubject": {
         "def": [
           "http://dbpedia.org/page/World_War_I"
         ]
       },
-      "dcType": {
-        "def": [
-          "http://www.eionet.europa.eu/gemet/concept/4730"
-        ]
-      },
       "proxyIn": [
-        "/aggregation/europeana/9200203/BibliographicResource_3000093837651_source"
+        "/aggregation/europeana/9200236/BibliographicResource_3000073847852"
       ],
-      "proxyFor": "/item/9200203/BibliographicResource_3000093837651_source",
-      "edmType": "IMAGE",
+      "proxyFor": "/item/9200236/BibliographicResource_3000073847852",
+      "edmType": "TEXT",
       "europeanaProxy": true
     }
   ],
   "aggregations": [
     {
-      "about": "/aggregation/provider/9200203/BibliographicResource_3000093837651_source",
+      "about": "/aggregation/provider/9200236/BibliographicResource_3000073847852",
       "edmDataProvider": {
         "def": [
-          "Central Institute for the Union Catalogue of Italian Libraries"
+          "National Library of Serbia"
         ]
       },
-      "edmIsShownBy": "http://www.14-18.it/img/foglio/IEI0361087_01/full",
-      "edmIsShownAt": "http://europeana.eu/api/14744/redirect?shownAt=http%3A%2F%2Fwww.14-18.it%2Ffoglio%2FIEI0361087_01%3Fbt%3Deuropeanaapi&provider=The+European+Library&id=http%3A%2F%2Fwww.europeana.eu%2Fresolve%2Frecord%2F9200203%2FBibliographicResource_3000093837651_source&profile=full",
-      "edmObject": "http://www.14-18.it/img/foglio/IEI0361087_01/full",
+      "edmIsShownBy": "http://velikirat.nb.rs/archive/fullsize/95020a1e4ad80a2c97da53ff2f04077f.jpg",
+      "edmIsShownAt": "http://europeana.eu/api/14744/redirect?shownAt=http%3A%2F%2Fvelikirat.nb.rs%2Fitems%2Fshow%2F3185%3Fbt%3Deuropeanaapi&provider=The+European+Library&id=http%3A%2F%2Fwww.europeana.eu%2Fresolve%2Frecord%2F9200236%2FBibliographicResource_3000073847852&profile=full",
+      "edmObject": "http://velikirat.nb.rs/archive/square_thumbnails/95020a1e4ad80a2c97da53ff2f04077f.jpg",
       "edmProvider": {
         "en": [
           "The European Library"
@@ -110,7 +105,7 @@
           "http://www.europeana.eu/rights/rr-f/"
         ]
       },
-      "aggregatedCHO": "/item/9200203/BibliographicResource_3000093837651_source",
+      "aggregatedCHO": "/item/9200236/BibliographicResource_3000073847852",
       "webResources": [
         {
           "webResourceEdmRights": {
@@ -118,7 +113,7 @@
               "http://www.europeana.eu/rights/rr-f/"
             ]
           },
-          "about": "http://www.14-18.it/foglio/IEI0361087_01"
+          "about": "http://velikirat.nb.rs/items/show/3185"
         },
         {
           "webResourceEdmRights": {
@@ -126,43 +121,51 @@
               "http://www.europeana.eu/rights/rr-f/"
             ]
           },
-          "about": "http://www.14-18.it/img/foglio/IEI0361087_01/full"
+          "about": "http://velikirat.nb.rs/archive/fullsize/95020a1e4ad80a2c97da53ff2f04077f.jpg"
+        },
+        {
+          "webResourceEdmRights": {
+            "def": [
+              "http://www.europeana.eu/rights/rr-f/"
+            ]
+          },
+          "about": "http://velikirat.nb.rs/archive/square_thumbnails/95020a1e4ad80a2c97da53ff2f04077f.jpg"
         }
       ],
       "edmPreviewNoDistribute": false
     }
   ],
   "europeanaCollectionName": [
-    "9200203_Ag_EU_TEL_a1132b_EUCollections1418_Italy"
+    "9200236_Ag_EU_TEL_a0567_Collections1914-1918"
   ],
   "concepts": [
     {
-      "about": "http://data.europeana.eu/concept/loc/sh85148236",
+      "about": "http://data.europeana.eu/concept/loc/sh2008113856",
       "prefLabel": {
         "de": [
-          "Erster Weltkrieg, 1914-1918"
+          "Erster Weltkrieg, 1914-1918 -- Serbien"
         ],
         "da": [
-          "1. Verdenskrig, 1914-1918"
+          "1. Verdenskrig, 1914-1918 -- Serbien"
         ],
         "it": [
-          "Guerra mondiale 1914-1918"
+          "Guerra mondiale 1914-1918 -- Serbia"
         ],
         "sr": [
-          "Prvi svetski rat, 1914-1918"
+          "Prvi svetski rat, 1914 -1918 -- Srbija"
         ],
         "fr": [
-          "Guerre mondiale, 1914-1918"
+          "Guerra mondiale 1914-1918 -- Serbie"
         ],
         "en": [
-          "World War, 1914-1918"
+          "World War, 1914-1918 -- Serbia"
         ],
         "nl": [
-          "Wereldoorlog, 1914-1918"
+          "Wereldoorlog, 1914-1918 --  Servië"
         ]
       },
       "exactMatch": [
-        "http://id.loc.gov/authorities/subjects/sh85148236"
+        "http://id.loc.gov/authorities/subjects/sh2008113856"
       ]
     },
     {
@@ -220,488 +223,26 @@
           "第一次世界大戦"
         ]
       }
-    },
-    {
-      "about": "http://www.eionet.europa.eu/gemet/concept/4730",
-      "prefLabel": {
-        "ro": [
-          "frunză"
-        ],
-        "tr": [
-          "yaprak"
-        ],
-        "no": [
-          "blad"
-        ],
-        "hu": [
-          "falevél"
-        ],
-        "lv": [
-          "lapa"
-        ],
-        "lt": [
-          "lapas"
-        ],
-        "de": [
-          "Blatt (Pflanze)"
-        ],
-        "def": [
-          "leaf",
-          "叶"
-        ],
-        "fi": [
-          "lehti; havupuun neulanen"
-        ],
-        "sv": [
-          "blad"
-        ],
-        "fr": [
-          "feuille"
-        ],
-        "bg": [
-          "Листо"
-        ],
-        "sl": [
-          "list"
-        ],
-        "sk": [
-          "list"
-        ],
-        "eu": [
-          "hosto; orri"
-        ],
-        "da": [
-          "blad"
-        ],
-        "it": [
-          "foglia"
-        ],
-        "mt": [
-          "werqa"
-        ],
-        "ar": [
-          "ورقة  (نباتية)"
-        ],
-        "cs": [
-          "list"
-        ],
-        "el": [
-          "φύλλο"
-        ],
-        "pt": [
-          "folhas"
-        ],
-        "pl": [
-          "liść (botanika)"
-        ],
-        "en": [
-          "leaf"
-        ],
-        "ru": [
-          "лист (бот.)"
-        ],
-        "et": [
-          "leht"
-        ],
-        "es": [
-          "hoja"
-        ],
-        "nl": [
-          "blad"
-        ]
-      },
-      "broader": [
-        "http://www.eionet.europa.eu/gemet/concept/6300"
-      ]
-    },
-    {
-      "about": "http://www.eionet.europa.eu/gemet/concept/6300",
-      "prefLabel": {
-        "ro": [
-          "parte a plantei"
-        ],
-        "tr": [
-          "bitki bileşenleri"
-        ],
-        "no": [
-          "plantedel"
-        ],
-        "hu": [
-          "növényrész"
-        ],
-        "lv": [
-          "auga sastāvdaļa"
-        ],
-        "lt": [
-          "sudedamoji augalo dalis"
-        ],
-        "de": [
-          "Pflanzenteil"
-        ],
-        "def": [
-          "plant component",
-          "植物组成"
-        ],
-        "fi": [
-          "kasvin osa; laitoksen osa"
-        ],
-        "sv": [
-          "växtdel; anläggningsdel"
-        ],
-        "fr": [
-          "partie de la plante"
-        ],
-        "bg": [
-          "Растителен компонент"
-        ],
-        "sl": [
-          "del rastline"
-        ],
-        "sk": [
-          "časť rastliny"
-        ],
-        "eu": [
-          "landare-osagai"
-        ],
-        "da": [
-          "plantedele"
-        ],
-        "it": [
-          "parti della pianta"
-        ],
-        "mt": [
-          "parti mill-pjanta"
-        ],
-        "ar": [
-          "مكونات النبات"
-        ],
-        "cs": [
-          "část rostliny"
-        ],
-        "el": [
-          "φυτικό συστατικό"
-        ],
-        "pl": [
-          "części roślin"
-        ],
-        "pt": [
-          "componentes das plantas"
-        ],
-        "en": [
-          "plant component"
-        ],
-        "ru": [
-          "часть растения"
-        ],
-        "et": [
-          "taimeosa"
-        ],
-        "es": [
-          "partes de la planta"
-        ],
-        "nl": [
-          "plantendeel"
-        ]
-      },
-      "broader": [
-        "http://www.eionet.europa.eu/gemet/concept/5890"
-      ]
-    },
-    {
-      "about": "http://www.eionet.europa.eu/gemet/concept/5890",
-      "prefLabel": {
-        "ro": [
-          "organ"
-        ],
-        "tr": [
-          "organ"
-        ],
-        "no": [
-          "organ (anatomi)"
-        ],
-        "hu": [
-          "szerv"
-        ],
-        "lv": [
-          "orgāns"
-        ],
-        "lt": [
-          "organas"
-        ],
-        "de": [
-          "Organ"
-        ],
-        "def": [
-          "organ",
-          "器官"
-        ],
-        "fi": [
-          "elin"
-        ],
-        "fr": [
-          "organe"
-        ],
-        "sv": [
-          "organ"
-        ],
-        "bg": [
-          "Орган"
-        ],
-        "sl": [
-          "organ"
-        ],
-        "sk": [
-          "orgán"
-        ],
-        "da": [
-          "organ"
-        ],
-        "eu": [
-          "organo"
-        ],
-        "it": [
-          "organo"
-        ],
-        "mt": [
-          "organu"
-        ],
-        "ar": [
-          "عضو"
-        ],
-        "cs": [
-          "orgán"
-        ],
-        "el": [
-          "όργανο"
-        ],
-        "pl": [
-          "organ"
-        ],
-        "pt": [
-          "órgãos (anatomia)"
-        ],
-        "en": [
-          "organ"
-        ],
-        "ru": [
-          "орган"
-        ],
-        "et": [
-          "elund, organ"
-        ],
-        "es": [
-          "órgano"
-        ],
-        "nl": [
-          "orgaan"
-        ]
-      },
-      "broader": [
-        "http://www.eionet.europa.eu/gemet/concept/406"
-      ]
-    },
-    {
-      "about": "http://www.eionet.europa.eu/gemet/concept/406",
-      "prefLabel": {
-        "ro": [
-          "anatomie"
-        ],
-        "tr": [
-          "anatomi"
-        ],
-        "no": [
-          "anatomi"
-        ],
-        "hu": [
-          "anatómia"
-        ],
-        "lv": [
-          "anatomija"
-        ],
-        "lt": [
-          "anatomija"
-        ],
-        "de": [
-          "Anatomie"
-        ],
-        "def": [
-          "anatomy",
-          "解剖学"
-        ],
-        "fi": [
-          "anatomia"
-        ],
-        "sv": [
-          "anatomi"
-        ],
-        "fr": [
-          "anatomie"
-        ],
-        "bg": [
-          "Анатомия"
-        ],
-        "sl": [
-          "anatomija"
-        ],
-        "sk": [
-          "anatómia"
-        ],
-        "eu": [
-          "anatomia"
-        ],
-        "da": [
-          "anatomi"
-        ],
-        "it": [
-          "anatomia"
-        ],
-        "mt": [
-          "anatomija"
-        ],
-        "ar": [
-          "تشريح"
-        ],
-        "cs": [
-          "anatomie"
-        ],
-        "el": [
-          "ανατομία"
-        ],
-        "pt": [
-          "anatomia"
-        ],
-        "pl": [
-          "anatomia"
-        ],
-        "en": [
-          "anatomy"
-        ],
-        "ru": [
-          "анатомия"
-        ],
-        "et": [
-          "anatoomia"
-        ],
-        "es": [
-          "anatomía"
-        ],
-        "nl": [
-          "anatomie"
-        ]
-      },
-      "broader": [
-        "http://www.eionet.europa.eu/gemet/concept/892"
-      ]
-    },
-    {
-      "about": "http://www.eionet.europa.eu/gemet/concept/892",
-      "prefLabel": {
-        "ro": [
-          "biosferă"
-        ],
-        "tr": [
-          "biyosfer"
-        ],
-        "no": [
-          "biosfære"
-        ],
-        "hu": [
-          "bioszféra"
-        ],
-        "lv": [
-          "biosfēra"
-        ],
-        "lt": [
-          "biosfera"
-        ],
-        "de": [
-          "Biosphäre"
-        ],
-        "def": [
-          "biosphere",
-          "生物圈"
-        ],
-        "fi": [
-          "biosfääri, eliökehä"
-        ],
-        "fr": [
-          "biosphère"
-        ],
-        "sv": [
-          "biosfär"
-        ],
-        "bg": [
-          "Биосфера"
-        ],
-        "sl": [
-          "biosfera"
-        ],
-        "sk": [
-          "biosféra"
-        ],
-        "eu": [
-          "biosfera"
-        ],
-        "da": [
-          "biosfære"
-        ],
-        "it": [
-          "biosfera"
-        ],
-        "mt": [
-          "bijosfera"
-        ],
-        "ar": [
-          "المحيط الحيوي"
-        ],
-        "cs": [
-          "biosféra"
-        ],
-        "el": [
-          "βιόσφαιρα"
-        ],
-        "pt": [
-          "biosfera"
-        ],
-        "pl": [
-          "biosfera"
-        ],
-        "en": [
-          "biosphere"
-        ],
-        "ru": [
-          "биосфера"
-        ],
-        "et": [
-          "biosfäär, elukond"
-        ],
-        "es": [
-          "biosfera"
-        ],
-        "nl": [
-          "biosfeer"
-        ]
-      }
     }
   ],
-  "europeanaCompleteness": 0,
+  "europeanaCompleteness": 5,
   "providedCHOs": [
     {
-      "about": "/item/9200203/BibliographicResource_3000093837651_source"
+      "about": "/item/9200236/BibliographicResource_3000073847852"
     }
   ],
   "europeanaAggregation": {
-    "about": "/aggregation/europeana/9200203/BibliographicResource_3000093837651_source",
-    "aggregatedCHO": "/item/9200203/BibliographicResource_3000093837651_source",
-    "edmLandingPage": "http://www.europeana.eu/portal/recordhttp://data.theeuropeanlibrary.org/BibliographicResource/3000093837651#source",
+    "about": "/aggregation/europeana/9200236/BibliographicResource_3000073847852",
+    "aggregatedCHO": "/item/9200236/BibliographicResource_3000073847852",
+    "edmLandingPage": "http://www.europeana.eu/portal/recordhttp://data.theeuropeanlibrary.org/BibliographicResource/3000073847852",
     "edmCountry": {
       "def": [
-        "italy"
+        "serbia"
       ]
     },
     "edmLanguage": {
       "def": [
-        "it"
+        "sr"
       ]
     },
     "edmRights": {
@@ -709,13 +250,13 @@
         "http://www.europeana.eu/rights/rr-f/"
       ]
     },
-    "edmPreview": "http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fwww.14-18.it%2Fimg%2Ffoglio%2FIEI0361087_01%2Ffull&size=LARGE&type=IMAGE"
+    "edmPreview": "http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fvelikirat.nb.rs%2Farchive%2Fsquare_thumbnails%2F95020a1e4ad80a2c97da53ff2f04077f.jpg&size=LARGE&type=TEXT"
   },
   "edmDatasetName": [
-    "9200203_Ag_EU_TEL_a1132b_EUCollections1418_Italy"
+    "9200236_Ag_EU_TEL_a0567_Collections1914-1918"
   ],
-  "timestamp_created_epoch": 1396433018148,
-  "timestamp_update_epoch": 1404914612897,
-  "timestamp_created": "2014-04-02T10:03:38.148Z",
-  "timestamp_update": "2014-07-09T14:03:32.897Z"
+  "timestamp_created_epoch": 1404223675713,
+  "timestamp_update_epoch": 1404223745286,
+  "timestamp_created": "2014-07-01T14:07:55.713Z",
+  "timestamp_update": "2014-07-01T14:09:05.286Z"
 }

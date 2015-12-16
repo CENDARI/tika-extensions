@@ -11,6 +11,7 @@ import java.util.regex.Pattern;
 public class TextCleaner {
     private static final Pattern SPACES = Pattern.compile("[ \t]+");
     private static final Pattern LINES = Pattern.compile("(\r?\n[ \t])+");
+    private static final Pattern AMPERSAND = Pattern.compile("&");
 
     /**
      * Cleanup a specified string, removing extra spaces
@@ -20,7 +21,8 @@ public class TextCleaner {
     public static String cleanup(String value) {
         value = value.trim();
         value = SPACES.matcher(value).replaceAll(" "); 
-        value = LINES.matcher(value).replaceAll("\n"); 
+        value = LINES.matcher(value).replaceAll("\n");
+        value = AMPERSAND.matcher(value).replaceAll("&amp;");
         return value;
     }
 }

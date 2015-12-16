@@ -28,6 +28,12 @@
      <acronym>OAI-PMH/XML</acronym>
      <glob pattern="*.oai"/>
    </mime-type>   
+   <mime-type type="application/rdf+xml">
+     <root-XML localName="RDF" namespaceURI="http://www.europeana.eu/schemas/edm/"/>
+     <sub-class-of type="application/xml"/>
+     <acronym>RDF/XML</acronym>
+     <glob pattern="*.xml"/>
+   </mime-type>   
   <mime-type type="application/json">
   	 <sub-class-of type="text/plain"/>
      <acronym>JSON</acronym>

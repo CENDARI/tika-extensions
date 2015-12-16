@@ -84,12 +84,12 @@ public abstract class AbstractXMLParser extends AbstractParser
                             getContentHandler(tagged, metadata, context)));
             
             if (transformer != null) {
-
                 transformer.transform(
                         new StreamSource(in), 
                         new SAXResult(out));
             }
             else {
+              
                 SAXParser parser = context.getSAXParser();
                 parser.getXMLReader().setErrorHandler(this);
                 parser.parse(in, out);

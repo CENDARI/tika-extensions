@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href= "http://134.76.20.210/schemas/eag/v1.0/rnc/EAG-schema.rnc" type="application/relax-ng-compact-syntax"?>
+<eag xmlns="http://www.ministryculture.es/">
+  <eagheader countryencoding="iso3166-1" langencoding="iso639-1" scriptencoding="iso15924" repositoryencoding="" dateencoding="iso8601" status="draft">
+   <mainhist>
+      <mainevent maintype="create">
+        <date normal="2015-09-17"/>
+        <respevent>
+<person xmlns="http://www.tei-c.org/ns/1.0"><persName><forename>Andrei Zamoiski</forename><surname>FUB</surname></persName><affiliation><orgName type="institution"></orgName></affiliation></person>        </respevent>
+<source>http://cinema.museum.by/node/2273</source>      </mainevent>
+    </mainhist>
+  </eagheader>
+<eagid identifier="3km22" url="https://archives.cendari.dariah.eu//index.php/3km22" encodinganalog="identifier">23357</eagid>
+  <archguide>
+    <identity>
+      <repositorid countrycode="BY" repositorycode=""/>
+<autform>Музей истории белорусского кино</autform>    </identity>
+    <desc>
+<location>      <country>Belarus</country>
+<municipality>Minsk</municipality><street>Sverdlova str. 4</street></location><telephone>+375 (017) 327-10-75, (029) 627-10-75</telephone><email href="belkino1924@gmail.com">belkino1924@gmail.com</email>
+<webpage href="www.cinema.histmuseum.by">www.cinema.histmuseum.by</webpage>
+      <repositorhist xml:lang="">
+        <p>Museum of history of the Belarusian cinema — one of the youngest in Belarus though it has almost thirty-year background.</p><p></p><p>It is based at the initiative of the Belarusian cinematographers in Minsk in 1976 as departmental "Belarusfilm" at a film studio for collecting and preservation of materials about a national cinema, promoting its achievements. From 1982 till 1988 it was located in the Republican House of cinema (a Simeon and Alyona catholic church) the Union of cinematographers of BSSR, carrying out generally archival function.</p><p></p><p>It is opened for regular visit at the beginning of 2002 in specially reconstructed (1994 — 1998) according to the decision of Council of ministers of Republic of Belarus the three-storyed building – a monument of architecture of the first half of the XX century. Since January 2005 the museum is a branch of "State Museum of History of Theatrical and Musical Culture of Republic of Belarus" institution.</p><p></p><p></p><p>Музей истории белорусского кино — один из самых молодых в Беларуси, хотя у него – почти тридцатилетняя предыстория.  Основан по инициативе белорусских кинематографистов в Минске в 1966 как ведомственный при киностудии «Беларусьфильм» для сбора и сохранения материалов о национальном кинематографе, популяризации его достижений. С 1982 по 1988 размещался в Республиканском Доме кино (костел святых Сымона и Алены) Союза кинематографистов БССР, выполняя в основном архивную функцию. Открыт для регулярного посещения в начале 2002 в специально реконструированном по решению Совета Министров Республики Беларусь трехэтажном здании – памятнике архитектуры первой половины ХХ века. С января 2005 – филиал учреждения «Государственный музей истории театральной и музыкальной культуры Республики Беларусь». С сентября 2014 - филиал ГУ «Национальный исторический музей Республики Беларусь». Основные виды деятельности: собирание, систематизация и описание документов и материалов по истории белорусского кино и кинокультуры в целом; организация фондовых, тематических и персональных выставок, связанных с кинематографом, белорусским изобразительным искусством в целом; систематизированный показ отечественной и зарубежной киноклассики.</p>
+      </repositorhist>
+      <repositorguides>
+        <repositorguide xml:lang="">http://cinema.museum.by/node/2273 (in Russian)</repositorguide>
+      </repositorguides>
+      <holdings><p></p></holdings>      <access question="yes"/>
+        <controlaccess>
+<controlaccess>
+          <head>Typology</head>
+          <subject>Educational</subject>
+        </controlaccess>
+      </controlaccess>
+     </desc>
+   </archguide>
+</eag>

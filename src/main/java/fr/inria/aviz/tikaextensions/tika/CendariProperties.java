@@ -75,7 +75,7 @@ public class CendariProperties {
     /**
      * NERDing names.
      */
-    public static final Property NERD = Property.internalTextBag(
-            PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "nerd");
+    public static final Property NERD =  Property.internalTextBag(
+          PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "nerd");
 
 }

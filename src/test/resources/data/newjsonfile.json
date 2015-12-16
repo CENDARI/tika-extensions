@@ -1,0 +1,895 @@
+ {
+  "type": "VIDEO",
+  "concepts": [
+    {
+      "about": "http://data.europeana.eu/concept/loc/sh85145155",
+      "prefLabel": {
+        "de": [
+          "Krieg und Gesellschaft"
+        ],
+        "da": [
+          "Krig og samfund"
+        ],
+        "it": [
+          "Società -- Effetti [della] Guerra mondiale 1914-1918"
+        ],
+        "sr": [
+          "Rat i društvo"
+        ],
+        "fr": [
+          "Guerre mondiale (1914-1918) -- Aspect social"
+        ],
+        "en": [
+          "War and society"
+        ],
+        "nl": [
+          "Oorlog en maatschappij"
+        ]
+      },
+      "exactMatch": [
+        "http://id.loc.gov/authorities/subjects/sh85145155"
+      ]
+    },
+    {
+      "about": "http://data.europeana.eu/concept/loc/sh85145228",
+      "prefLabel": {
+        "de": [
+          "Kriegsopfer"
+        ],
+        "da": [
+          "Krigsofre"
+        ],
+        "it": [
+          "Vittime di guerra"
+        ],
+        "sr": [
+          "Žrtve rata"
+        ],
+        "fr": [
+          "Victimes de guerre"
+        ],
+        "en": [
+          "War victims"
+        ],
+        "nl": [
+          "Oorlogsslachtoffers"
+        ]
+      },
+      "exactMatch": [
+        "http://id.loc.gov/authorities/subjects/sh85145228"
+      ]
+    },
+    {
+      "about": "http://data.europeana.eu/concept/loc/sh99002819",
+      "prefLabel": {
+        "de": [
+          "Erster Weltkrieg 1914-1918 -- Denkmäler"
+        ],
+        "da": [
+          "1. Verdenskrig -- Monumenter"
+        ],
+        "it": [
+          "Guerra mondiale 1914-1918 -- Monumenti"
+        ],
+        "sr": [
+          "Prvi svetski rat, 1914-1918 -- Spomenici"
+        ],
+        "fr": [
+          "Guerre mondiale (1914-1918) \n-- Monuments"
+        ],
+        "en": [
+          "World War, 1914-1918 -- Monuments"
+        ],
+        "nl": [
+          "Wereldoorlog, 1914-1918 --  Monumenten"
+        ]
+      },
+      "exactMatch": [
+        "http://id.loc.gov/authorities/subjects/sh99002819"
+      ]
+    },
+    {
+      "about": "http://dbpedia.org/page/World_War_I",
+      "prefLabel": {
+        "zh": [
+          "第一次世界大战"
+        ],
+        "uk": [
+          "Перша світова війна"
+        ],
+        "it": [
+          "Prima guerra mondiale"
+        ],
+        "no": [
+          "Første verdenskrig"
+        ],
+        "de": [
+          "Erste Weltkrieg"
+        ],
+        "fi": [
+          "Ensimmäinen maailmansota"
+        ],
+        "pl": [
+          "I wojna światowa"
+        ],
+        "pt": [
+          "Primeira Guerra Mundial"
+        ],
+        "sv": [
+          "Första världskriget"
+        ],
+        "fr": [
+          "Première Guerre mondiale"
+        ],
+        "en": [
+          "First World War",
+          "Great War",
+          "WW1",
+          "WWI",
+          "World War 1",
+          "World War I",
+          "World War One"
+        ],
+        "ru": [
+          "Первая мировая война"
+        ],
+        "es": [
+          "Primera Guerra Mundial"
+        ],
+        "nl": [
+          "Eerste Wereldoorlog"
+        ],
+        "ja": [
+          "第一次世界大戦"
+        ]
+      }
+    },
+    {
+      "about": "http://www.eionet.europa.eu/gemet/concept/2992",
+      "prefLabel": {
+        "sl": [
+          "Evropa"
+        ],
+        "sk": [
+          "Európa"
+        ],
+        "da": [
+          "Europa"
+        ],
+        "eu": [
+          "Europa"
+        ],
+        "ro": [
+          "Europa"
+        ],
+        "it": [
+          "Europa"
+        ],
+        "tr": [
+          "Avrupa"
+        ],
+        "mt": [
+          "Ewropa"
+        ],
+        "no": [
+          "Europa"
+        ],
+        "hu": [
+          "Európa"
+        ],
+        "lv": [
+          "Eiropa"
+        ],
+        "ar": [
+          "أوروبا"
+        ],
+        "lt": [
+          "Europa"
+        ],
+        "cs": [
+          "Evropa"
+        ],
+        "de": [
+          "Europa"
+        ],
+        "el": [
+          "Ευρώπη"
+        ],
+        "def": [
+          "Europe",
+          "欧洲"
+        ],
+        "fi": [
+          "Eurooppa"
+        ],
+        "pt": [
+          "Europa"
+        ],
+        "pl": [
+          "Europa"
+        ],
+        "bg": [
+          "Европа"
+        ],
+        "sv": [
+          "Europa"
+        ],
+        "fr": [
+          "Europe"
+        ],
+        "en": [
+          "Europe"
+        ],
+        "ru": [
+          "Европа"
+        ],
+        "et": [
+          "Euroopa"
+        ],
+        "es": [
+          "Europa"
+        ],
+        "nl": [
+          "Europa"
+        ]
+      },
+      "broader": [
+        "http://www.eionet.europa.eu/gemet/concept/9380"
+      ]
+    },
+    {
+      "about": "http://www.eionet.europa.eu/gemet/concept/9380",
+      "prefLabel": {
+        "sl": [
+          "svet"
+        ],
+        "sk": [
+          "svet"
+        ],
+        "da": [
+          "verden"
+        ],
+        "eu": [
+          "mundu"
+        ],
+        "ro": [
+          "lume"
+        ],
+        "it": [
+          "mondo"
+        ],
+        "tr": [
+          "dünya"
+        ],
+        "mt": [
+          "dinja"
+        ],
+        "no": [
+          "verden"
+        ],
+        "hu": [
+          "világ"
+        ],
+        "lv": [
+          "pasaule"
+        ],
+        "ar": [
+          "عالم"
+        ],
+        "lt": [
+          "pasaulis"
+        ],
+        "cs": [
+          "svět"
+        ],
+        "de": [
+          "Welt"
+        ],
+        "el": [
+          "κόσμος/πλανήτης/παγκόσμιος (-α, -ο)"
+        ],
+        "def": [
+          "world",
+          "世界"
+        ],
+        "fi": [
+          "maailma"
+        ],
+        "pl": [
+          "świat"
+        ],
+        "pt": [
+          "mundo"
+        ],
+        "bg": [
+          "Свят"
+        ],
+        "fr": [
+          "monde"
+        ],
+        "sv": [
+          "värld"
+        ],
+        "en": [
+          "world"
+        ],
+        "ru": [
+          "мир"
+        ],
+        "et": [
+          "maailm"
+        ],
+        "es": [
+          "mundo"
+        ],
+        "nl": [
+          "wereld"
+        ]
+      },
+      "broader": [
+        "http://www.eionet.europa.eu/gemet/concept/4599"
+      ]
+    },
+    {
+      "about": "http://www.eionet.europa.eu/gemet/concept/4599",
+      "prefLabel": {
+        "sl": [
+          "zemlja, površje, zemljišče"
+        ],
+        "sk": [
+          "zem"
+        ],
+        "da": [
+          "land"
+        ],
+        "eu": [
+          "lurralde"
+        ],
+        "ro": [
+          "teritoriu"
+        ],
+        "it": [
+          "territorio (geografia)"
+        ],
+        "tr": [
+          "arazi, alan"
+        ],
+        "no": [
+          "land (natur)"
+        ],
+        "hu": [
+          "föld"
+        ],
+        "lv": [
+          "zeme"
+        ],
+        "ar": [
+          "أرض"
+        ],
+        "lt": [
+          "žemė, sausuma"
+        ],
+        "cs": [
+          "pozemek"
+        ],
+        "de": [
+          "Land"
+        ],
+        "el": [
+          "γη/ξηρά/έκταση/αγρός/έδαφος/κτήμα"
+        ],
+        "def": [
+          "land",
+          "土地"
+        ],
+        "fi": [
+          "maa"
+        ],
+        "pt": [
+          "terras"
+        ],
+        "pl": [
+          "ląd"
+        ],
+        "bg": [
+          "Земя"
+        ],
+        "sv": [
+          "land; mark"
+        ],
+        "fr": [
+          "pays"
+        ],
+        "en": [
+          "land"
+        ],
+        "ru": [
+          "земля"
+        ],
+        "et": [
+          "maa"
+        ],
+        "es": [
+          "tierra"
+        ],
+        "nl": [
+          "land"
+        ]
+      }
+    },
+    {
+      "about": "http://www.eionet.europa.eu/gemet/concept/8964",
+      "prefLabel": {
+        "sl": [
+          "video"
+        ],
+        "sk": [
+          "video"
+        ],
+        "eu": [
+          "bideo"
+        ],
+        "da": [
+          "video"
+        ],
+        "ro": [
+          "video"
+        ],
+        "it": [
+          "video"
+        ],
+        "tr": [
+          "video"
+        ],
+        "mt": [
+          "vidjow"
+        ],
+        "no": [
+          "video"
+        ],
+        "hu": [
+          "videó"
+        ],
+        "lv": [
+          "video"
+        ],
+        "ar": [
+          "فيديو"
+        ],
+        "lt": [
+          "filmuota medžiaga"
+        ],
+        "cs": [
+          "videotechnika"
+        ],
+        "de": [
+          "video"
+        ],
+        "el": [
+          "βίντεο"
+        ],
+        "def": [
+          "video",
+          "视频"
+        ],
+        "fi": [
+          "video"
+        ],
+        "pt": [
+          "vídeos"
+        ],
+        "pl": [
+          "magnetowid"
+        ],
+        "fr": [
+          "vidéo"
+        ],
+        "bg": [
+          "Видео"
+        ],
+        "en": [
+          "video"
+        ],
+        "ru": [
+          "видео"
+        ],
+        "et": [
+          "video"
+        ],
+        "es": [
+          "vídeo"
+        ],
+        "nl": [
+          "video"
+        ]
+      },
+      "broader": [
+        "http://www.eionet.europa.eu/gemet/concept/2284"
+      ]
+    },
+    {
+      "about": "http://www.eionet.europa.eu/gemet/concept/2284",
+      "prefLabel": {
+        "sl": [
+          "dokumentacija"
+        ],
+        "sk": [
+          "dokumentácia"
+        ],
+        "eu": [
+          "dokumentatze; dokumentazio"
+        ],
+        "da": [
+          "dokumentation"
+        ],
+        "ro": [
+          "documentaţie"
+        ],
+        "it": [
+          "documentazione"
+        ],
+        "tr": [
+          "dokümantasyon"
+        ],
+        "mt": [
+          "dokumentazzjoni"
+        ],
+        "no": [
+          "dokumentasjon"
+        ],
+        "hu": [
+          "dokumentálás"
+        ],
+        "lv": [
+          "dokumentācija"
+        ],
+        "ar": [
+          "توثيق"
+        ],
+        "lt": [
+          "dokumentacija"
+        ],
+        "cs": [
+          "dokumentace"
+        ],
+        "de": [
+          "Dokumentation"
+        ],
+        "el": [
+          "τεκμηρίωση"
+        ],
+        "def": [
+          "documentation",
+          "文档化"
+        ],
+        "fi": [
+          "dokumentointi, asiakirja-aineisto"
+        ],
+        "pt": [
+          "documentação"
+        ],
+        "pl": [
+          "dokumentacja"
+        ],
+        "bg": [
+          "Документиране"
+        ],
+        "fr": [
+          "documentation"
+        ],
+        "sv": [
+          "dokumentation"
+        ],
+        "en": [
+          "documentation"
+        ],
+        "ru": [
+          "документация"
+        ],
+        "et": [
+          "dokumentatsioon"
+        ],
+        "es": [
+          "documentación"
+        ],
+        "nl": [
+          "documentatie"
+        ]
+      },
+      "broader": [
+        "http://www.eionet.europa.eu/gemet/concept/4303"
+      ]
+    },
+    {
+      "about": "http://www.eionet.europa.eu/gemet/concept/4303",
+      "prefLabel": {
+        "sl": [
+          "informacija, informacije, podatki"
+        ],
+        "sk": [
+          "informácia"
+        ],
+        "eu": [
+          "informazio"
+        ],
+        "da": [
+          "information"
+        ],
+        "ro": [
+          "informaţie"
+        ],
+        "it": [
+          "informazione"
+        ],
+        "tr": [
+          "bilgi"
+        ],
+        "mt": [
+          "informazzjoni"
+        ],
+        "no": [
+          "informasjon"
+        ],
+        "hu": [
+          "információ"
+        ],
+        "lv": [
+          "informācija"
+        ],
+        "ar": [
+          "المعلومات"
+        ],
+        "lt": [
+          "informacija"
+        ],
+        "cs": [
+          "informace"
+        ],
+        "de": [
+          "Information"
+        ],
+        "el": [
+          "πληροφορία(ίες)/πληροφόρηση/στοιχεία/ενημέρωση"
+        ],
+        "def": [
+          "information",
+          "信息"
+        ],
+        "fi": [
+          "tieto"
+        ],
+        "pt": [
+          "informação"
+        ],
+        "pl": [
+          "informacja"
+        ],
+        "bg": [
+          "Информация"
+        ],
+        "fr": [
+          "information"
+        ],
+        "sv": [
+          "information"
+        ],
+        "en": [
+          "information"
+        ],
+        "ru": [
+          "информация"
+        ],
+        "et": [
+          "teave, info[rmatsioon]"
+        ],
+        "es": [
+          "información"
+        ],
+        "nl": [
+          "informatie"
+        ]
+      }
+    }
+  ],
+  "proxies": [
+    {
+      "about": "/proxy/provider/08623/13074",
+      "dcDate": {
+        "def": [
+          "1937"
+        ]
+      },
+      "dcDescription": {
+        "def": [
+          "Reportage over een groepsreis van een aantal Vlaamse oud-strijders naar Verdun in 1937, georganiseerd door de V.O.S (Vlaamse Oud-Strijders), een anti-militaristische, vlaams-nationalistische vereniging die opkwam voor de belangen van de Vlaamse oudstrijders van de Eerste Wereldoorlog. (1) \"Verdun! Het reuzenkerkhof van den wereldoorlog, waar miljoenen menschenkinderen hun graf vonden.\" Panoramische opname van het immense kerkhof gefilmd vanaf een toren. (2) \"Aan het station wordt de stoet gevormd\" en \"Een indrukwekkende optocht van Vlaamsche vlaggen door het glorierijke Verdun.\" De oud-strijders trekken in een stoet door de straten van Verdun, vooraan de verschillende vlaggen van de meegekomen delegaties. Er zijn vlaggen uit Eeklo, Merchtem, Poperinge, Aalst, Sint-Amandsberg, Mariakerke, Deerlijk, Opwijk, Ichtegem, Langemark, Mortsel, Kortrijk en Bosvoorde. Nadien komen de officiële vertegenwoordigers voorafgegaan door enkelen die bloemenkransen dragen. (3) \"In de aloude kathedraal werden de V.O.S.-sen door de Bisschop van Verdun geestdriftig verwelkomd.\" We zien dezelfde stoet met vlaggen de kathedraal binnengaan maar van de bisschop is er geen beeld. (4) \"Oud krijgsaalmoezenier Pater Vigilius De Bock predikte er voor wereldvrede.\" Een close-up van de pater en meer beelden van de stoet met vlaggen die de kathedraal verlaat. (5) \"De optocht trekt voorbij het machtige Gedenkteeken der Overwinning\" en \"Waarna de optocht gaat naar het Stadhuis.\" (6) \"Waar de V.O.S.sen door den Adjunct Maire werden verwelkomd.\" De stoet trekt opnieuw door de straten van Verdun voorbij het monument, over en langs de Maas en tot bij het stadhuis. (7) \"Daarna wordt een krans neergelegd aan het Monument der Kinderen van Verdun.\" We zien de vlaggen die opgesteld worden op het plein voor het monument en een man die een bloemenkrans voor het monument legt. (8) \"'s Namiddags gaat het in verscheidene autobus-groepen naar de tragische Slagvelden.\" (9) \"Op enkele kilometers van Verdun, het beruchte Knekelhuis van Douaumont...\" (10) \"...waar, in talrijke grafkelders, het gebeente rust van tienduizenden onbekende soldaten, gevonden in de 52 verschillende frontsektors.\" (11) \"De Lichttoren, die 's nachts de wacht houdt over het uitgestrekte doodenveld.\" Verschillende zichten op het slagveld, de kerkhoven en de toren van het \"Ossuaire\" die veel gelijkenissen vertoond met de IJzertoren van Diksmuide. De film toont ook enkele details van de toren waaronder ook de schilden van enkele Franse steden zoals Brest, Biarritz, Auxerre maar ook Anvers. (12) \"De 'Bajonetten-loopgracht'. Een der vreeselijkste frontepisoden.\" (13) \"Hier werd een gansche kompagnie, die ten aanval gereed stond, levend begraven!\" (14) \"Bajonetten, waaronder Fransche soldaten rechtstaand, geweer in de hand, nu nog begraven staan!\" Zoals de titels aangeven zien we hier opnamen van het monument dat gebouwd werd op de loopgracht waar het drama zich moet afgespeeld hebben en de bewuste bajonetten zelf. Bezoekers hebben bloemen bij het monument gelegd. Op een bord bij het monument staat: \"Tranchee des baionettes monument historique classe ... Il est formellement inderdit sous peine d'emprisonnement de commettre toute déprédation à ce monument...\" De film eindigt met een close-up van het PAX-opschrift op het monument.",
+          "Report on a group of Flemish war veterans visiting Verdun 1937, organised by the V.O.S (Vlaamse Oud-Strijders / Flemish war veterans): an anti-militaristic, Flemish-nationalistic association. Its objective is to stand up for the interests of Flemish war veterans who fought during First World War."
+        ]
+      },
+      "dcIdentifier": {
+        "def": [
+          "13074",
+          "45637"
+        ]
+      },
+      "dcLanguage": {
+        "def": [
+          "nl"
+        ]
+      },
+      "dcRights": {
+        "def": [
+          "VRT"
+        ]
+      },
+      "dcSubject": {
+        "def": [
+          "1937",
+          "anciens combattants",
+          "bedevaarten",
+          "begraafplaatsen",
+          "Cathédrale Notre-Dame (Verdun)",
+          "cathédrales",
+          "cimetières",
+          "cortèges",
+          "De Bock, Vigilius",
+          "Douaumont",
+          "Dragées de Verdun",
+          "drapeaux",
+          "Eerste Wereldoorlog",
+          "EFG1914",
+          "églises",
+          "Europa",
+          "Europe",
+          "France",
+          "Frankrijk",
+          "guerres",
+          "kathedralen",
+          "kerken",
+          "knekelhuizen",
+          "Kosmos",
+          "L'Univers",
+          "monumenten",
+          "monuments",
+          "mouvement flamand",
+          "Newsreel",
+          "Notre-Dame kathedraal (Verdun)",
+          "oorlogen",
+          "optochten",
+          "ossuaires",
+          "oud-strijders",
+          "pélerinages",
+          "Première Guerre mondiale",
+          "http://data.europeana.eu/concept/loc/sh85145155",
+          "http://data.europeana.eu/concept/loc/sh85145228",
+          "http://data.europeana.eu/concept/loc/sh99002819",
+          "Singer",
+          "vaandels",
+          "Verdun",
+          "Vlaamse Beweging",
+          "Vlaamse Oud-Soldatenbond",
+          "War and society",
+          "War victims",
+          "World War, 1914-1918 -- Monuments",
+          "World War I"
+        ]
+      },
+      "dcTitle": {
+        "def": [
+          "MET DE V.O.S. NAAR VERDUN"
+        ]
+      },
+      "dcType": {
+        "def": [
+          "Video"
+        ]
+      },
+      "dctermsCreated": {
+        "def": [
+          "1937"
+        ]
+      },
+      "proxyIn": [
+        "/aggregation/provider/08623/13074"
+      ],
+      "proxyFor": "/item/08623/13074",
+      "edmType": "VIDEO",
+      "europeanaProxy": false
+    },
+    {
+      "about": "/proxy/europeana/08623/13074",
+      "dcSubject": {
+        "def": [
+          "http://dbpedia.org/page/World_War_I",
+          "http://www.eionet.europa.eu/gemet/concept/2992"
+        ]
+      },
+      "dcType": {
+        "def": [
+          "http://www.eionet.europa.eu/gemet/concept/8964"
+        ]
+      },
+      "proxyIn": [
+        "/aggregation/europeana/08623/13074"
+      ],
+      "proxyFor": "/item/08623/13074",
+      "edmType": "VIDEO",
+      "year": {
+        "eur": [
+          "1937"
+        ]
+      },
+      "europeanaProxy": true
+    }
+  ],
+  "language": [
+    "mul"
+  ],
+  "europeanaCompleteness": 8,
+  "providedCHOs": [
+    {
+      "about": "/item/08623/13074"
+    }
+  ],
+  "about": "/08623/13074",
+  "europeanaAggregation": {
+    "about": "/aggregation/europeana/08623/13074",
+    "aggregatedCHO": "/item/08623/13074",
+    "edmLandingPage": "http://europeana.eu/portal/record/08623/13074.html",
+    "edmCountry": {
+      "def": [
+        "belgium"
+      ]
+    },
+    "edmLanguage": {
+      "def": [
+        "mul"
+      ]
+    },
+    "edmRights": {
+      "def": [
+        "http://www.europeana.eu/rights/rr-f/"
+      ]
+    },
+    "edmPreview": "http://europeanastatic.eu/api/image?uri=http%3A%2F%2Fapi.picturepipe.net%2F1.2%2Fjson%2Fthumbnail%2Fae388029f6394f2499002273ad031d45&size=LARGE&type=VIDEO"
+  },
+  "europeanaCollectionName": [
+    "08623_Ag_EU_EFG_Cinematheque_Royale_Belgique"
+  ],
+  "title": [
+    "MET DE V.O.S. NAAR VERDUN"
+  ],
+  "edmDatasetName": [
+    "08623_Ag_EU_EFG_Cinematheque_Royale_Belgique"
+  ],
+  "aggregations": [
+    {
+      "about": "/aggregation/provider/08623/13074",
+      "edmDataProvider": {
+        "def": [
+          "Cinémathèque Royale de Belgique"
+        ]
+      },
+      "edmIsShownBy": "http://api.picturepipe.net/api/html/widgets/public/playout_cloudfront?token=ae388029f6394f2499002273ad031d45",
+      "edmObject": "http://api.picturepipe.net/1.2/json/thumbnail/ae388029f6394f2499002273ad031d45",
+      "edmProvider": {
+        "def": [
+          "EFG - The European Film Gateway"
+        ]
+      },
+      "edmRights": {
+        "def": [
+          "http://www.europeana.eu/rights/rr-f/"
+        ]
+      },
+      "aggregatedCHO": "/item/08623/13074",
+      "edmPreviewNoDistribute": false
+    }
+  ],
+  "year": [
+    "1937"
+  ],
+  "timestamp_created_epoch": 1385134311382,
+  "timestamp_update_epoch": 1411379113815,
+  "timestamp_created": "2013-11-22T15:31:51.382Z",
+  "timestamp_update": "2014-09-22T09:45:13.815Z"
+}
