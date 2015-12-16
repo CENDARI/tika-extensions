@@ -77,17 +77,12 @@ private static final String NAMESPACE_URI_EAG = "http://www.ministryculture.es/"
                 //getEAGHandler(metadata, CendariProperties.REFERENCE, "source"),
                 new AttributeMetadataHandler(NAMESPACE_URI_XML, "lang", metadata, 
                 CendariProperties.LANG),
-                new AttributeMetadataHandler("", "url", metadata, 
-                    CendariProperties.REFERENCE) {
-                      protected void addMetadata(String url) {
-                        String cendariUrl = url;
-                        if (url.contains(CendariProperties.DOMAIN_CENDARI)){
-                          super.addMetadata(url);
-                        }
-                        
-                      };
-        }
-
+                new ElementAttributeMetadataHandler(
+                    "", "url",
+                    metadata, CendariProperties.REFERENCE, "eagid"),
+                new ElementAttributeMetadataHandler(
+                            "", "href",
+                            metadata, CendariProperties.POTENTIAL_REFERENCE, "webpage")
         );
 
     }     

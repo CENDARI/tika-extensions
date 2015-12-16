@@ -9,6 +9,7 @@ import org.apache.tika.metadata.Property;
 import org.apache.tika.metadata.TikaCoreProperties;
 import org.apache.tika.mime.MediaType;
 import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.xml.AttributeDependantMetadataHandler;
 import org.apache.tika.parser.xml.AttributeMetadataHandler;
 import org.apache.tika.parser.xml.ElementMetadataHandler;
 import org.apache.tika.sax.TeeContentHandler;
@@ -26,8 +27,11 @@ import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 public class EDMParser extends AbstractXMLParser {
 private static final String NAMESPACE_URI_EDM = "http://www.europeana.eu/schemas/edm/";
 private static final String NAMESPACE_URI_ORE = "http://www.openarchives.org/ore/terms/";
+private static final String NAMESPACE_URI_RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+private static final String EUROPEANA_URL = "http://data.europeana.eu/";
+private static final String EUROPEAN_LIBRARY_URL = "http://data.theeuropeanlibrary.org";
 
-    private static final Set<MediaType> SUPPORTED_TYPES =
+private static final Set<MediaType> SUPPORTED_TYPES =
             Collections.singleton(MediaType.application("rdf+xml"));
     
     /**
@@ -61,7 +65,6 @@ private static final String NAMESPACE_URI_ORE = "http://www.openarchives.org/ore
             NAMESPACE_URI_EDM, element,
             metadata, property, context);
     }
-
     private static ContentHandler getLocalHandler(String namespaceUri, 
         Metadata metadata, Property property, String element) {
     return new ElementMetadataHandler(namespaceUri, element, metadata, property);
@@ -70,6 +73,7 @@ private static final String NAMESPACE_URI_ORE = "http://www.openarchives.org/ore
     protected ContentHandler getContentHandler(
             ContentHandler handler, Metadata metadata, ParseContext context) {
         ContentHandler defaultContentHandler = new TextContentHandler(handler, true);
+  
         return new TeeContentHandler(
                 defaultContentHandler,
                 getHandler(metadata, TikaCoreProperties.TITLE, "title"),
@@ -80,29 +84,19 @@ private static final String NAMESPACE_URI_ORE = "http://www.openarchives.org/ore
                 getHandler(metadata, TikaCoreProperties.RIGHTS, "rights"),
                 getHandler(metadata, TikaCoreProperties.CREATED, "date"),
                 getHandler(metadata, TikaCoreProperties.CREATED, "year"),
+                getTermsHandler(metadata, TikaCoreProperties.CREATED, "created"),
                 getHandler(metadata, TikaCoreProperties.SOURCE, "source"),
                 getHandler(metadata, TikaCoreProperties.KEYWORDS , "subject"),
-                getHandler(metadata, TikaCoreProperties.IDENTIFIER, "identifier"),
                 getHandler(metadata, TikaCoreProperties.COVERAGE, "coverage"),
                 getHandler(metadata, TikaCoreProperties.TYPE, "type"),
-                getTermsHandler(metadata, TikaCoreProperties.CREATED, "created"),
                 getTermsHandler(metadata, TikaCoreProperties.RELATION, "isPartOf"),
                 getTermsHandler(metadata, TikaCoreProperties.FORMAT, "medium"),
                 getHandler(metadata, TikaCoreProperties.LANGUAGE, "language"),
                 getLocalHandler(NAMESPACE_URI_EDM, metadata, CendariProperties.PLACE, "country"),
                 //new AttributeMetadataHandler(NAMESPACE_URI_EDM, "landingPage", metadata, CendariProperties.REFERENCE),
-                new AttributeMetadataHandler("http://www.w3.org/1999/02/22-rdf-syntax-ns#", "resource", metadata, 
-                    CendariProperties.REFERENCE) {
-                      protected void addMetadata(String url) {
-                        String cendariUrl = url;
-                        if (url.contains("http://europeana.eu/portal/record/")){
-                          super.addMetadata(url);
-                        }
-                        
-                      };
-                    },
-                
-
+                new ElementAttributeMetadataHandler(
+                    NAMESPACE_URI_RDF, "about",
+                    metadata, CendariProperties.REFERENCE, "ProvidedCHO"),  
                 //NERD
                 getHandler(metadata, CendariProperties.NERD, "title"),
                 getHandler(metadata, CendariProperties.NERD, "contributor"),
@@ -113,7 +107,6 @@ private static final String NAMESPACE_URI_ORE = "http://www.openarchives.org/ore
                 getHandler(metadata, CendariProperties.NERD, "coverage"),
                 getTermsHandler(metadata, CendariProperties.NERD, "created"),
                 getEDMHandler(metadata, CendariProperties.NERD, "country")
-
             );
 
     }     

@@ -65,7 +65,13 @@ public class CendariProperties {
      */
     public static final Property REFERENCE = Property.internalTextBag(
             PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "reference");
-    
+
+    /**
+     * External reference such as URI or DOI.
+     */
+    public static final Property POTENTIAL_REFERENCE = Property.internalTextBag(
+            PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "potential_reference");
+
     /**
      * Tag names.
      */

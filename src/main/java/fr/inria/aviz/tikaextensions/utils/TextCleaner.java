@@ -2,6 +2,10 @@ package fr.inria.aviz.tikaextensions.utils;
 
 import java.util.regex.Pattern;
 
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Whitelist;
+
+
 /**
  * Class TextCleaner
  * 
@@ -23,6 +27,9 @@ public class TextCleaner {
         value = SPACES.matcher(value).replaceAll(" "); 
         value = LINES.matcher(value).replaceAll("\n");
         value = AMPERSAND.matcher(value).replaceAll("&amp;");
+        if (!Jsoup.isValid(value, Whitelist.simpleText()) ){
+            value =  Jsoup.clean(value, Whitelist.simpleText());
+        }
         return value;
     }
 }

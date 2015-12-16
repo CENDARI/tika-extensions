@@ -35,21 +35,21 @@ import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 public class TestTika extends TestCase {
 
  static final String[] fileName = {
-"/data/errors/books-from-ww1-period-kept-by-state-library-of-berlin.ead.xml",
-"/data/someoai.xml",
-   "/data/europeana.xml",
-       "/data/oai-pmh.xml",
-        "/data/frlacinemathequedetoulouse.eag.xml",
-        "/data/library-of-castle-mikulov_draft;ead.xml",
-     "/data/eadarhiveshub.ead.xml",
-        "/data/B360446201_B343_2_tei.xml",
-        "/data/sloveniaeag.eag.xml",
-      "/data/titleeag.eag.xml",
-  "/data/D9.1.docx",
-  "/data/D9.1.pdf",
-      "/data/package.json",
-    "/data/newjsonfile.json",
-      "/data/crispienartur.ead.xml",
+//"/data/errors/books-from-ww1-period-kept-by-state-library-of-berlin.ead.xml",
+//"/data/someoai.xml",
+  // "/data/europeana.xml",
+   //       "/data/oai-pmh.xml",
+  //     "/data/frlacinemathequedetoulouse.eag.xml",
+  //    "/data/library-of-castle-mikulov_draft;ead.xml",
+ // "/data/eadarhiveshub.ead.xml",
+   //     "/data/B360446201_B343_2_tei.xml",
+         "/data/sloveniaeag.eag.xml",
+   //   "/data/titleeag.eag.xml",
+   // "/data/D9.1.docx",
+   // "/data/D9.1.pdf",
+   //   "/data/package.json",
+   // "/data/newjsonfile.json",
+   //   "/data/crispienartur.ead.xml",
    };
 
     /**
@@ -72,7 +72,7 @@ public class TestTika extends TestCase {
           Metadata info = tika.parseDocument(name, null, in, -1);
           if (info != null) {
               for (String key : info.names()) {
-                 System.out.println(key+":"+ info.get (key));
+                 System.out.println("ELEMENT "+key.toUpperCase()+":"+ info.get (key));
            }
               
           }

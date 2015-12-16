@@ -11,6 +11,8 @@ import org.apache.log4j.Logger;
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 /**
  * Singleton class, find metadata and text contents in documents.
@@ -89,6 +91,11 @@ public class TikaExtensions {
             {
                metadata.add("text", TextCleaner.cleanup(parsedContent));
               
+            }
+            
+            if (metadata.get(CendariProperties.REFERENCE) == null) {
+                metadata.add(CendariProperties.REFERENCE, metadata.get(CendariProperties.POTENTIAL_REFERENCE));
+                metadata.remove(CendariProperties.POTENTIAL_REFERENCE.getName());
             }
         }
         catch (TikaException e) {

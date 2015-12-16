@@ -12,6 +12,7 @@ import org.apache.tika.parser.xml.AttributeMetadataHandler;
 import org.apache.tika.sax.TeeContentHandler;
 import org.apache.tika.sax.TextContentHandler;
 import org.xml.sax.ContentHandler;
+
 import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 
 /**
@@ -58,23 +59,20 @@ public class EADParser extends AbstractXMLParser {
                 //getEADHandler(metadata, TikaCoreProperties.PUBLISHER, "publisher"),
                 getEADHandler(metadata, TikaCoreProperties.CONTRIBUTOR, 
                         "name", "titleStmt", "respStmt"),
+                getEADHandler(metadata, TikaCoreProperties.PUBLISHER, "publicationstmt"),
                 //getEADHandler(metadata, CendariProperties.DATE, "date"),
                 new ElementAttributeMetadataHandler(
                         NAMESPACE_URI_EAD, "normal",
-                            metadata, CendariProperties.DATE, "unitdate") {
+                            metadata, TikaCoreProperties.CREATED, "unitdate") {
                     protected void addMetadata(String date) {
                         String[] dates = date.split("/");
                         for (String d : dates) 
                             super.addMetadata(d);
                     };
                 },
-                //getEADHandler(metadata, TikaCoreProperties.CREATED, "date"),
-                //getEADHandler(metadata, TikaCoreProperties.TYPE, "type"),
-                //getEADHandler(metadata, TikaCoreProperties.FORMAT, "format"),
-                //getEADHandler(metadata, TikaCoreProperties.IDENTIFIER, "identifier"),
                 getEADHandler(metadata, TikaCoreProperties.RIGHTS, "licence"),
+
                 
-                getEADHandler(metadata, CendariProperties.NERD, "did"),
                 getEADHandler(metadata, CendariProperties.NERD, "archref"),
                 getEADHandler(metadata, CendariProperties.NERD, "eventgrp"),
                 getEADHandler(metadata, CendariProperties.NERD, "chronitem"),
@@ -82,7 +80,7 @@ public class EADParser extends AbstractXMLParser {
                 getEADHandler(metadata, CendariProperties.NERD, "appraisal"),
                 getEADHandler(metadata, CendariProperties.NERD, "bibliography"),
                 getEADHandler(metadata, CendariProperties.NERD, "bioghist"),
-                getEADHandler(metadata, CendariProperties.NERD, "c"),
+//                getEADHandler(metadata, CendariProperties.NERD, "c"),
                 getEADHandler(metadata, CendariProperties.NERD, "c01"),
                 getEADHandler(metadata, CendariProperties.NERD, "c02"),
                 getEADHandler(metadata, CendariProperties.NERD, "c03"),
@@ -98,28 +96,23 @@ public class EADParser extends AbstractXMLParser {
                 getEADHandler(metadata, CendariProperties.NERD, "custodhist"),
                 getEADHandler(metadata, CendariProperties.NERD, "daodesc"),
                 getEADHandler(metadata, CendariProperties.NERD, "descgrp"),
-                getEADHandler(metadata, CendariProperties.NERD, "div"),
-                getEADHandler(metadata, CendariProperties.NERD, "dsc"),
                 getEADHandler(metadata, CendariProperties.NERD, "dscgrp"),
-                getEADHandler(metadata, CendariProperties.NERD, "odd"),
+//                getEADHandler(metadata, CendariProperties.NERD, "odd"),
                 getEADHandler(metadata, CendariProperties.NERD, "relatedmaterial"),
                 getEADHandler(metadata, CendariProperties.NERD, "scopecontent"),
                 getEADHandler(metadata, CendariProperties.NERD, "separatedmaterial"),
                 getEADHandler(metadata, CendariProperties.NERD, "table"),
-                getEADHandler(metadata, CendariProperties.NERD, "relatedmaterial"),
                 getEADHandler(metadata, CendariProperties.NERD, "blockquote"),
                 getEADHandler(metadata, CendariProperties.NERD, "note"),
-                getEADHandler(metadata, CendariProperties.NERD, "publicationstmt"),
+//                getEADHandler(metadata, CendariProperties.NERD, "publicationstmt"),
                 getEADHandler(metadata, CendariProperties.NERD, "seriesstmt"),
                 getEADHandler(metadata, CendariProperties.NERD, "titlepage"),
                 getEADHandler(metadata, CendariProperties.NERD, "titlestmt"),
                 getEADHandler(metadata, CendariProperties.NERD, "abstract"),
-                getEADHandler(metadata, CendariProperties.NERD, "date", "creation"),
                 getEADHandler(metadata, CendariProperties.NERD, "event"),
                 getEADHandler(metadata, CendariProperties.NERD, "item"),
                 getEADHandler(metadata, CendariProperties.NERD, "label"),
                 getEADHandler(metadata, CendariProperties.NERD, "origination"),
-                getEADHandler(metadata, CendariProperties.NERD, "titlestmt"),
                 getEADHandler(metadata, CendariProperties.NERD, "name", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.NERD, "geogname", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.NERD, "subject", "controlaccess"),
@@ -128,18 +121,9 @@ public class EADParser extends AbstractXMLParser {
                         CendariProperties.LANG),
                 new AttributeMetadataHandler(NAMESPACE_URI_EAD, "langcode", metadata, 
                         CendariProperties.LANG),
-                new AttributeMetadataHandler("", "url", metadata, 
-                            CendariProperties.REFERENCE) {
-                  protected void addMetadata(String url) {
-                    String cendariUrl = url;
-                    if (url.contains(CendariProperties.DOMAIN_CENDARI)){
-                      super.addMetadata(url);
-                    }
-                    
-                  };
-
-                }
-        );
+                new ElementAttributeMetadataHandler("", "url", metadata, 
+                            CendariProperties.REFERENCE, "eadid")
+                );
     }
-
 }
+                
