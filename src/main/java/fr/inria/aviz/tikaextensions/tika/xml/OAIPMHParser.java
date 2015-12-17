@@ -20,6 +20,10 @@ import org.xml.sax.ContentHandler;
  * @version $Revision$
  */
 public class OAIPMHParser extends AbstractXMLParser {
+    /**
+   * 
+   */
+  private static final long serialVersionUID = 522581315138961225L;
     //private static final String NAMESPACE_URI_OAI_PMH = "http://www.openarchives.org/OAI/2.0";
     
     private static final Set<MediaType> SUPPORTED_TYPES =

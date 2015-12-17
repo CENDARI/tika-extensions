@@ -22,6 +22,11 @@ import fr.inria.aviz.tikaextensions.tika.CendariProperties;
  */
 public class TEIParser extends AbstractXMLParser {
     /**
+   * 
+   */
+  private static final long serialVersionUID = 4165215549554674353L;
+
+    /**
      * TEI namespace
      */
     public static final String NAMESPACE_URI_TEI = "http://www.tei-c.org/ns/1.0";

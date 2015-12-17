@@ -2,7 +2,6 @@ package fr.inria.aviz.tikaextensions;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.util.Arrays;
 
 import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 import fr.inria.aviz.tikaextensions.utils.TextCleaner;
@@ -11,8 +10,6 @@ import org.apache.log4j.Logger;
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 /**
  * Singleton class, find metadata and text contents in documents.

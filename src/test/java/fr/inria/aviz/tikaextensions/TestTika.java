@@ -1,33 +1,14 @@
 package fr.inria.aviz.tikaextensions;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.List;
 
 import junit.framework.TestCase;
 
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang.ArrayUtils;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
-import org.apache.tika.parser.AutoDetectParser;
-import org.apache.tika.parser.ParseContext;
-import org.apache.tika.parser.Parser;
-import org.apache.tika.parser.RecursiveParserWrapper;
-import org.apache.tika.sax.BasicContentHandlerFactory;
-import org.apache.tika.sax.ContentHandlerFactory;
 import org.junit.Test;
 import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
-
-import com.uwyn.jhighlight.fastutil.Arrays;
-
-import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 
 /**
  * Class TestTika

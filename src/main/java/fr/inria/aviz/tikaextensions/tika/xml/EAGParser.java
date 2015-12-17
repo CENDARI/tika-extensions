@@ -22,6 +22,11 @@ import fr.inria.aviz.tikaextensions.tika.CendariProperties;
  * @version $Revision$
  */
 public class EAGParser extends AbstractXMLParser {
+/**
+   * 
+   */
+  private static final long serialVersionUID = -7483213014696616781L;
+
 private static final String NAMESPACE_URI_EAG = "http://www.ministryculture.es/";
     
     private static final Set<MediaType> SUPPORTED_TYPES =

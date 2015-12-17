@@ -22,6 +22,11 @@ import fr.inria.aviz.tikaextensions.tika.CendariProperties;
  * @version $Revision$
  */
 public class EADParser extends AbstractXMLParser {
+    /**
+   * 
+   */
+  private static final long serialVersionUID = 7171484731068477630L;
+
     private static final String NAMESPACE_URI_EAD = "";
     
     private static final Set<MediaType> SUPPORTED_TYPES =

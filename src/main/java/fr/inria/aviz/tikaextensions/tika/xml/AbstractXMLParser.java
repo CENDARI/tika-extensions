@@ -35,6 +35,10 @@ import org.xml.sax.SAXParseException;
  */
 public abstract class AbstractXMLParser extends AbstractParser
     implements ErrorHandler {
+    /**
+   * 
+   */
+  private static final long serialVersionUID = -3146147078112373286L;
     static final protected Logger logger = Logger.getLogger(AbstractXMLParser.class);
     protected static final String NAMESPACE_URI_XML = "http://www.w3.org/XML/1998/namespace";
     

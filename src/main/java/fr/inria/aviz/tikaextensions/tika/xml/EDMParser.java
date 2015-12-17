@@ -9,8 +9,6 @@ import org.apache.tika.metadata.Property;
 import org.apache.tika.metadata.TikaCoreProperties;
 import org.apache.tika.mime.MediaType;
 import org.apache.tika.parser.ParseContext;
-import org.apache.tika.parser.xml.AttributeDependantMetadataHandler;
-import org.apache.tika.parser.xml.AttributeMetadataHandler;
 import org.apache.tika.parser.xml.ElementMetadataHandler;
 import org.apache.tika.sax.TeeContentHandler;
 import org.apache.tika.sax.TextContentHandler;
@@ -25,11 +23,12 @@ import fr.inria.aviz.tikaextensions.tika.CendariProperties;
  * @version $Revision$
  */
 public class EDMParser extends AbstractXMLParser {
+/**
+   * 
+   */
+  private static final long serialVersionUID = -7394174337764559046L;
 private static final String NAMESPACE_URI_EDM = "http://www.europeana.eu/schemas/edm/";
-private static final String NAMESPACE_URI_ORE = "http://www.openarchives.org/ore/terms/";
 private static final String NAMESPACE_URI_RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
-private static final String EUROPEANA_URL = "http://data.europeana.eu/";
-private static final String EUROPEAN_LIBRARY_URL = "http://data.theeuropeanlibrary.org";
 
 private static final Set<MediaType> SUPPORTED_TYPES =
             Collections.singleton(MediaType.application("rdf+xml"));

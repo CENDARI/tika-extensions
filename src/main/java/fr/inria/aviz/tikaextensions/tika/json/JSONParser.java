@@ -21,6 +21,10 @@ import org.xml.sax.SAXException;
  * JSON parser
  */
 public class JSONParser extends AbstractParser {
+    /**
+   * 
+   */
+  private static final long serialVersionUID = -8127078373229137155L;
     private static final Set<MediaType> SUPPORTED_TYPES = Collections
                                                                 .singleton(MediaType
                                                                         .application("json"));
