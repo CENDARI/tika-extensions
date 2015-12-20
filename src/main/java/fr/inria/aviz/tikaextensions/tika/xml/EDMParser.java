@@ -99,7 +99,7 @@ private static final Set<MediaType> SUPPORTED_TYPES =
                 //NERD
                 getHandler(metadata, CendariProperties.NERD, "title"),
                 getHandler(metadata, CendariProperties.NERD, "contributor"),
-                getHandler(metadata, CendariProperties.NERD, "publisher"), 
+                getHandler(metadata, CendariProperties.NERD, "creator"), 
                 getHandler(metadata, CendariProperties.NERD, "date"),
                 getEDMHandler(metadata, CendariProperties.NERD, "year"),
                 getHandler(metadata, CendariProperties.NERD , "subject"),
