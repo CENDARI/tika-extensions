@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdaa="http://rdaregistry.info/Elements/a/"
+	xmlns:rdac="http://rdaregistry.info/Elements/c/"
+	xmlns:rdae="http://rdaregistry.info/Elements/e/"
+	xmlns:rdam="http://rdaregistry.info/Elements/m/"
+	xmlns:rdaw="http://rdaregistry.info/Elements/w/"
+	xmlns:rdau="http://rdaregistry.info/Elements/u/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:edm="http://www.europeana.eu/schemas/edm/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:frbrer="http://iflastandards.info/ns/fr/frbr/frbrer/"
+	xmlns:ore="http://www.openarchives.org/ore/terms/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:wgs84pos="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:mods="http://www.loc.gov/mods/rdf/v1#">
+
+<rdf:Description rdf:about="http://data.theeuropeanlibrary.org/BibliographicResource/3000115997933">
+	<rdf:type rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
+	<dcterms:publisher rdf:resource="http://data.theeuropeanlibrary.org/Agent/The_European_Library"/>
+	<dcterms:provenance rdf:nodeID="node19o2umfb7x1"/>
+	<dcterms:isPartOf rdf:resource="http://data.theeuropeanlibrary.org/Collection/a0601"/>
+	<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-10-05T18:21:56.000+01:00</dcterms:date>
+	<foaf:page>http://www.theeuropeanlibrary.org/tel4/record/3000115997933</foaf:page>
+	<dcterms:rights rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+	<foaf:primaryTopic rdf:resource="http://data.theeuropeanlibrary.org/Resource/3000115997933"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.theeuropeanlibrary.org/Resource/3000115997933">
+	<rdfs:isDefinedBy rdf:resource="http://data.theeuropeanlibrary.org/BibliographicResource/3000115997933"/>
+	<foaf:primaryTopic>http://www.theeuropeanlibrary.org/tel4/record/3000115997933</foaf:primaryTopic>
+	<rdf:type rdf:resource="http://schema.org/CreativeWork"/>
+	<rdam:P30156>De Volksvriend / 1917-10-11</rdam:P30156>
+	<dcterms:temporal rdf:nodeID="node19o2umfb7x2"/>
+	<rdau:P60444 rdf:nodeID="node19o2umfb7x3"/>
+	<dcterms:subject rdf:nodeID="node19o2umfb7x4"/>
+	<dcterms:type>Text</dcterms:type>
+	<rdau:P60099 rdf:resource="http://id.loc.gov/vocabulary/iso639-2/dut"/>
+	<dcterms:subject rdf:nodeID="node19o2umfb7x5"/>
+	<rdau:P60073 rdf:nodeID="node19o2umfb7x6"/>
+	<rdau:P60073>1917-10-11</rdau:P60073>
+	<dcterms:rights rdf:datatype="http://purl.org/dc/terms/URI">http://www.europeana.eu/rights/rr-f/</dcterms:rights>
+	<dcterms:type>Newspaper Issue</dcterms:type>
+	<rdam:P30003 rdf:datatype="http://rdvocab.info/termList/ModeIssue">serial</rdam:P30003>
+	<rdau:P60714 xml:lang="en">Europeana Newspapers</rdau:P60714>
+	<rdau:P60049 rdf:resource="http://rdvocab.info/termList/RDAContentType/1020"/>
+	<edm:isShownAt rdf:resource="http://data.theeuropeanlibrary.org/Resource/3000115997933#webresource09c7853a0"/>
+	<edm:object rdf:resource="http://data.theeuropeanlibrary.org/Resource/3000115997933#webresource064335321"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.theeuropeanlibrary.org/Resource/3000115997933#webresource064335321">
+	<dcterms:rights rdf:datatype="http://purl.org/dc/terms/URI">http://www.europeana.eu/rights/rr-f/</dcterms:rights>
+	<rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
+	<owl:sameAs rdf:resource="http://imageviewer.kb.nl/ImagingService/imagingService?id=ddd:011183411:mpeg21:p001:image&amp;w=200"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://data.theeuropeanlibrary.org/Resource/3000115997933#webresource09c7853a0">
+	<dcterms:rights rdf:datatype="http://purl.org/dc/terms/URI">http://www.europeana.eu/rights/rr-f/</dcterms:rights>
+	<rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/WebResource"/>
+	<owl:sameAs rdf:resource="http://kranten.delpher.nl/nl/view/index?image=ddd:011183411:mpeg21"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19o2umfb7x1">
+	<rdf:type rdf:resource="http://purl.org/dc/terms/ProvenanceStatement"/>
+	<rdfs:label xml:lang="en">Metadata provided by National Library of the Netherlands</rdfs:label>
+	<dcterms:contributor rdf:resource="http://data.theeuropeanlibrary.org/Agent/P01350"/>
+	<dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-07-20T00:00:00.000+01:00</dcterms:date>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19o2umfb7x2">
+	<rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/C1009"/>
+	<rdfs:label>Dag</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19o2umfb7x3">
+	<rdf:type rdf:resource="http://rdaregistry.info/Elements/c/C10002"/>
+	<rdau:P60368>Henry Hospers</rdau:P60368>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19o2umfb7x4">
+	<rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/C1010"/>
+	<rdau:P60366>Regionaal/lokaal</rdau:P60366>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19o2umfb7x5">
+	<rdf:type rdf:resource="http://iflastandards.info/ns/fr/frbr/frbrer/C1010"/>
+	<rdau:P60366>Orange City, Iowa</rdau:P60366>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node19o2umfb7x6">
+	<rdf:type rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+	<edm:begin>1874</edm:begin>
+	<edm:end>1951</edm:end>
+</rdf:Description>
+
+</rdf:RDF>
