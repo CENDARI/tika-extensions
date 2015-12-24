@@ -8,6 +8,8 @@ Right now, the following XML files are supported:
 * EAG
 * TEI
 * OAI-PMH
+* Europeana - EDM
+* TEL - LOD (excude mode)
 
 
 To create a specific parser for a new XML schema, do the following steps:

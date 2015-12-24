@@ -27,9 +27,8 @@ public class TextCleaner {
         value = SPACES.matcher(value).replaceAll(" "); 
         value = LINES.matcher(value).replaceAll("\n");
         value = AMPERSAND.matcher(value).replaceAll("&amp;");
-        if (!Jsoup.isValid(value, Whitelist.simpleText()) ){
-            value =  Jsoup.clean(value, Whitelist.simpleText());
-        }
+        value = Jsoup.clean(value, Whitelist.none());
+        
         return value;
     }
 }

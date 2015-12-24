@@ -1,6 +1,50 @@
-<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
-         http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><ResponseDate>2014-01-15T11:19:00Z</ResponseDate><Request verb="GetRecord" metadataPrefix="oai_dc" identifier="oai:socialhistoryservices.org:10622/ARCH00706"/><GetRecord><record><header><identifier>oai:socialhistoryservices.org:10622/ARCH00706</identifier><datestamp>2014-01-13T14:56:35Z</datestamp><setSpec>iisg_ead</setSpec><setSpec>iisg.archieven.1</setSpec><setSpec>iish</setSpec><setSpec>iish.archieven</setSpec></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:language>dut</dc:language><dc:contributor>KABO.Afdeling Amsterdamcreator</dc:contributor><dc:title>Archief KABO. Afdeling Amsterdam1903-1969</dc:title><dc:publisher> Internationaal Instituut voor Sociale Geschiedenis </dc:publisher><dc:rights> Beperkt  Toestemming vereist van de KABO </dc:rights><dc:description> Stukken van:   St. Gabriël, 1903-1925: notulen van de leden- en bestuursvergaderingen 1903-1908, 1911-1925, bevatten enige jaarverslagen; notulen van de propaganda- en buitengewone vergaderingen 1918 en 1922 (met bijlagen).   St. Laurentius, afdeling Amsterdam van St. Paulus, 1907-1948: notulen van de bestuursvergaderingen 1907-1911, 1917-1934 (onvolledig), 1945-1948, van de ledenvergaderingen juni/juli 1923, 1924-1928, 1931-1934, van de propagandavergaderingen 1946-1948, jaarverslagen 1927-1935, 1937-1940, 1946-1947; van de sectie Gasthuizen: notulen 1921-1924, jaarverslagen 1928, 1930-1931, notulen personeelsvergaderingen OLVG oktober 1934.   Afdeling Trampersoneel St. Laurentius, vanaf 15.10.1913 zelfstandige R.K. Vereeniging van Trampersoneel: notulen 1910 (met rapporten van onderhoud met directeur GVB 1910-1911), 22.10.1913 -- 22.1.1914.   KABO afdeling Amsterdam, 1949-1969: jaarverslagen 1949-1950, 1958-1969, verslag jaarvergadering 1953, stukken betreffende stakingen in Amsterdam 1948, 1949, 1950, 1955, de EVC 1949-1951, voorbereiding en viering 50-jarig bestaan 1953.   Groep 'lagere organen': notulen 1949-1951, jaarverslagen 1949-1952. </dc:description><dc:description>
-        Archief KABO. Afdeling Amsterdam
-      , inventory number ..., International Institute of Social History, Amsterdam </dc:description><dc:description> Katholieke Bond van Overheidspersoneel (KABO) afdeling Amsterdam en voorlopers. Ontstaan in 1949 door fusie van de Amsterdamse afdelingen van de R.K. Vereeniging van Post- en Telegraafbeambten St. Gabriël (opgericht in 1903, later R.K. Vereeniging van Post- en Telegraaf-, en Telefoonpersoneel, in 1908 toegetreden tot de Nederlandsche R.K. Bond van Post-, Telegraaf-, en Telefoonpersoneel St. Petrus) en van de Vereeniging van R.K. Gemeente-Werklieden en Beambten St. Laurentius (opgericht in 1903) die tot 1940 onder de naam St. Laurentius bleef opereren, ondanks naamsveranderingen van de landelijk bond: in 1909 Nederlandsche Rooms-Katholieke Gemeente-Werkliedenbond St. Paulus en in 1915 tot Nederlandsche R.K. Bond van Personeel in dienst van Openbare Lichamen en Bedrijven St. Paulus. </dc:description><dc:coverage>nl</dc:coverage><dc:contributor>R.contributor</dc:contributor><dc:contributor>Vereeniging van Roomsch-Katholieke Gemeente-Werklieden en Beambten "Sint Laurentius" (Amsterdam)contributor</dc:contributor><dc:contributor>Nederlandsche R.contributor</dc:contributor><dc:contributor>Nederlandsche R.contributor</dc:contributor><dc:format>text/xmlhttp://hdl.handle.net/10622/ARCH00706?locatt=view:ead</dc:format></oai_dc:dc></metadata></record></GetRecord></OAI-PMH>
+<?xml version="1.0" encoding="UTF-8" ?>
+<OAI-PMH
+xmlns="http://www.openarchives.org/OAI/2.0/"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"
+>
+   <responseDate>2013-12-31T14:21:17Z</responseDate>
+   <request verb="GetRecord" identifier="oai:u-paris10.fr:bdic/default.NOTICES.29338" metadataPrefix="oai_dc">http://flora.u-paris10.fr:8082/flora/servlet/OaiServlet</request>
+   <GetRecord>
+      <record>
+         <header>
+            <identifier>oai:u-paris10.fr:bdic/default.NOTICES.29338</identifier>
+            <datestamp>2011-02-21</datestamp>
+            <setSpec>default.NOTICES.jourtranch</setSpec>
+            <setSpec>default.NOTICES.OAI_VALOIS</setSpec>
+            <setSpec>default.NOTICES.IMMIGRATION_RUSSE</setSpec>
+            <setSpec>default.NOTICES.ICONO_1870_1871</setSpec>
+            <setSpec>default.NOTICES.IMMIGRATION_ESPAGNOLE</setSpec>
+            <setSpec>default.NOTICES.FRANCE_ICONO</setSpec>
+            <setSpec>default.NOTICES.1914_1918_ARCHIVES</setSpec>
+            <setSpec>default.NOTICES.1914_1918_ICONO</setSpec>
+            <setSpec>default.NOTICES.INTERNATIONAL</setSpec>
+            <setSpec>default.NOTICES.IMMIGRATION_POLONAISE</setSpec>
+            <setSpec>default.NOTICES.GUERRE_ESPAGNE</setSpec>
+            <setSpec>default.NOTICES.RUSSIE</setSpec>
+            <setSpec>default.NOTICES.1914_1918_IMPRIMES</setSpec>
+            <setSpec>default.NOTICES.PHOTOGRAPHIES_ELIE_KAGAN</setSpec>
+         </header>
+<metadata>
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<dc:identifier>http://flora.u-paris10.fr:8082/flora/jsp/index_view_direct.jsp?record=default:NOTICES:29338</dc:identifier>
+<dc:title>[Soldat bourrant sa pipe], 1915.</dc:title>
+<dc:creator>Steinlen, Théophile-Alexandre (1859-1923) (Dessinateur) </dc:creator>
+<dc:coverage>1915</dc:coverage>
+<dc:date>1915</dc:date>
+<dc:language>fre</dc:language>
+<dc:rights xml:lang="fre">Domaine public</dc:rights>
+<dc:rights xml:lang="eng">Public domain</dc:rights>
+<dc:source>BDIC_OR FL 1171</dc:source>
+<dc:subject>Poilus (Guerre mondiale, 1914-1918) ** Moeurs et coutumes</dc:subject>
+<dc:subject>Soldats français</dc:subject>
+<dc:type xml:lang="fre">image fixe</dc:type>
+<dc:type xml:lang="eng">still image</dc:type>
+<dc:type xml:lang="fre">Dessin</dc:type>
+<dc:relation>vignette : http://193.50.138.43:8082/flora/jsp/index_view_photo.jsp?recordId=default:NOTICES:29338&amp;idocsId=ged:IDOCS:21524&amp;resolution=LOW</dc:relation>
+</oai_dc:dc>
+</metadata>
+      </record>
+   </GetRecord>
+</OAI-PMH>

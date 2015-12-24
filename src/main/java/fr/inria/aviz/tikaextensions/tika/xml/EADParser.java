@@ -5,7 +5,6 @@ import java.util.Set;
 
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
-import org.apache.tika.metadata.TikaCoreProperties;
 import org.apache.tika.mime.MediaType;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.xml.AttributeMetadataHandler;
@@ -53,29 +52,38 @@ public class EADParser extends AbstractXMLParser {
         ContentHandler defaultContentHandler = new TextContentHandler(handler, true);
         return new TeeContentHandler(
                 defaultContentHandler,
-                getEADHandler(metadata, TikaCoreProperties.TITLE, 
+                getEADHandler(metadata, CendariProperties.TITLE, 
                         "titleproper", "titlestmt"),
                 //TODO check the specific EAD elements
-                getEADHandler(metadata, TikaCoreProperties.KEYWORDS, 
+                getEADHandler(metadata, CendariProperties.KEYWORDS, 
                         "term", "keywords"),
                 //getTEIHandler(metadata, TikaCoreProperties.CREATOR, "creator"),
-                getEADHandler(metadata, TikaCoreProperties.DESCRIPTION, 
+                getEADHandler(metadata, CendariProperties.DESCRIPTION, 
                         "description"),
                 //getEADHandler(metadata, TikaCoreProperties.PUBLISHER, "publisher"),
-                getEADHandler(metadata, TikaCoreProperties.CONTRIBUTOR, 
+                getEADHandler(metadata, CendariProperties.CONTRIBUTOR, 
                         "name", "titleStmt", "respStmt"),
-                getEADHandler(metadata, TikaCoreProperties.PUBLISHER, "publicationstmt"),
+                getEADHandler(metadata, CendariProperties.PUBLISHER, "publicationstmt"),
                 //getEADHandler(metadata, CendariProperties.DATE, "date"),
                 new ElementAttributeMetadataHandler(
                         NAMESPACE_URI_EAD, "normal",
-                            metadata, TikaCoreProperties.CREATED, "unitdate") {
+                            metadata, CendariProperties.DATE, "unitdate") {
                     protected void addMetadata(String date) {
                         String[] dates = date.split("/");
                         for (String d : dates) 
                             super.addMetadata(d);
                     };
                 },
-                getEADHandler(metadata, TikaCoreProperties.RIGHTS, "licence"),
+                new ElementAttributeMetadataHandler(
+                    NAMESPACE_URI_EAD, "normal",
+                        metadata, CendariProperties.DATE, "unitdate") {
+                protected void addMetadata(String date) {
+                    String[] dates = date.split("/");
+                    for (String d : dates) 
+                        super.addMetadata(d);
+                };
+                },
+                getEADHandler(metadata, CendariProperties.RIGHTS, "licence"),
 
                 
                 getEADHandler(metadata, CendariProperties.NERD, "archref"),
@@ -85,7 +93,6 @@ public class EADParser extends AbstractXMLParser {
                 getEADHandler(metadata, CendariProperties.NERD, "appraisal"),
                 getEADHandler(metadata, CendariProperties.NERD, "bibliography"),
                 getEADHandler(metadata, CendariProperties.NERD, "bioghist"),
-//                getEADHandler(metadata, CendariProperties.NERD, "c"),
                 getEADHandler(metadata, CendariProperties.NERD, "c01"),
                 getEADHandler(metadata, CendariProperties.NERD, "c02"),
                 getEADHandler(metadata, CendariProperties.NERD, "c03"),

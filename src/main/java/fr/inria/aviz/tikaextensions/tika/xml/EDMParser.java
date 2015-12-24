@@ -6,7 +6,6 @@ import java.util.Set;
 import org.apache.tika.metadata.DublinCore;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
-import org.apache.tika.metadata.TikaCoreProperties;
 import org.apache.tika.mime.MediaType;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.xml.ElementMetadataHandler;
@@ -71,28 +70,29 @@ private static final Set<MediaType> SUPPORTED_TYPES =
 
     protected ContentHandler getContentHandler(
             ContentHandler handler, Metadata metadata, ParseContext context) {
-        ContentHandler defaultContentHandler = new TextContentHandler(handler, true);
-  
+        ContentHandler defaultContentHandler = new TextContentHandler(handler,   
+true);
         return new TeeContentHandler(
                 defaultContentHandler,
-                getHandler(metadata, TikaCoreProperties.TITLE, "title"),
-                getHandler(metadata, TikaCoreProperties.CONTRIBUTOR, "contributor"),
-                getHandler(metadata, TikaCoreProperties.CREATOR, "creator"), 
-                getHandler(metadata, TikaCoreProperties.PUBLISHER, "publisher"),
-                getHandler(metadata, TikaCoreProperties.IDENTIFIER, "identifier"),
-                getHandler(metadata, TikaCoreProperties.RIGHTS, "rights"),
-                getHandler(metadata, TikaCoreProperties.CREATED, "date"),
-                getHandler(metadata, TikaCoreProperties.CREATED, "year"),
-                getTermsHandler(metadata, TikaCoreProperties.CREATED, "created"),
-                getHandler(metadata, TikaCoreProperties.SOURCE, "source"),
-                getHandler(metadata, TikaCoreProperties.KEYWORDS , "subject"),
-                getHandler(metadata, TikaCoreProperties.COVERAGE, "coverage"),
-                getHandler(metadata, TikaCoreProperties.TYPE, "type"),
-                getTermsHandler(metadata, TikaCoreProperties.RELATION, "isPartOf"),
-                getTermsHandler(metadata, TikaCoreProperties.FORMAT, "medium"),
-                getHandler(metadata, TikaCoreProperties.LANGUAGE, "language"),
+                getHandler(metadata, CendariProperties.TITLE, "title"),
+                getHandler(metadata, CendariProperties.CONTRIBUTOR, "contributor"),
+                getHandler(metadata, CendariProperties.CREATOR, "creator"), 
+                getHandler(metadata, CendariProperties.PUBLISHER, "publisher"),
+                getHandler(metadata, CendariProperties.IDENTIFIER, "identifier"),
+                getHandler(metadata, CendariProperties.RIGHTS, "rights"),
+                getHandler(metadata, CendariProperties.DATE, "date"),
+                getHandler(metadata, CendariProperties.DATE, "year"),
+                getTermsHandler(metadata, CendariProperties.DATE, "created"),
+                getHandler(metadata, CendariProperties.SOURCE, "source"),
+                getHandler(metadata, CendariProperties.KEYWORDS , "subject"),
+                getHandler(metadata, CendariProperties.COVERAGE, "coverage"),
+                getHandler(metadata, CendariProperties.TYPE, "type"),
+                getHandler(metadata, CendariProperties.TYPE, "type"),
+                getTermsHandler(metadata, CendariProperties.RELATION, "isPartOf"),
+                getTermsHandler(metadata, CendariProperties.FORMAT, "medium"),
+                getHandler(metadata, CendariProperties.LANG, "language"),
                 getLocalHandler(NAMESPACE_URI_EDM, metadata, CendariProperties.PLACE, "country"),
-                //new AttributeMetadataHandler(NAMESPACE_URI_EDM, "landingPage", metadata, CendariProperties.REFERENCE),
+                getLocalHandler(NAMESPACE_URI_EDM, metadata, CendariProperties.PROVIDER, "dataProvider"),
                 new ElementAttributeMetadataHandler(
                     NAMESPACE_URI_RDF, "about",
                     metadata, CendariProperties.REFERENCE, "ProvidedCHO"),  
@@ -105,7 +105,17 @@ private static final Set<MediaType> SUPPORTED_TYPES =
                 getHandler(metadata, CendariProperties.NERD , "subject"),
                 getHandler(metadata, CendariProperties.NERD, "coverage"),
                 getTermsHandler(metadata, CendariProperties.NERD, "created"),
-                getEDMHandler(metadata, CendariProperties.NERD, "country")
+                getEDMHandler(metadata, CendariProperties.NERD, "country"),
+                
+                /*<dcterms:publisher rdf:resource="http://data.theeuropeanlibrary.org/Agent/The_European_Library"/>*/
+                
+                getTermsHandler(metadata, CendariProperties.PUBLISHER, "publisher"),
+                getTermsHandler(metadata, CendariProperties.DATE, "issued"),
+                getTermsHandler(metadata, CendariProperties.PLACE, "spatial"),
+                //Hack for TEL LOD to exclude from Elastic and NERD 
+                new ElementAttributeMetadataHandler(
+                    NAMESPACE_URI_RDF, "resource",
+                    metadata, CendariProperties.PROVIDER, "publisher")
             );
 
     }     

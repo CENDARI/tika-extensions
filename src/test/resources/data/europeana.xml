@@ -1,514 +1,201 @@
 <?xml version="1.0" ?>
 <rdf:RDF xmlns:edm="http://www.europeana.eu/schemas/edm/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-	<edm:ProvidedCHO rdf:about="http://data.europeana.eu/item/9200231/BibliographicResource_3000060331322"/>
-	<edm:WebResource rdf:about="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000001.jpg">
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+	<edm:ProvidedCHO rdf:about="http://data.europeana.eu/item/9200316/BibliographicResource_3000092751107"/>
+	<edm:WebResource rdf:about="http://digital.nls.uk/74546914">
+		<edm:rights rdf:resource="http://www.europeana.eu/rights/rr-f"/>
 	</edm:WebResource>
-	<edm:WebResource rdf:about="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000002.jpg">
-		<edm:isNextInSequence rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000001.jpg"/>
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+	<edm:WebResource rdf:about="http://deriv.nls.uk/dcn3/7430/74301059.3.jpg">
+		<edm:rights rdf:resource="http://www.europeana.eu/rights/rr-f"/>
 	</edm:WebResource>
-	<edm:WebResource rdf:about="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000003.jpg">
-		<edm:isNextInSequence rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000002.jpg"/>
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+	<edm:WebResource rdf:about="http://deriv.nls.uk/dcn17/7430/74301059.17.jpg">
+		<edm:rights rdf:resource="http://www.europeana.eu/rights/rr-f"/>
 	</edm:WebResource>
-	<edm:WebResource rdf:about="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000004.jpg">
-		<edm:isNextInSequence rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000003.jpg"/>
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-	</edm:WebResource>
-	<edm:WebResource rdf:about="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000005.jpg">
-		<edm:isNextInSequence rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000004.jpg"/>
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-	</edm:WebResource>
-	<edm:WebResource rdf:about="http://stabikat.de/DB=1/PPN?PPN=746595050">
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-	</edm:WebResource>
-	<edm:WebResource rdf:about="http://resolver.staatsbibliothek-berlin.de/SBB0000D98A00000000">
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-	</edm:WebResource>
-	<edm:WebResource rdf:about="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/150/0/00000001.png">
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
-	</edm:WebResource>
-	<edm:Place rdf:about="http://sws.geonames.org/2747373/">
-		<wgs84:lat xmlns:wgs84="http://www.w3.org/2003/01/geo/wgs84_pos#">52.07667</wgs84:lat>
-		<wgs84:long xmlns:wgs84="http://www.w3.org/2003/01/geo/wgs84_pos#">4.29861</wgs84:long>
-		<skos:prefLabel xml:lang="ca" xmlns:skos="http://www.w3.org/2004/02/skos/core#">La Haia</skos:prefLabel>
-		<skos:prefLabel xml:lang="tr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Lahey</skos:prefLabel>
-		<skos:prefLabel xml:lang="no" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="fy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">De Haach</skos:prefLabel>
-		<skos:prefLabel xml:lang="bs" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Den Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="bs" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="ga" xmlns:skos="http://www.w3.org/2004/02/skos/core#">An Háig</skos:prefLabel>
-		<skos:prefLabel xml:lang="fi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="sv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="fr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">La Haye</skos:prefLabel>
-		<skos:prefLabel xml:lang="bg" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Хага</skos:prefLabel>
-		<skos:prefLabel xml:lang="ka" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ჰააგა</skos:prefLabel>
-		<skos:prefLabel xml:lang="sl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="sk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="da" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="sr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Хаг</skos:prefLabel>
-		<skos:prefLabel xml:lang="sq" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haga</skos:prefLabel>
-		<skos:prefLabel xml:lang="ko" xmlns:skos="http://www.w3.org/2004/02/skos/core#">헤이그</skos:prefLabel>
-		<skos:prefLabel xml:lang="cy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Den Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="he" xmlns:skos="http://www.w3.org/2004/02/skos/core#">האג</skos:prefLabel>
-		<skos:prefLabel xml:lang="sh" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Hag</skos:prefLabel>
-		<skos:prefLabel xml:lang="cs" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="li" xmlns:skos="http://www.w3.org/2004/02/skos/core#">D'n Haog</skos:prefLabel>
-		<skos:prefLabel xml:lang="gl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">A Haia - Den Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="pl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haga</skos:prefLabel>
-		<skos:prefLabel xml:lang="la" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haga</skos:prefLabel>
-		<skos:prefLabel xml:lang="ru" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Гаага</skos:prefLabel>
-		<skos:prefLabel xml:lang="hr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="ro" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haga</skos:prefLabel>
-		<skos:prefLabel xml:lang="zh" xmlns:skos="http://www.w3.org/2004/02/skos/core#">海牙</skos:prefLabel>
-		<skos:prefLabel xml:lang="vi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Den Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="hu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Hága</skos:prefLabel>
-		<skos:prefLabel xml:lang="lv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Hāga</skos:prefLabel>
-		<skos:prefLabel xml:lang="lt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haga</skos:prefLabel>
-		<skos:prefLabel xml:lang="de" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Den Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="id" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Den Haag</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Den Haag</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">The Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="is" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="it" xmlns:skos="http://www.w3.org/2004/02/skos/core#">L'Aia</skos:prefLabel>
-		<skos:prefLabel xml:lang="fa" xmlns:skos="http://www.w3.org/2004/02/skos/core#">لاهه</skos:prefLabel>
-		<skos:prefLabel xml:lang="ar" xmlns:skos="http://www.w3.org/2004/02/skos/core#">لاهاي</skos:prefLabel>
-		<skos:prefLabel xml:lang="el" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Χάγη</skos:prefLabel>
-		<skos:prefLabel xml:lang="pt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">A Haia</skos:prefLabel>
-		<skos:prefLabel xml:lang="eo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Hago</skos:prefLabel>
-		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">The Hague</skos:prefLabel>
-		<skos:prefLabel xml:lang="et" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="es" xmlns:skos="http://www.w3.org/2004/02/skos/core#">La Haya</skos:prefLabel>
-		<skos:prefLabel xml:lang="nl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">'s-Gravenhage</skos:prefLabel>
-		<skos:prefLabel xml:lang="nl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Den Haag</skos:prefLabel>
-		<skos:prefLabel xml:lang="nl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">denhaag</skos:prefLabel>
-		<skos:prefLabel xml:lang="ja" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ハーグ</skos:prefLabel>
-		<skos:prefLabel xml:lang="af" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Den Haag</skos:prefLabel>
-		<dcterms:isPartOf rdf:resource="http://sws.geonames.org/2750405/" xmlns:dcterms="http://purl.org/dc/terms/"/>
-	</edm:Place>
-	<edm:Place rdf:about="http://sws.geonames.org/2950159/">
-		<wgs84:lat xmlns:wgs84="http://www.w3.org/2003/01/geo/wgs84_pos#">52.52437</wgs84:lat>
-		<wgs84:long xmlns:wgs84="http://www.w3.org/2003/01/geo/wgs84_pos#">13.41053</wgs84:long>
-		<skos:prefLabel xml:lang="jv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="ca" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlín</skos:prefLabel>
-		<skos:prefLabel xml:lang="ca" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Estat de Berlín</skos:prefLabel>
-		<skos:prefLabel xml:lang="tr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="no" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="nn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="gd" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="bs" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="ga" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Beirlín</skos:prefLabel>
-		<skos:prefLabel xml:lang="th" xmlns:skos="http://www.w3.org/2004/02/skos/core#">เบอร์ลิน</skos:prefLabel>
-		<skos:prefLabel xml:lang="bn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">বার্লিন</skos:prefLabel>
-		<skos:prefLabel xml:lang="oc" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="fi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berliini</skos:prefLabel>
-		<skos:prefLabel xml:lang="ta" xmlns:skos="http://www.w3.org/2004/02/skos/core#">பெர்லின்</skos:prefLabel>
-		<skos:prefLabel xml:lang="sv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="fr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="bg" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Берлин</skos:prefLabel>
-		<skos:prefLabel xml:lang="ka" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ბერლინი</skos:prefLabel>
-		<skos:prefLabel xml:lang="fo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="sw" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="be" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Берлін</skos:prefLabel>
-		<skos:prefLabel xml:lang="be" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Бэрлін</skos:prefLabel>
-		<skos:prefLabel xml:lang="sl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="kw" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="sk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlín</skos:prefLabel>
-		<skos:prefLabel xml:lang="da" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="sr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Берлин</skos:prefLabel>
-		<skos:prefLabel xml:lang="ku" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlîn</skos:prefLabel>
-		<skos:prefLabel xml:lang="sq" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlini</skos:prefLabel>
-		<skos:prefLabel xml:lang="ko" xmlns:skos="http://www.w3.org/2004/02/skos/core#">베를린</skos:prefLabel>
-		<skos:prefLabel xml:lang="cy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="he" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ברלין</skos:prefLabel>
-		<skos:prefLabel xml:lang="cv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Берлин</skos:prefLabel>
-		<skos:prefLabel xml:lang="sh" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="cs" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlín</skos:prefLabel>
-		<skos:prefLabel xml:lang="li" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlien</skos:prefLabel>
-		<skos:prefLabel xml:lang="gl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlín - Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="la" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berolinum</skos:prefLabel>
-		<skos:prefLabel xml:lang="pl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="ru" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Берлин</skos:prefLabel>
-		<skos:prefLabel xml:lang="lb" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="hr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="zh" xmlns:skos="http://www.w3.org/2004/02/skos/core#">柏林</skos:prefLabel>
-		<skos:prefLabel xml:lang="ro" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="vi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="hu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="lv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlīne</skos:prefLabel>
-		<skos:prefLabel xml:lang="lt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlynas</skos:prefLabel>
-		<skos:prefLabel xml:lang="vo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="id" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="de" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="ia" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="qu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="qu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlín</skos:prefLabel>
-		<skos:prefLabel xml:lang="hy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Բերլին</skos:prefLabel>
-		<skos:prefLabel xml:lang="mk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Берлин</skos:prefLabel>
-		<skos:prefLabel xml:lang="is" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlín</skos:prefLabel>
-		<skos:prefLabel xml:lang="eu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="uk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Берлін</skos:prefLabel>
-		<skos:prefLabel xml:lang="it" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlino</skos:prefLabel>
-		<skos:prefLabel xml:lang="mr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">बर्लिन</skos:prefLabel>
-		<skos:prefLabel xml:lang="ug" xmlns:skos="http://www.w3.org/2004/02/skos/core#">بېرلىن</skos:prefLabel>
-		<skos:prefLabel xml:lang="ms" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="fa" xmlns:skos="http://www.w3.org/2004/02/skos/core#">برلین</skos:prefLabel>
-		<skos:prefLabel xml:lang="ar" xmlns:skos="http://www.w3.org/2004/02/skos/core#">برلين</skos:prefLabel>
-		<skos:prefLabel xml:lang="io" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="ty" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="el" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Βερολίνο</skos:prefLabel>
-		<skos:prefLabel xml:lang="an" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlín</skos:prefLabel>
-		<skos:prefLabel xml:lang="pt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlim</skos:prefLabel>
-		<skos:prefLabel xml:lang="eo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlino</skos:prefLabel>
-		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlin</skos:prefLabel>
-		<skos:prefLabel xml:lang="et" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berliin</skos:prefLabel>
-		<skos:prefLabel xml:lang="es" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlín</skos:prefLabel>
-		<skos:prefLabel xml:lang="nl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlijn</skos:prefLabel>
-		<skos:prefLabel xml:lang="ja" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ベルリン</skos:prefLabel>
-		<skos:prefLabel xml:lang="af" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Berlyn</skos:prefLabel>
-		<skos:prefLabel xml:lang="yi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">בערלין</skos:prefLabel>
-		<dcterms:isPartOf rdf:resource="http://sws.geonames.org/2921044/" xmlns:dcterms="http://purl.org/dc/terms/"/>
-	</edm:Place>
-	<edm:Place rdf:about="http://sws.geonames.org/2750405/">
-		<skos:prefLabel xml:lang="to" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holani</skos:prefLabel>
-		<skos:prefLabel xml:lang="xh" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ENetherlands</skos:prefLabel>
-		<skos:prefLabel xml:lang="ca" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Països Baixos</skos:prefLabel>
-		<skos:prefLabel xml:lang="tl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Netherlands</skos:prefLabel>
-		<skos:prefLabel xml:lang="tr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Hollanda</skos:prefLabel>
-		<skos:prefLabel xml:lang="no" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederland</skos:prefLabel>
-		<skos:prefLabel xml:lang="nn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederland</skos:prefLabel>
-		<skos:prefLabel xml:lang="fy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederlân</skos:prefLabel>
-		<skos:prefLabel xml:lang="tg" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Нидерланд</skos:prefLabel>
-		<skos:prefLabel xml:lang="bs" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nizozemska</skos:prefLabel>
-		<skos:prefLabel xml:lang="br" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Izelvroioù</skos:prefLabel>
-		<skos:prefLabel xml:lang="ga" xmlns:skos="http://www.w3.org/2004/02/skos/core#">An Ísiltír</skos:prefLabel>
-		<skos:prefLabel xml:lang="th" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ประเทศเนเธอร์แลนด์</skos:prefLabel>
-		<skos:prefLabel xml:lang="th" xmlns:skos="http://www.w3.org/2004/02/skos/core#">เนเธอร์แลนด์</skos:prefLabel>
-		<skos:prefLabel xml:lang="bn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">হলণ্ড</skos:prefLabel>
-		<skos:prefLabel xml:lang="bn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">হল্যাণ্ড</skos:prefLabel>
-		<skos:prefLabel xml:lang="bo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ནེ་ཐར་ལནྜ།</skos:prefLabel>
-		<skos:prefLabel xml:lang="oc" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Païses Basses</skos:prefLabel>
-		<skos:prefLabel xml:lang="fi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alankomaat</skos:prefLabel>
-		<skos:prefLabel xml:lang="ta" xmlns:skos="http://www.w3.org/2004/02/skos/core#">நெதர்லாந்து</skos:prefLabel>
-		<skos:prefLabel xml:lang="sv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederländerna</skos:prefLabel>
-		<skos:prefLabel xml:lang="fr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Pays-Bas</skos:prefLabel>
-		<skos:prefLabel xml:lang="bg" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Холандия</skos:prefLabel>
-		<skos:prefLabel xml:lang="ka" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ნიდერლანდები</skos:prefLabel>
-		<skos:prefLabel xml:lang="ka" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ნიდერლანდი</skos:prefLabel>
-		<skos:prefLabel xml:lang="st" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Hôlanê</skos:prefLabel>
-		<skos:prefLabel xml:lang="fo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Niðurlond</skos:prefLabel>
-		<skos:prefLabel xml:lang="sw" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Uholanzi</skos:prefLabel>
-		<skos:prefLabel xml:lang="be" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Нідэрланды</skos:prefLabel>
-		<skos:prefLabel xml:lang="be" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Нідэрлянды</skos:prefLabel>
-		<skos:prefLabel xml:lang="sl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nizozemska</skos:prefLabel>
-		<skos:prefLabel xml:lang="sk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holandsko</skos:prefLabel>
-		<skos:prefLabel xml:lang="da" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holland</skos:prefLabel>
-		<skos:prefLabel xml:lang="sr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Холандија</skos:prefLabel>
-		<skos:prefLabel xml:lang="ku" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holanda</skos:prefLabel>
-		<skos:prefLabel xml:lang="sq" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holanda</skos:prefLabel>
-		<skos:prefLabel xml:lang="sq" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Vendet e Ulëta</skos:prefLabel>
-		<skos:prefLabel xml:lang="ko" xmlns:skos="http://www.w3.org/2004/02/skos/core#">네덜란드</skos:prefLabel>
-		<skos:prefLabel xml:lang="cy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Yr Iseldiroedd</skos:prefLabel>
-		<skos:prefLabel xml:lang="he" xmlns:skos="http://www.w3.org/2004/02/skos/core#">הולנד</skos:prefLabel>
-		<skos:prefLabel xml:lang="se" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Hollánda</skos:prefLabel>
-		<skos:prefLabel xml:lang="se" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederland</skos:prefLabel>
-		<skos:prefLabel xml:lang="sh" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nizozemska</skos:prefLabel>
-		<skos:prefLabel xml:lang="km" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ហូល្លង់</skos:prefLabel>
-		<skos:prefLabel xml:lang="cs" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nizozemsko</skos:prefLabel>
-		<skos:prefLabel xml:lang="li" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederland</skos:prefLabel>
-		<skos:prefLabel xml:lang="gl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Países Baixos</skos:prefLabel>
-		<skos:prefLabel xml:lang="gl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Países Baixos - Nederland</skos:prefLabel>
-		<skos:prefLabel xml:lang="pl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holandia</skos:prefLabel>
-		<skos:prefLabel xml:lang="la" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederlandia</skos:prefLabel>
-		<skos:prefLabel xml:lang="ru" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Нидерланды</skos:prefLabel>
-		<skos:prefLabel xml:lang="lb" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holland</skos:prefLabel>
-		<skos:prefLabel xml:lang="wa" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Bas Payis</skos:prefLabel>
-		<skos:prefLabel xml:lang="rw" xmlns:skos="http://www.w3.org/2004/02/skos/core#">U Buholandi</skos:prefLabel>
-		<skos:prefLabel xml:lang="lo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ເນເທີແລນ</skos:prefLabel>
-		<skos:prefLabel xml:lang="hr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nizozemska</skos:prefLabel>
-		<skos:prefLabel xml:lang="ro" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Olanda</skos:prefLabel>
-		<skos:prefLabel xml:lang="ro" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Ţările de Jos</skos:prefLabel>
-		<skos:prefLabel xml:lang="zh" xmlns:skos="http://www.w3.org/2004/02/skos/core#">荷兰</skos:prefLabel>
-		<skos:prefLabel xml:lang="vi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Hà Lan</skos:prefLabel>
-		<skos:prefLabel xml:lang="dz" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ནེ་དར་ལེནཌསི</skos:prefLabel>
-		<skos:prefLabel xml:lang="hu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Hollandia</skos:prefLabel>
-		<skos:prefLabel xml:lang="lv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nīderlande</skos:prefLabel>
-		<skos:prefLabel xml:lang="lt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nyderlandai</skos:prefLabel>
-		<skos:prefLabel xml:lang="lt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Olandija</skos:prefLabel>
-		<skos:prefLabel xml:lang="hi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">नीदरलैंड्स</skos:prefLabel>
-		<skos:prefLabel xml:lang="vo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nedän</skos:prefLabel>
-		<skos:prefLabel xml:lang="de" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Niederlande</skos:prefLabel>
-		<skos:prefLabel xml:lang="id" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Belanda</skos:prefLabel>
-		<skos:prefLabel xml:lang="id" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Netherlands</skos:prefLabel>
-		<skos:prefLabel xml:lang="ia" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederlandia</skos:prefLabel>
-		<skos:prefLabel xml:lang="ia" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Pais Basse</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holland</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Kingdom of the Netherlands</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">NL</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederlanden</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Niederlande</skos:prefLabel>
-		<skos:prefLabel xml:lang="qu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Urasuyu</skos:prefLabel>
-		<skos:prefLabel xml:lang="qu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Uray Llaqta Suyu</skos:prefLabel>
-		<skos:prefLabel xml:lang="hy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Նիդերլանդեր</skos:prefLabel>
-		<skos:prefLabel xml:lang="mk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Холандија</skos:prefLabel>
-		<skos:prefLabel xml:lang="az" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Niderland</skos:prefLabel>
-		<skos:prefLabel xml:lang="eu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Herbehereak</skos:prefLabel>
-		<skos:prefLabel xml:lang="is" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holland</skos:prefLabel>
-		<skos:prefLabel xml:lang="is" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Niðurlönd</skos:prefLabel>
-		<skos:prefLabel xml:lang="uk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Нідерланди</skos:prefLabel>
-		<skos:prefLabel xml:lang="it" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Olanda</skos:prefLabel>
-		<skos:prefLabel xml:lang="it" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Paesi Bassi</skos:prefLabel>
-		<skos:prefLabel xml:lang="mt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Olanda</skos:prefLabel>
-		<skos:prefLabel xml:lang="ug" xmlns:skos="http://www.w3.org/2004/02/skos/core#">گوللاندىيە</skos:prefLabel>
-		<skos:prefLabel xml:lang="ms" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Belanda</skos:prefLabel>
-		<skos:prefLabel xml:lang="ur" xmlns:skos="http://www.w3.org/2004/02/skos/core#">نیدرلینڈ</skos:prefLabel>
-		<skos:prefLabel xml:lang="fa" xmlns:skos="http://www.w3.org/2004/02/skos/core#">هلند</skos:prefLabel>
-		<skos:prefLabel xml:lang="ar" xmlns:skos="http://www.w3.org/2004/02/skos/core#">هولندا</skos:prefLabel>
-		<skos:prefLabel xml:lang="io" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederlando</skos:prefLabel>
-		<skos:prefLabel xml:lang="na" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Eben Eyong</skos:prefLabel>
-		<skos:prefLabel xml:lang="nb" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederland</skos:prefLabel>
-		<skos:prefLabel xml:lang="el" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Ολλανδία</skos:prefLabel>
-		<skos:prefLabel xml:lang="am" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ኔዘርላንድ</skos:prefLabel>
-		<skos:prefLabel xml:lang="an" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Países Baxos</skos:prefLabel>
-		<skos:prefLabel xml:lang="ne" xmlns:skos="http://www.w3.org/2004/02/skos/core#">नेदरल्याण्ड्स</skos:prefLabel>
-		<skos:prefLabel xml:lang="pt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Países Baixos</skos:prefLabel>
-		<skos:prefLabel xml:lang="eo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederlando</skos:prefLabel>
-		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holland</skos:prefLabel>
-		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Kingdom of the Netherlands</skos:prefLabel>
-		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Netherlands</skos:prefLabel>
-		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">The Netherlands</skos:prefLabel>
-		<skos:prefLabel xml:lang="et" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holland</skos:prefLabel>
-		<skos:prefLabel xml:lang="et" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Madalmaad</skos:prefLabel>
-		<skos:prefLabel xml:lang="es" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Holanda</skos:prefLabel>
-		<skos:prefLabel xml:lang="es" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Países Bajos</skos:prefLabel>
-		<skos:prefLabel xml:lang="nl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Koninkrijk der Nederlanden</skos:prefLabel>
-		<skos:prefLabel xml:lang="nl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederland</skos:prefLabel>
-		<skos:prefLabel xml:lang="ja" xmlns:skos="http://www.w3.org/2004/02/skos/core#">オランダ</skos:prefLabel>
-		<skos:prefLabel xml:lang="ja" xmlns:skos="http://www.w3.org/2004/02/skos/core#">オランダ王国</skos:prefLabel>
-		<skos:prefLabel xml:lang="af" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nederland</skos:prefLabel>
-		<skos:prefLabel xml:lang="ps" xmlns:skos="http://www.w3.org/2004/02/skos/core#">هالېنډ</skos:prefLabel>
-	</edm:Place>
-	<edm:Place rdf:about="http://sws.geonames.org/2921044/">
-		<skos:prefLabel xml:lang="no" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Tyskland</skos:prefLabel>
-		<skos:prefLabel xml:lang="nn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Tyskland</skos:prefLabel>
-		<skos:prefLabel xml:lang="fy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Dútslân</skos:prefLabel>
-		<skos:prefLabel xml:lang="gd" xmlns:skos="http://www.w3.org/2004/02/skos/core#">A' Ghearmailt</skos:prefLabel>
-		<skos:prefLabel xml:lang="ga" xmlns:skos="http://www.w3.org/2004/02/skos/core#">An Ghearmáin</skos:prefLabel>
-		<skos:prefLabel xml:lang="oc" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemanha</skos:prefLabel>
-		<skos:prefLabel xml:lang="fi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Saksa</skos:prefLabel>
-		<skos:prefLabel xml:lang="om" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germany</skos:prefLabel>
-		<skos:prefLabel xml:lang="fr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Allemagne</skos:prefLabel>
-		<skos:prefLabel xml:lang="fo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Týskland</skos:prefLabel>
-		<skos:prefLabel xml:lang="os" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Герман</skos:prefLabel>
-		<skos:prefLabel xml:lang="he" xmlns:skos="http://www.w3.org/2004/02/skos/core#">גרמניה</skos:prefLabel>
-		<skos:prefLabel xml:lang="gn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemaña</skos:prefLabel>
-		<skos:prefLabel xml:lang="gl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemaña</skos:prefLabel>
-		<skos:prefLabel xml:lang="gl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemaña - Deutschland</skos:prefLabel>
-		<skos:prefLabel xml:lang="pl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Niemcy</skos:prefLabel>
-		<skos:prefLabel xml:lang="gv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Yn Ghermaan</skos:prefLabel>
-		<skos:prefLabel xml:lang="gu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">જમિની</skos:prefLabel>
-		<skos:prefLabel xml:lang="lo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ເຢຍລະມັນ</skos:prefLabel>
-		<skos:prefLabel xml:lang="ln" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alémani</skos:prefLabel>
-		<skos:prefLabel xml:lang="ln" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alémanyi</skos:prefLabel>
-		<skos:prefLabel xml:lang="vi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Đức</skos:prefLabel>
-		<skos:prefLabel xml:lang="dz" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ཇཱར་མ་ནི</skos:prefLabel>
-		<skos:prefLabel xml:lang="lv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Vācija</skos:prefLabel>
-		<skos:prefLabel xml:lang="lt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Vokietija</skos:prefLabel>
-		<skos:prefLabel xml:lang="vo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Deutän</skos:prefLabel>
-		<skos:prefLabel xml:lang="de" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Bundesrepublik Deutschland</skos:prefLabel>
-		<skos:prefLabel xml:lang="de" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Deutschland</skos:prefLabel>
-		<skos:prefLabel xml:lang="uz" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Olmoniya</skos:prefLabel>
-		<skos:prefLabel xml:lang="uz" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Олмония</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">DE</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Duitschland</skos:prefLabel>
-		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">Federal Republic of Germany</skos:prefLabel>
-		<skos:prefLabel xml:lang="mk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Германија</skos:prefLabel>
-		<skos:prefLabel xml:lang="ml" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ജര്‍മനി</skos:prefLabel>
-		<skos:prefLabel xml:lang="ml" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ജര്‍മ്മനി</skos:prefLabel>
-		<skos:prefLabel xml:lang="mi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Tiamana</skos:prefLabel>
-		<skos:prefLabel xml:lang="mn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Герман</skos:prefLabel>
-		<skos:prefLabel xml:lang="uk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Німеччина</skos:prefLabel>
-		<skos:prefLabel xml:lang="eu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemania</skos:prefLabel>
-		<skos:prefLabel xml:lang="mo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Ӂермания</skos:prefLabel>
-		<skos:prefLabel xml:lang="mr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">जमिन</skos:prefLabel>
-		<skos:prefLabel xml:lang="mr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">जर्मनी</skos:prefLabel>
-		<skos:prefLabel xml:lang="mt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Ġermanja</skos:prefLabel>
-		<skos:prefLabel xml:lang="ug" xmlns:skos="http://www.w3.org/2004/02/skos/core#">گېرمانىيە</skos:prefLabel>
-		<skos:prefLabel xml:lang="ms" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Jerman</skos:prefLabel>
-		<skos:prefLabel xml:lang="fa" xmlns:skos="http://www.w3.org/2004/02/skos/core#">آلمان</skos:prefLabel>
-		<skos:prefLabel xml:lang="ur" xmlns:skos="http://www.w3.org/2004/02/skos/core#">جرمنی</skos:prefLabel>
-		<skos:prefLabel xml:lang="ty" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Heremani</skos:prefLabel>
-		<skos:prefLabel xml:lang="na" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germany</skos:prefLabel>
-		<skos:prefLabel xml:lang="el" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Γερμανία</skos:prefLabel>
-		<skos:prefLabel xml:lang="nb" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Tyskland</skos:prefLabel>
-		<skos:prefLabel xml:lang="ne" xmlns:skos="http://www.w3.org/2004/02/skos/core#">जर्मनी</skos:prefLabel>
-		<skos:prefLabel xml:lang="eo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germanio</skos:prefLabel>
-		<skos:prefLabel xml:lang="eo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germanujo</skos:prefLabel>
-		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Federal Republic of Germany</skos:prefLabel>
-		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germany</skos:prefLabel>
-		<skos:prefLabel xml:lang="et" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Saksamaa</skos:prefLabel>
-		<skos:prefLabel xml:lang="es" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemania</skos:prefLabel>
-		<skos:prefLabel xml:lang="nl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Duitsland</skos:prefLabel>
-		<skos:prefLabel xml:lang="to" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Siamane</skos:prefLabel>
-		<skos:prefLabel xml:lang="jv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Jerman</skos:prefLabel>
-		<skos:prefLabel xml:lang="tl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemanya</skos:prefLabel>
-		<skos:prefLabel xml:lang="ca" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemanya</skos:prefLabel>
-		<skos:prefLabel xml:lang="tr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Almanya</skos:prefLabel>
-		<skos:prefLabel xml:lang="tg" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Олмон</skos:prefLabel>
-		<skos:prefLabel xml:lang="te" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ఙర్మని</skos:prefLabel>
-		<skos:prefLabel xml:lang="bs" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Njemačka</skos:prefLabel>
-		<skos:prefLabel xml:lang="br" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alamagn</skos:prefLabel>
-		<skos:prefLabel xml:lang="th" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ประเทศเยอรมนี</skos:prefLabel>
-		<skos:prefLabel xml:lang="th" xmlns:skos="http://www.w3.org/2004/02/skos/core#">สหพันธ์สาธารณรัฐเยอรมนี</skos:prefLabel>
-		<skos:prefLabel xml:lang="th" xmlns:skos="http://www.w3.org/2004/02/skos/core#">เยอรมนี</skos:prefLabel>
-		<skos:prefLabel xml:lang="th" xmlns:skos="http://www.w3.org/2004/02/skos/core#">เยอรมัน</skos:prefLabel>
-		<skos:prefLabel xml:lang="bn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">জার্মানি</skos:prefLabel>
-		<skos:prefLabel xml:lang="bo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">འཇར་མནི།</skos:prefLabel>
-		<skos:prefLabel xml:lang="ta" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ஜெர்மனி</skos:prefLabel>
-		<skos:prefLabel xml:lang="ta" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ஜெர்மன்</skos:prefLabel>
-		<skos:prefLabel xml:lang="su" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Jėrman</skos:prefLabel>
-		<skos:prefLabel xml:lang="ka" xmlns:skos="http://www.w3.org/2004/02/skos/core#">გერმანია</skos:prefLabel>
-		<skos:prefLabel xml:lang="sv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Tyskland</skos:prefLabel>
-		<skos:prefLabel xml:lang="bg" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Германия</skos:prefLabel>
-		<skos:prefLabel xml:lang="st" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Tôitšhi</skos:prefLabel>
-		<skos:prefLabel xml:lang="sw" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Udachi</skos:prefLabel>
-		<skos:prefLabel xml:lang="sw" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Ujerumani</skos:prefLabel>
-		<skos:prefLabel xml:lang="be" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Германія</skos:prefLabel>
-		<skos:prefLabel xml:lang="be" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Нямеччына</skos:prefLabel>
-		<skos:prefLabel xml:lang="kw" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Almayn</skos:prefLabel>
-		<skos:prefLabel xml:lang="sl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nemčija</skos:prefLabel>
-		<skos:prefLabel xml:lang="sk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nemecko</skos:prefLabel>
-		<skos:prefLabel xml:lang="da" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Tyskland</skos:prefLabel>
-		<skos:prefLabel xml:lang="so" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Jarmal</skos:prefLabel>
-		<skos:prefLabel xml:lang="so" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Jarmalka</skos:prefLabel>
-		<skos:prefLabel xml:lang="ku" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Almanya</skos:prefLabel>
-		<skos:prefLabel xml:lang="sr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Немачка</skos:prefLabel>
-		<skos:prefLabel xml:lang="sq" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Gjermani</skos:prefLabel>
-		<skos:prefLabel xml:lang="sq" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Gjermania</skos:prefLabel>
-		<skos:prefLabel xml:lang="ko" xmlns:skos="http://www.w3.org/2004/02/skos/core#">독일</skos:prefLabel>
-		<skos:prefLabel xml:lang="sc" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germània</skos:prefLabel>
-		<skos:prefLabel xml:lang="cy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Yr Almaen</skos:prefLabel>
-		<skos:prefLabel xml:lang="se" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Duiska</skos:prefLabel>
-		<skos:prefLabel xml:lang="se" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Duiskka</skos:prefLabel>
-		<skos:prefLabel xml:lang="sh" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Nemačka</skos:prefLabel>
-		<skos:prefLabel xml:lang="kk" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Алмания</skos:prefLabel>
-		<skos:prefLabel xml:lang="cv" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Германи</skos:prefLabel>
-		<skos:prefLabel xml:lang="km" xmlns:skos="http://www.w3.org/2004/02/skos/core#">អាល្លឺម៉ង់</skos:prefLabel>
-		<skos:prefLabel xml:lang="kn" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ಜರ್ಮನಿ</skos:prefLabel>
-		<skos:prefLabel xml:lang="cs" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Německo</skos:prefLabel>
-		<skos:prefLabel xml:lang="li" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Duutsjlandj</skos:prefLabel>
-		<skos:prefLabel xml:lang="lg" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Girimane</skos:prefLabel>
-		<skos:prefLabel xml:lang="la" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germania</skos:prefLabel>
-		<skos:prefLabel xml:lang="lb" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Däitschland</skos:prefLabel>
-		<skos:prefLabel xml:lang="ru" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Германия</skos:prefLabel>
-		<skos:prefLabel xml:lang="hr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Njemačka</skos:prefLabel>
-		<skos:prefLabel xml:lang="zh" xmlns:skos="http://www.w3.org/2004/02/skos/core#">德国</skos:prefLabel>
-		<skos:prefLabel xml:lang="ro" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germania</skos:prefLabel>
-		<skos:prefLabel xml:lang="rm" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germania</skos:prefLabel>
-		<skos:prefLabel xml:lang="hu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Németország</skos:prefLabel>
-		<skos:prefLabel xml:lang="hi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">जर्मनी</skos:prefLabel>
-		<skos:prefLabel xml:lang="id" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Jerman</skos:prefLabel>
-		<skos:prefLabel xml:lang="ia" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germania</skos:prefLabel>
-		<skos:prefLabel xml:lang="ig" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germany</skos:prefLabel>
-		<skos:prefLabel xml:lang="zu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">IJalimani</skos:prefLabel>
-		<skos:prefLabel xml:lang="hy" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Գերմանիա</skos:prefLabel>
-		<skos:prefLabel xml:lang="qu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alimaniya</skos:prefLabel>
-		<skos:prefLabel xml:lang="qu" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alimanya</skos:prefLabel>
-		<skos:prefLabel xml:lang="is" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Þýskaland</skos:prefLabel>
-		<skos:prefLabel xml:lang="az" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Almaniya</skos:prefLabel>
-		<skos:prefLabel xml:lang="it" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germania</skos:prefLabel>
-		<skos:prefLabel xml:lang="ii" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ꄓꇩ</skos:prefLabel>
-		<skos:prefLabel xml:lang="ar" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ألمانيا</skos:prefLabel>
-		<skos:prefLabel xml:lang="ar" xmlns:skos="http://www.w3.org/2004/02/skos/core#">المانيا</skos:prefLabel>
-		<skos:prefLabel xml:lang="io" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germania</skos:prefLabel>
-		<skos:prefLabel xml:lang="am" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ጀርመን</skos:prefLabel>
-		<skos:prefLabel xml:lang="an" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemaña</skos:prefLabel>
-		<skos:prefLabel xml:lang="pt" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Alemanha</skos:prefLabel>
-		<skos:prefLabel xml:lang="yo" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Jámánì</skos:prefLabel>
-		<skos:prefLabel xml:lang="aa" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Germany</skos:prefLabel>
-		<skos:prefLabel xml:lang="ja" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ドイツ</skos:prefLabel>
-		<skos:prefLabel xml:lang="ja" xmlns:skos="http://www.w3.org/2004/02/skos/core#">ドイツ連邦共和国</skos:prefLabel>
-		<skos:prefLabel xml:lang="yi" xmlns:skos="http://www.w3.org/2004/02/skos/core#">דייטשלאנד</skos:prefLabel>
-		<skos:prefLabel xml:lang="af" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Duitsland</skos:prefLabel>
-		<skos:prefLabel xml:lang="ps" xmlns:skos="http://www.w3.org/2004/02/skos/core#">المان</skos:prefLabel>
-		<skos:prefLabel xml:lang="ps" xmlns:skos="http://www.w3.org/2004/02/skos/core#">جرمني/آلمان</skos:prefLabel>
-	</edm:Place>
-	<skos:Concept rdf:about="http://dbpedia.org/page/World_War_I" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
-		<skos:prefLabel xml:lang="zh">第一次世界大战</skos:prefLabel>
-		<skos:prefLabel xml:lang="uk">Перша світова війна</skos:prefLabel>
-		<skos:prefLabel xml:lang="it">Prima guerra mondiale</skos:prefLabel>
-		<skos:prefLabel xml:lang="no">Første verdenskrig</skos:prefLabel>
-		<skos:prefLabel xml:lang="de">Erste Weltkrieg</skos:prefLabel>
-		<skos:prefLabel xml:lang="fi">Ensimmäinen maailmansota</skos:prefLabel>
-		<skos:prefLabel xml:lang="pl">I wojna światowa</skos:prefLabel>
-		<skos:prefLabel xml:lang="pt">Primeira Guerra Mundial</skos:prefLabel>
-		<skos:prefLabel xml:lang="sv">Första världskriget</skos:prefLabel>
-		<skos:prefLabel xml:lang="fr">Première Guerre mondiale</skos:prefLabel>
-		<skos:prefLabel xml:lang="en">First World War</skos:prefLabel>
-		<skos:prefLabel xml:lang="en">Great War</skos:prefLabel>
-		<skos:prefLabel xml:lang="en">WW1</skos:prefLabel>
-		<skos:prefLabel xml:lang="en">WWI</skos:prefLabel>
-		<skos:prefLabel xml:lang="en">World War 1</skos:prefLabel>
-		<skos:prefLabel xml:lang="en">World War I</skos:prefLabel>
-		<skos:prefLabel xml:lang="en">World War One</skos:prefLabel>
-		<skos:prefLabel xml:lang="ru">Первая мировая война</skos:prefLabel>
-		<skos:prefLabel xml:lang="es">Primera Guerra Mundial</skos:prefLabel>
-		<skos:prefLabel xml:lang="nl">Eerste Wereldoorlog</skos:prefLabel>
-		<skos:prefLabel xml:lang="ja">第一次世界大戦</skos:prefLabel>
+	<edm:TimeSpan rdf:about="http://semium.org/time/2005">
+		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">2005</skos:prefLabel>
+		<dcterms:isPartOf rdf:resource="http://semium.org/time/20xx_1_third" xmlns:dcterms="http://purl.org/dc/terms/"/>
+		<edm:begin>Sat Jan 01 01:00:00 CET 2005</edm:begin>
+		<edm:end>Sat Dec 31 01:00:00 CET 2005</edm:end>
+	</edm:TimeSpan>
+	<edm:TimeSpan rdf:about="http://semium.org/time/20xx_1_third">
+		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Early 21th century</skos:prefLabel>
+		<skos:prefLabel xml:lang="ru" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Начало 21-го века</skos:prefLabel>
+		<edm:begin>Mon Jan 01 01:00:00 CET 2001</edm:begin>
+		<edm:end>Sat Dec 31 01:00:00 CET 2033</edm:end>
+	</edm:TimeSpan>
+	<edm:TimeSpan rdf:about="http://semium.org/time/20xx">
+		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">21..</skos:prefLabel>
+		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">21??</skos:prefLabel>
+		<skos:prefLabel xmlns:skos="http://www.w3.org/2004/02/skos/core#">21e</skos:prefLabel>
+		<skos:prefLabel xml:lang="fr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">21er siècle</skos:prefLabel>
+		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">21-st</skos:prefLabel>
+		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">21st</skos:prefLabel>
+		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">21st century</skos:prefLabel>
+		<skos:prefLabel xml:lang="ru" xmlns:skos="http://www.w3.org/2004/02/skos/core#">21й век</skos:prefLabel>
+		<skos:prefLabel xml:lang="nl" xmlns:skos="http://www.w3.org/2004/02/skos/core#">21ste eeuw</skos:prefLabel>
+		<dcterms:isPartOf rdf:resource="http://semium.org/time/AD2xxx" xmlns:dcterms="http://purl.org/dc/terms/"/>
+		<edm:begin>Mon Jan 01 01:00:00 CET 2001</edm:begin>
+		<edm:end>Fri Dec 31 01:00:00 CET 2100</edm:end>
+	</edm:TimeSpan>
+	<edm:TimeSpan rdf:about="http://semium.org/time/AD2xxx">
+		<skos:prefLabel xml:lang="fr" xmlns:skos="http://www.w3.org/2004/02/skos/core#">2e millénaire après J.-C.</skos:prefLabel>
+		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Second millenium AD</skos:prefLabel>
+		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Second millenium AD, years 1001-2000</skos:prefLabel>
+	</edm:TimeSpan>
+	<edm:TimeSpan rdf:about="http://semium.org/time/ChronologicalPeriod">
+		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Chronological period</skos:prefLabel>
+		<dcterms:isPartOf rdf:resource="http://semium.org/time/Time" xmlns:dcterms="http://purl.org/dc/terms/"/>
+	</edm:TimeSpan>
+	<edm:TimeSpan rdf:about="http://semium.org/time/Time">
+		<skos:prefLabel xml:lang="en" xmlns:skos="http://www.w3.org/2004/02/skos/core#">Time</skos:prefLabel>
+	</edm:TimeSpan>
+	<skos:Concept rdf:about="http://www.eionet.europa.eu/gemet/concept/6205" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+		<skos:prefLabel xml:lang="sl">fotografija</skos:prefLabel>
+		<skos:prefLabel xml:lang="sk">fotografia</skos:prefLabel>
+		<skos:prefLabel xml:lang="da">fotografi</skos:prefLabel>
+		<skos:prefLabel xml:lang="eu">fotografia; argazki</skos:prefLabel>
+		<skos:prefLabel xml:lang="ro">fotograf</skos:prefLabel>
+		<skos:prefLabel xml:lang="it">fotografia (immagine)</skos:prefLabel>
+		<skos:prefLabel xml:lang="tr">fotoğraf</skos:prefLabel>
+		<skos:prefLabel xml:lang="mt">ritratt</skos:prefLabel>
+		<skos:prefLabel xml:lang="no">fotografi (bilde)</skos:prefLabel>
+		<skos:prefLabel xml:lang="hu">fénykép</skos:prefLabel>
+		<skos:prefLabel xml:lang="lv">fotogrāfs</skos:prefLabel>
+		<skos:prefLabel xml:lang="ar">صورة فوتوغرافية</skos:prefLabel>
+		<skos:prefLabel xml:lang="lt">nuotrauka</skos:prefLabel>
+		<skos:prefLabel xml:lang="cs">fotografie</skos:prefLabel>
+		<skos:prefLabel xml:lang="de">Photo</skos:prefLabel>
+		<skos:prefLabel xml:lang="el">φωτογραφία</skos:prefLabel>
+		<skos:prefLabel>photograph</skos:prefLabel>
+		<skos:prefLabel>照片</skos:prefLabel>
+		<skos:prefLabel xml:lang="fi">valokuva</skos:prefLabel>
+		<skos:prefLabel xml:lang="pl">fotografia</skos:prefLabel>
+		<skos:prefLabel xml:lang="pt">fotografia (imagem)</skos:prefLabel>
+		<skos:prefLabel xml:lang="bg">Фотография, фотографско изображение, снимка</skos:prefLabel>
+		<skos:prefLabel xml:lang="sv">fotografi</skos:prefLabel>
+		<skos:prefLabel xml:lang="fr">photo</skos:prefLabel>
+		<skos:prefLabel xml:lang="en">photograph</skos:prefLabel>
+		<skos:prefLabel xml:lang="ru">фотография</skos:prefLabel>
+		<skos:prefLabel xml:lang="et">foto</skos:prefLabel>
+		<skos:prefLabel xml:lang="es">fotografía</skos:prefLabel>
+		<skos:prefLabel xml:lang="nl">foto</skos:prefLabel>
+		<skos:broader rdf:resource="http://www.eionet.europa.eu/gemet/concept/2284"/>
 	</skos:Concept>
-	<ore:Aggregation rdf:about="http://data.europeana.eu/aggregation/provider/9200231/BibliographicResource_3000060331322" xmlns:ore="http://www.openarchives.org/ore/terms/">
-		<edm:aggregatedCHO rdf:resource="http://data.europeana.eu/item/9200231/BibliographicResource_3000060331322"/>
-		<edm:dataProvider>Staatsbibliothek zu Berlin - Preußischer Kulturbesitz</edm:dataProvider>
-		<edm:hasView rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000002.jpg"/>
-		<edm:hasView rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000003.jpg"/>
-		<edm:hasView rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000004.jpg"/>
-		<edm:hasView rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000005.jpg"/>
-		<edm:hasView rdf:resource="http://stabikat.de/DB=1/PPN?PPN=746595050"/>
-		<edm:isShownAt rdf:resource="http://resolver.staatsbibliothek-berlin.de/SBB0000D98A00000000"/>
-		<edm:isShownBy rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/1200/0/00000001.jpg"/>
-		<edm:object rdf:resource="http://content.staatsbibliothek-berlin.de/dms/PPN746595050/150/0/00000001.png"/>
+	<skos:Concept rdf:about="http://www.eionet.europa.eu/gemet/concept/2284" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+		<skos:prefLabel xml:lang="sl">dokumentacija</skos:prefLabel>
+		<skos:prefLabel xml:lang="sk">dokumentácia</skos:prefLabel>
+		<skos:prefLabel xml:lang="eu">dokumentatze; dokumentazio</skos:prefLabel>
+		<skos:prefLabel xml:lang="da">dokumentation</skos:prefLabel>
+		<skos:prefLabel xml:lang="ro">documentaţie</skos:prefLabel>
+		<skos:prefLabel xml:lang="it">documentazione</skos:prefLabel>
+		<skos:prefLabel xml:lang="tr">dokümantasyon</skos:prefLabel>
+		<skos:prefLabel xml:lang="mt">dokumentazzjoni</skos:prefLabel>
+		<skos:prefLabel xml:lang="no">dokumentasjon</skos:prefLabel>
+		<skos:prefLabel xml:lang="hu">dokumentálás</skos:prefLabel>
+		<skos:prefLabel xml:lang="lv">dokumentācija</skos:prefLabel>
+		<skos:prefLabel xml:lang="ar">توثيق</skos:prefLabel>
+		<skos:prefLabel xml:lang="lt">dokumentacija</skos:prefLabel>
+		<skos:prefLabel xml:lang="cs">dokumentace</skos:prefLabel>
+		<skos:prefLabel xml:lang="de">Dokumentation</skos:prefLabel>
+		<skos:prefLabel xml:lang="el">τεκμηρίωση</skos:prefLabel>
+		<skos:prefLabel>documentation</skos:prefLabel>
+		<skos:prefLabel>文档化</skos:prefLabel>
+		<skos:prefLabel xml:lang="fi">dokumentointi, asiakirja-aineisto</skos:prefLabel>
+		<skos:prefLabel xml:lang="pt">documentação</skos:prefLabel>
+		<skos:prefLabel xml:lang="pl">dokumentacja</skos:prefLabel>
+		<skos:prefLabel xml:lang="bg">Документиране</skos:prefLabel>
+		<skos:prefLabel xml:lang="fr">documentation</skos:prefLabel>
+		<skos:prefLabel xml:lang="sv">dokumentation</skos:prefLabel>
+		<skos:prefLabel xml:lang="en">documentation</skos:prefLabel>
+		<skos:prefLabel xml:lang="ru">документация</skos:prefLabel>
+		<skos:prefLabel xml:lang="et">dokumentatsioon</skos:prefLabel>
+		<skos:prefLabel xml:lang="es">documentación</skos:prefLabel>
+		<skos:prefLabel xml:lang="nl">documentatie</skos:prefLabel>
+		<skos:broader rdf:resource="http://www.eionet.europa.eu/gemet/concept/4303"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.eionet.europa.eu/gemet/concept/4303" xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+		<skos:prefLabel xml:lang="sl">informacija, informacije, podatki</skos:prefLabel>
+		<skos:prefLabel xml:lang="sk">informácia</skos:prefLabel>
+		<skos:prefLabel xml:lang="eu">informazio</skos:prefLabel>
+		<skos:prefLabel xml:lang="da">information</skos:prefLabel>
+		<skos:prefLabel xml:lang="ro">informaţie</skos:prefLabel>
+		<skos:prefLabel xml:lang="it">informazione</skos:prefLabel>
+		<skos:prefLabel xml:lang="tr">bilgi</skos:prefLabel>
+		<skos:prefLabel xml:lang="mt">informazzjoni</skos:prefLabel>
+		<skos:prefLabel xml:lang="no">informasjon</skos:prefLabel>
+		<skos:prefLabel xml:lang="hu">információ</skos:prefLabel>
+		<skos:prefLabel xml:lang="lv">informācija</skos:prefLabel>
+		<skos:prefLabel xml:lang="ar">المعلومات</skos:prefLabel>
+		<skos:prefLabel xml:lang="lt">informacija</skos:prefLabel>
+		<skos:prefLabel xml:lang="cs">informace</skos:prefLabel>
+		<skos:prefLabel xml:lang="de">Information</skos:prefLabel>
+		<skos:prefLabel xml:lang="el">πληροφορία(ίες)/πληροφόρηση/στοιχεία/ενημέρωση</skos:prefLabel>
+		<skos:prefLabel>information</skos:prefLabel>
+		<skos:prefLabel>信息</skos:prefLabel>
+		<skos:prefLabel xml:lang="fi">tieto</skos:prefLabel>
+		<skos:prefLabel xml:lang="pt">informação</skos:prefLabel>
+		<skos:prefLabel xml:lang="pl">informacja</skos:prefLabel>
+		<skos:prefLabel xml:lang="bg">Информация</skos:prefLabel>
+		<skos:prefLabel xml:lang="fr">information</skos:prefLabel>
+		<skos:prefLabel xml:lang="sv">information</skos:prefLabel>
+		<skos:prefLabel xml:lang="en">information</skos:prefLabel>
+		<skos:prefLabel xml:lang="ru">информация</skos:prefLabel>
+		<skos:prefLabel xml:lang="et">teave, info[rmatsioon]</skos:prefLabel>
+		<skos:prefLabel xml:lang="es">información</skos:prefLabel>
+		<skos:prefLabel xml:lang="nl">informatie</skos:prefLabel>
+	</skos:Concept>
+	<ore:Aggregation rdf:about="http://data.europeana.eu/aggregation/provider/9200316/BibliographicResource_3000092751107" xmlns:ore="http://www.openarchives.org/ore/terms/">
+		<edm:aggregatedCHO rdf:resource="http://data.europeana.eu/item/9200316/BibliographicResource_3000092751107"/>
+		<edm:dataProvider>National Library of Scotland</edm:dataProvider>
+		<edm:isShownAt rdf:resource="http://digital.nls.uk/74546914"/>
+		<edm:isShownBy rdf:resource="http://deriv.nls.uk/dcn3/7430/74301059.3.jpg"/>
+		<edm:object rdf:resource="http://deriv.nls.uk/dcn17/7430/74301059.17.jpg"/>
 		<edm:provider xml:lang="en">The European Library</edm:provider>
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+		<edm:rights rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
 	</ore:Aggregation>
-	<ore:Proxy rdf:about="http://data.europeana.eu/proxy/provider/9200231/BibliographicResource_3000060331322" xmlns:ore="http://www.openarchives.org/ore/terms/">
-		<dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jacoba van Heemskerck</dc:creator>
-		<dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">[Electronic ed.]</dc:description>
-		<dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/">oai:digital.staatsbibliothek-berlin.de:PPN746595050</dc:identifier>
-		<dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/">Staatsbibliothek zu Berlin - Preußischer Kulturbesitz, Germany</dc:publisher>
-		<dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">de</dc:language>
-		<dc:subject xml:lang="en" xmlns:dc="http://purl.org/dc/elements/1.1/">World War I</dc:subject>
-		<dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Korrespondenz</dc:title>
-		<dc:type xmlns:dc="http://purl.org/dc/elements/1.1/">letter</dc:type>
-		<dc:type xmlns:dc="http://purl.org/dc/elements/1.1/">autograph</dc:type>
-		<dc:type xml:lang="en" xmlns:dc="http://purl.org/dc/elements/1.1/">Text</dc:type>
-		<dcterms:extent xmlns:dcterms="http://purl.org/dc/terms/">1 eigenhändiger Brief mit Unterschrift, 2 Bl.</dcterms:extent>
-		<dcterms:isPartOf rdf:resource="http://data.theeuropeanlibrary.org/Collection/a1081" xmlns:dcterms="http://purl.org/dc/terms/"/>
-		<dcterms:isPartOf xml:lang="en" xmlns:dcterms="http://purl.org/dc/terms/">Europeana Collections 1914-1918</dcterms:isPartOf>
-		<dcterms:spatial rdf:resource="http://sws.geonames.org/2747373/" xmlns:dcterms="http://purl.org/dc/terms/"/>
-		<dcterms:spatial rdf:resource="http://sws.geonames.org/2950159/" xmlns:dcterms="http://purl.org/dc/terms/"/>
+	<ore:Proxy rdf:about="http://data.europeana.eu/proxy/provider/9200316/BibliographicResource_3000092751107" xmlns:ore="http://www.openarchives.org/ore/terms/">
+		<dc:contributor xmlns:dc="http://purl.org/dc/elements/1.1/">Ernest, British official photographer Brooks</dc:contributor>
+		<dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">1914 - 1920</dc:date>
+		<dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2005</dc:date>
+		<dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">Wounded soldier lying in a hospital bed, with his leg in traction. He appears to have lost part of his other leg. The bottom legs of the bed have been placed on blocks to make them higher than the top. According to the original caption the woman sitting next to the soldier is his mother. She has a letter in her hand, and is likely reading it to her son. The letter and number 'C35' are posted above the soldier's bed. There is a soldier having a cigarette in the next bed.     Many of the official photographs taken during World War I were used by the Government and Military as propaganda. This particular photograph is a good example of the type that would have been used to reassure those at home about conditions at the Front and the treatment of wounded soldiers.    [Original reads: 'OFFICIAL PHOTOGRAPHS TAKEN ON THE BRITISH WESTERN FRONT IN FRANCE - A MOTHER READING TO HER SON SOME KIND MESSAGES FROM VARIOUS FRIENDS.'].</dc:description>
+		<dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">Electronic reproduction of:; Mother reading to her son some kind messages from various friends.; 1 photograph : black and white ; 16.30 x 21.70 cm.</dc:description>
+		<dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/">74546914</dc:identifier>
+		<dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">Available under Creative Commons license; Attribution, Non-commercial, ShareAlike</dc:rights>
+		<dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Casting plaster</dc:subject>
+		<dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Hospital beds</dc:subject>
+		<dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Legs (animal components)</dc:subject>
+		<dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Mothers</dc:subject>
+		<dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Pulleys</dc:subject>
+		<dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Reading</dc:subject>
+		<dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Sons</dc:subject>
+		<dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Visiting</dc:subject>
+		<dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">War casualties</dc:subject>
+		<dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Mother reading to her son some kind messages from various friends</dc:title>
+		<dc:type xmlns:dc="http://purl.org/dc/elements/1.1/">Photograph</dc:type>
+		<dc:type xml:lang="en" xmlns:dc="http://purl.org/dc/elements/1.1/">Monograph</dc:type>
+		<dc:type xml:lang="en" xmlns:dc="http://purl.org/dc/elements/1.1/">Still image</dc:type>
+		<dcterms:alternative xmlns:dcterms="http://purl.org/dc/terms/">Mother reading to her son some kind messages from various friends</dcterms:alternative>
+		<dcterms:extent xmlns:dcterms="http://purl.org/dc/terms/">1 online resource</dcterms:extent>
+		<dcterms:isPartOf rdf:resource="http://data.theeuropeanlibrary.org/Collection/a1219" xmlns:dcterms="http://purl.org/dc/terms/"/>
 		<edm:europeanaProxy>false</edm:europeanaProxy>
-		<ore:proxyFor rdf:resource="http://data.europeana.eu/item/9200231/BibliographicResource_3000060331322"/>
-		<ore:proxyIn rdf:resource="http://data.europeana.eu/aggregation/provider/9200231/BibliographicResource_3000060331322"/>
-		<edm:type>TEXT</edm:type>
+		<ore:proxyFor rdf:resource="http://data.europeana.eu/item/9200316/BibliographicResource_3000092751107"/>
+		<ore:proxyIn rdf:resource="http://data.europeana.eu/aggregation/provider/9200316/BibliographicResource_3000092751107"/>
+		<edm:type>IMAGE</edm:type>
 	</ore:Proxy>
-	<ore:Proxy rdf:about="http://data.europeana.eu/proxy/europeana/9200231/BibliographicResource_3000060331322" xmlns:ore="http://www.openarchives.org/ore/terms/">
-		<dc:subject rdf:resource="http://dbpedia.org/page/World_War_I" xmlns:dc="http://purl.org/dc/elements/1.1/"/>
-		<dcterms:spatial rdf:resource="http://sws.geonames.org/2747373/" xmlns:dcterms="http://purl.org/dc/terms/"/>
-		<dcterms:spatial rdf:resource="http://sws.geonames.org/2950159/" xmlns:dcterms="http://purl.org/dc/terms/"/>
+	<ore:Proxy rdf:about="http://data.europeana.eu/proxy/europeana/9200316/BibliographicResource_3000092751107" xmlns:ore="http://www.openarchives.org/ore/terms/">
+		<dc:date rdf:resource="http://semium.org/time/2005" xmlns:dc="http://purl.org/dc/elements/1.1/"/>
+		<dc:type rdf:resource="http://www.eionet.europa.eu/gemet/concept/6205" xmlns:dc="http://purl.org/dc/elements/1.1/"/>
 		<edm:europeanaProxy>true</edm:europeanaProxy>
-		<ore:proxyFor rdf:resource="http://data.europeana.eu/item/9200231/BibliographicResource_3000060331322"/>
-		<ore:proxyIn rdf:resource="http://data.europeana.eu/aggregation/europeana/9200231/BibliographicResource_3000060331322"/>
-		<edm:type>TEXT</edm:type>
+		<edm:year xml:lang="eur">2005</edm:year>
+		<ore:proxyFor rdf:resource="http://data.europeana.eu/item/9200316/BibliographicResource_3000092751107"/>
+		<ore:proxyIn rdf:resource="http://data.europeana.eu/aggregation/europeana/9200316/BibliographicResource_3000092751107"/>
+		<edm:type>IMAGE</edm:type>
 	</ore:Proxy>
-	<edm:EuropeanaAggregation rdf:about="http://data.europeana.eu/aggregation/europeana/9200231/BibliographicResource_3000060331322">
-		<edm:aggregatedCHO rdf:resource="http://data.europeana.eu/item/9200231/BibliographicResource_3000060331322"/>
-		<edm:collectionName>9200231_Ag_EU_TEL_a1081_Collections_1914-1918</edm:collectionName>
-		<edm:country>Germany</edm:country>
-		<edm:landingPage rdf:resource="http://www.europeana.eu/portal/recordhttp://data.theeuropeanlibrary.org/BibliographicResource/3000060331322"/>
-		<edm:language>de</edm:language>
-		<edm:rights rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+	<edm:EuropeanaAggregation rdf:about="http://data.europeana.eu/aggregation/europeana/9200316/BibliographicResource_3000092751107">
+		<edm:aggregatedCHO rdf:resource="http://data.europeana.eu/item/9200316/BibliographicResource_3000092751107"/>
+		<edm:collectionName>9200316_Ag_EU_TEL_a11219_Scotland</edm:collectionName>
+		<edm:country>United Kingdom</edm:country>
+		<edm:landingPage rdf:resource="http://europeana.eu/portal/record/9200316/BibliographicResource_3000092751107.html"/>
+		<edm:language>en</edm:language>
+		<edm:rights rdf:resource="http://creativecommons.org/licenses/by-nc-sa/4.0/"/>
 	</edm:EuropeanaAggregation>
 </rdf:RDF>

@@ -5,13 +5,13 @@ import java.util.Set;
 
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
-import org.apache.tika.metadata.TikaCoreProperties;
 import org.apache.tika.mime.MediaType;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.xml.AttributeMetadataHandler;
 import org.apache.tika.sax.TeeContentHandler;
 import org.apache.tika.sax.TextContentHandler;
 import org.xml.sax.ContentHandler;
+
 import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 
 /**
@@ -56,15 +56,15 @@ public class TEIParser extends AbstractXMLParser {
         ContentHandler defaultContentHandler = new TextContentHandler(handler, true);
         return new TeeContentHandler(
                 defaultContentHandler,
-                getTEIHandler(metadata, TikaCoreProperties.TITLE, 
+                getTEIHandler(metadata, CendariProperties.TITLE, 
                         "title", "titleStmt"),
-                getTEIHandler(metadata, TikaCoreProperties.KEYWORDS, 
+                getTEIHandler(metadata, CendariProperties.KEYWORDS, 
                         "term", "keywords"),
-                getTEIHandler(metadata, TikaCoreProperties.DESCRIPTION, 
+                getTEIHandler(metadata, CendariProperties.DESCRIPTION, 
                         "description"),
-                getTEIHandler(metadata, TikaCoreProperties.PUBLISHER, 
+                getTEIHandler(metadata, CendariProperties.PUBLISHER, 
                         "publisher"),
-                getTEIHandler(metadata, TikaCoreProperties.CONTRIBUTOR, 
+                getTEIHandler(metadata, CendariProperties.CONTRIBUTOR, 
                         "name", "titleStmt", "respStmt"),
                 getTEIHandler(metadata, CendariProperties.PLACE, 
                         "placeName"),
@@ -83,7 +83,7 @@ public class TEIParser extends AbstractXMLParser {
                 //getTEIHandler(metadata, TikaCoreProperties.TYPE, "type"),
                 //getTEIHandler(metadata, TikaCoreProperties.FORMAT, "format"),
                 //getTEIHandler(metadata, TikaCoreProperties.IDENTIFIER, "identifier"),
-                getTEIHandler(metadata, TikaCoreProperties.RIGHTS, "licence"),
+                getTEIHandler(metadata, CendariProperties.RIGHTS, "licence"),
                 new AttributeMetadataHandler(NAMESPACE_URI_XML, "lang", metadata, 
                         CendariProperties.LANG)
                 );

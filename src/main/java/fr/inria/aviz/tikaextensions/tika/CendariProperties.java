@@ -27,7 +27,7 @@ public class CendariProperties {
      * "akk" for Akkadian, and "en-GB" for English used in the United Kingdom.
      */
     public static final Property LANG = Property.internalTextBag(
-            PREFIX_XML + Metadata.NAMESPACE_PREFIX_DELIMITER + "lang");
+            PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "lang");
     
     /**
      * 
@@ -47,6 +47,9 @@ public class CendariProperties {
     public static final Property DATE = Property.internalTextBag(
             PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "date");
     
+    public static final Property TYPE = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "type");
+
     /**
      * Event type
      */
@@ -83,5 +86,41 @@ public class CendariProperties {
      */
     public static final Property NERD =  Property.internalTextBag(
           PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "nerd");
+    
+    public static final Property PROVIDER =  Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "provider");
 
+    public static final Property RIGHTS = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "rights");
+
+    public static final Property TITLE = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "title");
+    public static final Property DESCRIPTION = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "description");
+    public static final Property PUBLISHER = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "publisher");
+    public static final Property CONTRIBUTOR = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "contributor");
+    public static final Property CREATOR = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "creator");
+    public static final Property KEYWORDS = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "keywords");
+    public static final Property FORMAT = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "format");
+    public static final Property IDENTIFIER = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "identifier");
+    public static final Property RELATION = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "relation");
+
+    public static final Property COVERAGE = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "coverage");
+    public static final Property SOURCE = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "source");
+    
+    public static final Property LATITUDE = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "latitude");
+ 
+    public static final Property LONGITUDE = Property.internalTextBag(
+        PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "longitude");
+ 
 }

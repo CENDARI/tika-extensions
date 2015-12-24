@@ -3,13 +3,16 @@ package fr.inria.aviz.tikaextensions;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 
-import fr.inria.aviz.tikaextensions.tika.CendariProperties;
-import fr.inria.aviz.tikaextensions.utils.TextCleaner;
-
 import org.apache.log4j.Logger;
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
+import org.apache.tika.metadata.Property;
+import org.apache.tika.metadata.TikaCoreProperties;
+
+import fr.inria.aviz.tikaextensions.tika.CendariProperties;
+import fr.inria.aviz.tikaextensions.tika.ExcludeCendariIndexer;
+import fr.inria.aviz.tikaextensions.utils.TextCleaner;
 
 /**
  * Singleton class, find metadata and text contents in documents.
@@ -73,27 +76,68 @@ public class TikaExtensions {
         
         
         try {
+          String parsedContent = tika.parseToString(content, metadata, maxLength);
+          
+          shuffleMetadata(metadata, "publisher", CendariProperties.PUBLISHER);
+          shuffleMetadata(metadata, "dc:publisher", CendariProperties.PUBLISHER);
+          shuffleMetadata(metadata, "creator", CendariProperties.CREATOR);
+          shuffleMetadata(metadata, "Author", CendariProperties.CREATOR);
+          shuffleMetadata(metadata, "dc:creator", CendariProperties.CREATOR);
+          shuffleMetadata(metadata, "contributor", CendariProperties.CONTRIBUTOR);
+          shuffleMetadata(metadata, "dc:contributor", CendariProperties.CONTRIBUTOR);
+          shuffleMetadata(metadata, "date", CendariProperties.DATE);
+          shuffleMetadata(metadata, "created", CendariProperties.DATE);
+          shuffleMetadata(metadata, "dc:date", CendariProperties.DATE);
+          shuffleMetadata(metadata, "dcterms:created", CendariProperties.DATE);
+          shuffleMetadata(metadata, "Creation-Date", CendariProperties.DATE);
+          shuffleMetadata(metadata, "dc:format", CendariProperties.FORMAT);
+          shuffleMetadata(metadata, "dc:type", CendariProperties.TYPE);
+          shuffleMetadata(metadata, TikaCoreProperties.COVERAGE.getName(), CendariProperties.COVERAGE);
+          shuffleMetadata(metadata, TikaCoreProperties.DESCRIPTION.getName(), CendariProperties.DESCRIPTION);
+          shuffleMetadata(metadata, TikaCoreProperties.KEYWORDS.getName(), CendariProperties.KEYWORDS);
+          shuffleMetadata(metadata, TikaCoreProperties.FORMAT.getName(), CendariProperties.FORMAT);
+          shuffleMetadata(metadata, TikaCoreProperties.TYPE.getName(), CendariProperties.TYPE);
+          shuffleMetadata(metadata, TikaCoreProperties.IDENTIFIER.getName(), CendariProperties.IDENTIFIER);
+          shuffleMetadata(metadata, TikaCoreProperties.LATITUDE.getName(), CendariProperties.LATITUDE);
+          shuffleMetadata(metadata, TikaCoreProperties.LONGITUDE.getName(), CendariProperties.LONGITUDE);
+          shuffleMetadata(metadata, TikaCoreProperties.SOURCE.getName(), CendariProperties.SOURCE);
+          shuffleMetadata(metadata, TikaCoreProperties.LANGUAGE.getName(), CendariProperties.LANG);
+          shuffleMetadata(metadata, TikaCoreProperties.PUBLISHER.getName(), CendariProperties.PUBLISHER);
+          shuffleMetadata(metadata, TikaCoreProperties.RELATION.getName(), CendariProperties.RELATION);
+          shuffleMetadata(metadata, TikaCoreProperties.RIGHTS.getName(), CendariProperties.RIGHTS);
+          shuffleMetadata(metadata, TikaCoreProperties.TITLE.getName(), CendariProperties.TITLE);
+          
+          
+          System.out.println("REALLY PARSING 2 "+name);
+          
+          if ( !ExcludeCendariIndexer.shouldExclude(metadata.getValues(CendariProperties.PROVIDER))){
             
-            String parsedContent = tika.parseToString(content, metadata, maxLength);
-            String nerdString =
-                metadata.getValues(CendariProperties.NERD).length > 0 ?
-                   getString(metadata.getValues(CendariProperties.NERD)) :"";
-            
-            if (!nerdString.equals("")) {
-               nerdString = TextCleaner.cleanup(nerdString);
-               metadata.set(CendariProperties.NERD, nerdString);
-               metadata.add("text", nerdString);
-            }
+                String nerdString =
+                    metadata.getValues(CendariProperties.NERD).length > 0 ?
+                       getString(metadata.getValues(CendariProperties.NERD)) :"";
+                
+                if (!nerdString.equals("")) {
+                   nerdString = TextCleaner.cleanup(nerdString);
+                   metadata.set(CendariProperties.NERD, nerdString);
+                   metadata.add("text", nerdString);
+                }
+                else
+                {
+                 
+                   metadata.add("text", TextCleaner.cleanup(parsedContent));
+                }
+          
+           }
             else
             {
-               metadata.add("text", TextCleaner.cleanup(parsedContent));
-              
+              metadata.add("text", "");
+              metadata.set(CendariProperties.NERD, "");
             }
             
             if (metadata.get(CendariProperties.REFERENCE) == null) {
                 metadata.add(CendariProperties.REFERENCE, metadata.get(CendariProperties.POTENTIAL_REFERENCE));
-                metadata.remove(CendariProperties.POTENTIAL_REFERENCE.getName());
             }
+            metadata.remove(CendariProperties.POTENTIAL_REFERENCE.getName());
         }
         catch (TikaException e) {
             logger.error("Tika parse exception for document "+name, e);
@@ -113,6 +157,18 @@ public class TikaExtensions {
       }
       String text = builder.toString();
       return text;
+    }
+    
+    private void shuffleMetadata (Metadata metadata, String name, Property property) {
+      if (metadata.getValues(name) != null && metadata.getValues(name).length>0) {
+           for (int i= 0; i<metadata.getValues(name).length;i++){
+             metadata.add(property, metadata.getValues(name)[i]);
+           }
+           metadata.remove(name);
+      }
+      
+      
+      
     }
 
 }
