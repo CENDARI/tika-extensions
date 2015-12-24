@@ -27,7 +27,7 @@ public class CendariTextContentHandler extends TextContentHandler {
   public void endElement (String uri, String localName, String qName)
       throws SAXException
   {
-      System.out.println("ADDING SPACE AFTER ELEMENT "+localName);
+      //System.out.println("ADDING SPACE AFTER ELEMENT "+localName);
       delegateT.characters(SPACE, 0, SPACE.length);
   }
 
