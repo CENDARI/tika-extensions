@@ -11,7 +11,9 @@ public class ExcludeCendariIndexer {
   private static List<String> excludeList = 
         new ArrayList<String>(
             Arrays.asList(
-                "http://data.theeuropeanlibrary.org/Agent/The_European_Library"
+                "http://data.theeuropeanlibrary.org/Agent/The_European_Library",
+                "http://resources.cendari.dariah.eu/ontologies/cao",
+                "http://resources.cendari.dariah.eu/ontology/elementset/cedm/"
   ));
   
   

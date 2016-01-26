@@ -7,6 +7,8 @@ import org.apache.tika.metadata.Property;
 import org.apache.tika.parser.xml.ElementMetadataHandler;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
+
+import edu.emory.mathcs.backport.java.util.Arrays;
 import fr.inria.aviz.tikaextensions.utils.TextCleaner;
 
 /**
@@ -67,7 +69,7 @@ public class ContextualElementMetadataHandler extends ElementMetadataHandler {
     protected boolean isMatchingStack() {
         int cn = context.length,
             sn = stack.size();
-
+        
         if (cn > sn)
             return false;
         for (int i = 0; i < cn; i++) {
@@ -137,4 +139,26 @@ public class ContextualElementMetadataHandler extends ElementMetadataHandler {
     protected void addMetadata(String value) {
         super.addMetadata(TextCleaner.cleanup(value));
     }
+    
+    
+   /* @Override
+    public void characters(char[] ch, int start, int length) {
+      boolean ampersandExists = false;
+      for (char cc:ch){
+         if (String.valueOf(cc).equals("&") ){
+            ampersandExists = true;
+            break;
+         }
+        }
+      char[] ch1 = ch;
+       if (ampersandExists) {
+         String str = String.copyValueOf(ch);
+         str.replaceAll("&", "&amp;");
+         ch1 = str.toCharArray();
+       }
+       
+       super.characters(ch1, start, length);
+    }
+*/
 }
+

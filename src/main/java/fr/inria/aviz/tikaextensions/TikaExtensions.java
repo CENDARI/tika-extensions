@@ -1,8 +1,12 @@
 package fr.inria.aviz.tikaextensions;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.log4j.Logger;
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
@@ -10,6 +14,7 @@ import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
 import org.apache.tika.metadata.TikaCoreProperties;
 
+import edu.emory.mathcs.backport.java.util.Arrays;
 import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 import fr.inria.aviz.tikaextensions.tika.ExcludeCendariIndexer;
 import fr.inria.aviz.tikaextensions.utils.TextCleaner;
@@ -111,7 +116,6 @@ public class TikaExtensions {
           //System.out.println("REALLY PARSING 2 "+name);
           
           if ( !ExcludeCendariIndexer.shouldExclude(metadata.getValues(CendariProperties.PROVIDER))){
-            
                 String nerdString =
                     metadata.getValues(CendariProperties.NERD).length > 0 ?
                        getString(metadata.getValues(CendariProperties.NERD)) :"";
@@ -151,6 +155,7 @@ public class TikaExtensions {
     }
     
     private String getString(String [] nerdArray){
+
       StringBuilder builder = new StringBuilder();
       for (String value : nerdArray) {
           builder.append(value+" ");
@@ -162,12 +167,13 @@ public class TikaExtensions {
     private void shuffleMetadata (Metadata metadata, String name, Property property) {
       if (metadata.getValues(name) != null && metadata.getValues(name).length>0) {
            for (int i= 0; i<metadata.getValues(name).length;i++){
-             metadata.add(property, metadata.getValues(name)[i]);
+               //to not add duplicate values (somtimes tika internals do it even for same values) 
+               if (! ArrayUtils.contains(metadata.getValues(property), metadata.getValues(name)[i])) {
+                   metadata.add(property, metadata.getValues(name)[i]);
+               }
            }
            metadata.remove(name);
       }
-      
-      
       
     }
 

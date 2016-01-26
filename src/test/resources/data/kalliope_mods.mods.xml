@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mods xmlns="http://www.loc.gov/mods/v3" version="3.4">
+  <identifier type="uri">http://kalliope-verbund.info/DE-611-HS-532175</identifier>
+  <recordInfo>
+    <recordIdentifier source="DE-611">DE-611-HS-532175</recordIdentifier>
+    <recordCreationDate encoding="marc">20030506</recordCreationDate>
+    <recordChangeDate encoding="iso8601">20030506</recordChangeDate>
+    <recordContentSource authority="marcorg">Staatsbibliothek &lt;Berlin&gt; / Handschriftenabteilung</recordContentSource>
+    <languageOfCataloging>
+      <languageTerm authority="iso639-2b">ger</languageTerm>
+    </languageOfCataloging>
+  </recordInfo>
+  <typeOfResource manuscript="yes">text</typeOfResource>
+  <name type="personal" authority="GND" valueURI="http://d-nb.info/gnd/118804448">
+    <namePart>Viebig, Clara (17.07.1860-31.07.1952)</namePart>
+    <role>
+      <roleTerm>creator</roleTerm>
+    </role>
+  </name>
+  <name type="corporate">
+    <namePart>Peters, Karl &lt;Magdeburg, Buch-, Kunst- u. Landkartenhandlung, mod. Antiquariat&gt;</namePart>
+    <role>
+      <roleTerm>addressee</roleTerm>
+    </role>
+  </name>
+  <titleInfo>
+    <title>Brief von Clara Viebig an Karl Peters &lt;Magdeburg, Buch-, Kunst- u. Landkartenhandlung, mod. Antiquariat&gt;</title>
+  </titleInfo>
+  <originInfo>
+    <dateCreated encoding="w3cdtf">19050216</dateCreated>
+    <place>
+      <placeTerm>Berlin</placeTerm>
+    </place>
+  </originInfo>
+  <location>
+    <shelfLocator>Autogr. I/2283</shelfLocator>
+    <url>http://kalliope-verbund.info/DE-611-HS-532175</url>
+  </location>
+  <physicalDescription>
+    <extent>1 Postkt.</extent>
+  </physicalDescription>
+</mods>

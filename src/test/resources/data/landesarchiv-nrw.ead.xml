@@ -1,0 +1,156 @@
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" repositoryencoding="iso15511" scriptencoding="iso15924">
+    <eadid mainagencycode="DE-2191" url="http://www.lav.nrw.de">20040900002180</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>L 79 Lippische Regierung (Jüngere Registratur)</titleproper>
+      </titlestmt>
+    </filedesc>
+    <profiledesc>
+      <creation>
+        <date normal="2014-09-05">05.09.2014</date>
+      </creation>
+    </profiledesc>
+  </eadheader>
+  <archdesc level="collection" type="Findbuch">
+    <did>
+      <unitid>L 79</unitid>
+      <repository>
+        <corpname role="Staatliche Archive" id="DE-2188">Landesarchiv NRW Abteilung Ostwestfalen-Lippe</corpname>
+        <address>
+          <addressline>Willi-Hofmann-Str. 2, 32756 Detmold, owl@lav.nrw.de</addressline>
+        </address>
+        <extref xlink:role="url_archive" xlink:href="http://www.archive.nrw.de//lav/abteilungen/ostwestfalen_lippe/oeffnungszeiten_und_kontakt_/index.php">Landesarchiv NRW Abteilung Ostwestfalen-Lippe</extref>
+      </repository>
+    </did>
+    <otherfindaid>
+      <extref xlink:role="url_findbuch" xlink:href="http://www.archive.nrw.de/LAV_NRW/jsp/findbuch.jsp?guid=20040900002180&amp;archivNr=409">Findbuch im Angebot des Archivs</extref>
+    </otherfindaid>
+    <dsc>
+      <c level="collection" id="20040900002180">
+        <did>
+          <unitid>L 79</unitid>
+          <unittitle>L 79 Lippische Regierung (Jüngere Registratur)</unittitle>
+          <unitdate normal="1609/1949">1609-1949</unitdate>
+        </did>
+        <scopecontent encodinganalog="Einleitung">
+          <p>
+            <lb />
+            Der Bestand L 79 umfasst die Archivalien, die 1910/1912 in die neu eingerichtete Registratur der lippischen Regierung -allgemeine und innere Verwaltung- übernommen wurden; er bildet die Fortsetzung des Bestandes L 77 A. Zur Archiv- und Registraturgeschichte und den älteren Ordnungs- und Verzeichnungsarbeiten sei auf die ausführliche Vorbemerkung dort verwiesen, zur Neuordnung siehe L 79 Nr. 240.
+            <lb />
+            <lb />
+            Eingerichtet wurden drei Abteilungen mit je einem Repertorium (I, II, III) sowie eine Statistik- (IV) und eine Militärregistratur (V). Allerdings wurden in die neue Registratur auch zahlreiche ältere Akten übernommen, die dann doch nicht weitergeführt wurden und somit nach der Beständesystematik eigentlich in den Bestand L 77 A gehören.
+            <lb />
+            <lb />
+            1924 wurde die zentral geführte Registratur im Zuge einer Neuordnung und Vereinfachung der Verwaltung aufgelöst und durch Abteilungsregistraturen ( &gt; Beständegruppe L 80) ersetzt (siehe Vorbemerkung zum Bestand L 80.04). Daneben blieb die Statistikregistratur jedoch unverändert bis zum Ende des Landes Lippe bestehen, so dass sich die Laufzeit des Bestandes L 79 in diesem Teilbereich bis 1949 erstreckt. Auch 1924 wurden wieder viele Akten in die neuen Repertorien übertragen, die dann nicht weitergeführt wurden und somit in den Bestand L 79 gehören.
+            <lb />
+            <lb />
+            Bei der Verzeichnung der Abteilungsregistraturen (L 80) wurden diese bis 1924 geschlossenen Akten aber teilweise in den Beständen belassen (v.a. L 80.14, L 80.18), aus anderen Beständen (L 80.04, L 80.20, L 80.22) jedoch herausgenommen; diese Akten wurden in den Bestand L 79 zurückgeordnet und im Jahre 2008 verzeichnet file://fn@01 .
+            <lb />
+            <lb />
+            Umgekehrt enthält der Bestand L 79 - auch abgesehen von der Statistikabteilung - viele Akten mit Laufzeiten bis in die 1930er und sogar 1940er Jahre hinein. Offenbar hat man die Altregistratur noch weiter kurrent gehalten. Der Bearbeiter kann sich sogar daran erinnern, vor Jahren einmal eine in L 79 nachträglich angelegte (auch so bezeichnete) Akte gesehen zu haben, die vielleicht im Ordnungssystem der Abteilungsregistraturen nicht unterzubringen war.
+            <lb />
+            <lb />
+            Wann genau die Akten des Bestandes L 79 ins Landesarchiv gelangten, lässt sich dem Zugangsbuch nicht entnehmen. Nach Drake, Die lippische Landesverwaltung in der Nachkriegszeit (S. 211) wurden "die Akten  der Regierung nach ihrer Auflösung in einzelne Abteilungen, soweit sie nicht laufende Registratur blieben" dem Landesarchiv überwiesen (also 1924 ff.). Bis zum Ausdruck der dBase-Datei (siehe unten) wurden die alten Behördenrepertorien als Findbücher benutzt.
+            <lb />
+            <lb />
+            Die Verzeichnung begann im Dezember 1984 als Gemeinschaftswerk aller Archivarinnen und Archivare des Staatsarchivs Detmold und wurde schließlich 1991-1993 (ab Nr. 3898) von der Bielefelder Historikerin Claudia Puschmann bis Nr. 6879 vorläufig abgeschlossen.
+            <lb />
+            <lb />
+            Die Dateneingabe erfolgte danach in dBase; 2007 wurde diese Datei von der Firma Startext in das Programm VERA konvertiert. Die Verzeichnung der Nummern 7099 ff. (Nachträge aus ehemals L 80 I a und L 80 IV) erfolgte Anfang 2008 durch den unten genannten Bearbeiter.
+            <lb />
+            <lb />
+            Von der dBase-Datei wurde 2003 durch die damaligen FAMI-Auszubildenden Edler und Schulz ein Papierausdruck erstellt. Außer diesem Ausdruck war noch ein Ende der 1970er Jahre erstelltes Findbuch über einen Teilbereich der Militärregistratur (Zeit des I. Weltkriegs) vorhanden, L 79 V Fach 60 * . Dieses Findbuch wurde im Oktober 2007 unter Vergabe neuer Signaturen als Gliederungspunkt 33 der bestehende VERA-Datei hinzugefügt.
+            <lb />
+            <lb />
+            <lb />
+            <lb />
+            Juni/Oktober 2007
+            <lb />
+            gez. Schwinger
+            <lb />
+            <lb />
+            <lb />
+            <lb />
+            Die Verzeichnungeinheiten Nr. 7099 ff. wurden bei Neuverzeichnung der Bestände L 80.04 (früher L 80 I c) und L 80.22 (früher L 80 IV) herausgenommen, da ihre Laufzeit vor Einführung der Abteilungsregistraturen 1924 endet; sie wurden jeweils an ihrer früheren Stelle im Bestand L 79 eingeordnet. Von Rückführungen aus L 80 in den Bestand L 77 A wurde aber abgesehen, da dessen Neuverzeichnung bereits seit langem abgeschlossen ist und auch bei der bisherigen Neuverzeichnung von L 79 nicht so verfahren wurde.
+            <lb />
+            <lb />
+            Außerdem wurden 50 Archivkartons Verlustlisten aus dem I. Weltkrieg verzeichnet.
+            <lb />
+            <lb />
+            <lb />
+            April 2008
+            <lb />
+            gez. Schwinger
+            <lb />
+            <lb />
+            <lb />
+            <lb />
+            <lb />
+            * Vorbemerkung zu Punkt 33 "Militärregistratur, I. Weltkrieg"
+            <lb />
+            <lb />
+            Am 31. Juli 1914 gab das Fürstlich-Lippische Staatsministerium den Kriegszustand für das Gebiet des Fürstentums bekannt. Es wies gleichzeitig darauf hin, dass die Anordnungsgewalt somit an den kommandierenden General des VII. Armeekorps übergehe und forderte alle Staats- und Kommunalbehörden sowie die Einwohner Lippes auf, für die Dauer des Kriegszustandes den Anordnungen des Generalkommandos Folge zu leisten. Die Entstehung fast des gesamten vorliegenden Teilbestandes ist auf derartige Anordnungen zurückzuführen.
+            <lb />
+            <lb />
+            Die Lippische Regierung bildete eine Art Mittelinstanz zwischen dem Generalkommando und den untersten Ebene, forderte Berichte von Magistraten und Ämtern und gab sie - falls erforderlich - ausgewertet an das Generalkommando oder entsprechende höhere Behörden.
+            <lb />
+            <lb />
+            Das Behördenverzeichnis des vorliegenden Teilbestandes war als Fach 60 dem Regierungsrepertorium "Militär-Registratur" (von 1912) angeheftet worden.  Es enthält eine grobe Gliederung in 8 Gruppen, die ein systematisches Ermitteln der Akten jedoch nicht zulässt. Bei einer Einordnung des Bestandes in die Klassifikation der vorhergehenden Fächer wäre das auch der Fall gewesen, da die Thematik der darin verzeichneten Akten des 19. Jahrhunderts von der der Akten zum 1. Weltkrieg abweicht. Es schien deshalb sinnvoller, für das Fach 60 eine eigene Klassifikation aufzustellen und den Bestand als Einheit zu repertorisieren.
+            <lb />
+            <lb />
+            Da die Akten aus losen Blättern formiert waren, konnten die häufig vorhanden Duplikate von Druckschriften und Formularen mühelos kassiert werden. Die ebenfalls häufig enthaltenen Plakate werden der Plakatsammlung zugeführt, da ihre Größe von z. T. 1,50 x 1,00 m eine mehrfache Faltung erforderlich macht, die zu Rissen im Papier führt. Kassiert wurden außerdem einige Spezialakten, weil die darin enthaltenen Angaben zusammengefaßt in anderen Bänden aufgeführt waren oder sie aus Mangel an Dokumentationswert als nicht archivwürdig erschienen.
+            <lb />
+            <lb />
+            Als Gruppe XIII [Unterpunkt] [33.13] (Nr. 211-218) wurde diesem Teilbestand der aufgelöste Bestand L 115 C zugefügt, da diesem keine eigene Provenienz zukommt. Es handelt sich um Vorarbeiten für den dem Geh. Regierungs- und Archivrat Kiewning aufgetragen lippischen Verwaltungsbericht, den der Anfang 1918 in Berlin der deutschen Kriegswirtschaft angefordert hatte.
+            <lb />
+            <lb />
+            Zu zitieren ist: L 79 ... .
+            <lb />
+            <lb />
+            [1972] gez. [G.] Prüßner [jetzt Kießling]
+            <lb />
+            <lb />
+            Im Oktober 2007 wurden die bisherigen Verzeichnungseinheiten L 79 V Fach 60 Nr. 1 - 218 als L 79 Nr. 6885 - 7098 der bestehenden VERA-Datei hinzugefügt (Abschrift mit geringen redaktionellen Korrekturen, v.a. Vereinfachung der Gliederung).
+            <lb />
+            <lb />
+            gez. Schwinger
+            <lb />
+            <lb />
+            <lb />
+            <lb />
+            In diesem Bestand befindet sich eine der dichtesten Überlieferungen der Wanderarbeit weltweit, insbesondere der lippischen Ziegler. Das Internationale Institut für Sozialgeschichte in Amsterdam (IISG) erforscht seit vielen Jahren diese Form der Arbeitmigration. Nun werden sowohl die Forschungsergebnisse von Prof. Dr. Jan Lucassen und Piet Lourens als auch digiatlisierte Archivalien aus diesem Bestand, v.a. Ziegelbotenliste, sowie quellenkundliche Hinweise zu L 77 A, L 79 und den für die Zieglerforschung auch relevanten Personenstandsunterlagen in einem Internetportal präsentiert: Internationales Institut für Sozialgeschichte .  Dort können in einer Datenbank auch einzelne Ziegler ermittelt werden.
+            <lb />
+          </p>
+        </scopecontent>
+        <c level="class" id="300409Klas_8c10a985-4ae4-465f-8114-4218634a3e12" pos="7758">
+          <did>
+            <unittitle>33 I. Weltkrieg</unittitle>
+          </did>
+          <c level="class" id="300409Klas_eab93d16-a3b2-413c-8b3d-aac109b7f8de" pos="7805">
+            <did>
+              <unittitle>33.3 Sicherung des Kriegsbedarfs</unittitle>
+            </did>
+            <c level="file" id="400409Vz_4fb2153a-13c5-41e2-8650-445478bd7ffa" pos="7815">
+              <did>
+                <unitid>
+                  L 79 Nr. 6927
+                  <lb />
+                </unitid>
+                <unitdate normal="1916/1916">1916</unitdate>
+                <unittitle>Bestandserhebung des im Besitz der lippischen Gymnasien, Realgymnasien und Mittelschulen befindlichen Platins (für Detmold auch das des Hofapothekers und der Sinalco-AG.)</unittitle>
+                <physdesc>
+                  <genreform normal="Akten" />
+                </physdesc>
+                <unitid type="Altsignatur">L 79 Fach 60 Nr. 047</unitid>
+              </did>
+              <otherfindaid>
+                <extref xlink:role="url_archivalunit" xlink:href="http://www.archive.nrw.de/LAV_NRW/jsp/findbuch.jsp?verzguid=Vz_4fb2153a-13c5-41e2-8650-445478bd7ffa&amp;archivNr=409">Titelaufnahme im Angebot des Archivs</extref>
+              </otherfindaid>
+            </c>
+          </c>
+        </c>
+      </c>
+    </dsc>
+  </archdesc>
+</ead>

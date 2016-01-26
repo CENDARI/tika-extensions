@@ -52,41 +52,25 @@ private static final String NAMESPACE_URI_EAG = "http://www.ministryculture.es/"
         ContentHandler defaultContentHandler = new TextContentHandler(handler, true);
         return new TeeContentHandler(
                 defaultContentHandler,
-                getEAGHandler(metadata, CendariProperties.TITLE, 
-                        "autform", "identity"),
-                        getEAGHandler(metadata, CendariProperties.TITLE, 
-                            "parform", "identity"),
-                //TODO check the specific EAD elements
-                getEAGHandler(metadata, CendariProperties.KEYWORDS, 
-                        "subject", "controlaccess"),
-                //getTEIHandler(metadata, TikaCoreProperties.CREATOR, "creator"),
-                getEAGHandler(metadata, CendariProperties.DESCRIPTION, 
-                        "description"),
-                //getEADHandler(metadata, TikaCoreProperties.PUBLISHER, "publisher"),
-                //getEADHandler(metadata, TikaCoreProperties.CREATED, "date"),
-                //getEADHandler(metadata, TikaCoreProperties.TYPE, "type"),
-                //getEADHandler(metadata, TikaCoreProperties.FORMAT, "format"),
+                getEAGHandler(metadata, CendariProperties.TITLE, "autform", "identity"),
+                getEAGHandler(metadata, CendariProperties.TITLE,"parform", "identity"),
+                getEAGHandler(metadata, CendariProperties.KEYWORDS,"subject", "controlaccess"),
+                getEAGHandler(metadata, CendariProperties.DESCRIPTION,"description"),
+                getEAGHandler(metadata, CendariProperties.DESCRIPTION,"repositorhist"),
                 getEAGHandler(metadata, CendariProperties.IDENTIFIER, "repositorid"),
-                //getEAGHandler(metadata, TikaCoreProperties.RIGHTS, "licence"),
                 getEAGHandler(metadata, CendariProperties.PLACE, "country", "location"),
                 getEAGHandler(metadata, CendariProperties.PLACE, "municipality", "location"),
                 getEAGHandler(metadata, CendariProperties.PLACE, "street", "location"),
-                TEIParser.getTEIHandler(metadata, CendariProperties.CONTRIBUTOR,
-                        "persName", "respevent", "person"),
+                TEIParser.getTEIHandler(metadata, CendariProperties.CONTRIBUTOR,"persName", "respevent", "person"),
                 getEAGHandler(metadata, CendariProperties.ORGANIZATION, "autform", "identity"),
                 getEAGHandler(metadata, CendariProperties.NERD, "repositorhist"),
                 getEAGHandler(metadata, CendariProperties.NERD, "holdings"),
                 getEAGHandler(metadata, CendariProperties.NERD, "autform"),
                 getEAGHandler(metadata, CendariProperties.NERD, "parform"),
                 //getEAGHandler(metadata, CendariProperties.REFERENCE, "source"),
-                new AttributeMetadataHandler(NAMESPACE_URI_XML, "lang", metadata, 
-                CendariProperties.LANG),
-                new ElementAttributeMetadataHandler(
-                    "", "url",
-                    metadata, CendariProperties.REFERENCE, "eagid"),
-                new ElementAttributeMetadataHandler(
-                            "", "href",
-                            metadata, CendariProperties.POTENTIAL_REFERENCE, "webpage")
+                new AttributeMetadataHandler(NAMESPACE_URI_XML, "lang", metadata,CendariProperties.LANG),
+                new ElementAttributeMetadataHandler("", "url", metadata, CendariProperties.REFERENCE, "eagid"),
+                new ElementAttributeMetadataHandler("", "href",metadata, CendariProperties.POTENTIAL_REFERENCE, "webpage")
         );
 
     }     

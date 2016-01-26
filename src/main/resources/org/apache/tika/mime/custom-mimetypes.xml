@@ -5,6 +5,11 @@
     <sub-class-of type="application/xml"/>
     <glob pattern="*.ead.xml"/>
    </mime-type>
+   <mime-type type="application/ead+xml">
+    <root-XML localName="ead" namespaceURI="urn:isbn:1-931666-22-9"/>
+    <sub-class-of type="application/xml"/>
+    <glob pattern="*.xml"/>
+   </mime-type>
    <mime-type type="application/eag+xml">
      <sub-class-of type="application/xml"/>
      <root-XML localName="eag"/>
@@ -26,7 +31,13 @@
      <root-XML localName="OAI-PMH" namespaceURI="http://www.openarchives.org/OAI/2.0/"/>
      <sub-class-of type="application/xml"/>
      <acronym>OAI-PMH/XML</acronym>
-     <glob pattern="*.oai"/>
+     <glob pattern="*.xml"/>
+   </mime-type>   
+   <mime-type type="application/mods+xml">
+     <root-XML localName="mods" namespaceURI="http://www.loc.gov/mods/v3"/>
+     <sub-class-of type="application/xml"/>
+     <acronym>MODS/XML</acronym>
+     <glob pattern="*.xml"/>
    </mime-type>   
    <mime-type type="application/rdf+xml">
      <root-XML localName="RDF" namespaceURI="http://www.europeana.eu/schemas/edm/"/>

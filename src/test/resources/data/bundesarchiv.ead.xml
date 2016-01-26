@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ead xmlns="urn:isbn:1-931666-22-9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" audience="external" xsi:schemaLocation="urn:isbn:1-931666-22-9 http://www.loc.gov/ead/ead.xsd">
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" repositoryencoding="iso15511" scriptencoding="iso15924">
+    <eadid mainagencycode="DE-1958" url="http://www.bundesarchiv.de">DE-1958_c6c0d367-fe18-4fe5-8c8d-13a2fd6d15e4</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper encodinganalog="Title">Reichsmarineamt</titleproper>
+      </titlestmt>
+      <publicationstmt>
+        <publisher encodinganalog="Publisher">Bundesarchiv - Militärarchiv</publisher>
+        <date normal="2015-05-18" encodinganalog="Date">2015-05-18</date>
+      </publicationstmt>
+    </filedesc>
+    <profiledesc>
+      <creation>
+        <date normal="2015-05-20">2015-05-20</date>
+      </creation>
+    </profiledesc>
+  </eadheader>
+  <archdesc level="file" relatedencoding="ISAD(G)v2">
+    <did>
+      <unittitle encodinganalog="3.1.2">MACKENSEN.- Großer Kreuzer</unittitle>
+      <unitid>BArch, RM 3/12252I</unitid>
+      <unittitle>Planheft: Längsschnitt, Obere Ansicht, Oberdeck, Aufbaudeck, Batteriedeck, Zwischendeck, Oberes Plattformdeck, Mittleres Plattformdeck, Unteres Plattformdeck (1:200)</unittitle>
+      <unitdate>1914</unitdate>
+      <origination>Reichsmarineamt (RMA), 1889-1919</origination>
+      <physdesc>
+        <genreform normal="Akten">Schriftgut</genreform>
+      </physdesc>
+      <repository>
+        <corpname>Bundesarchiv</corpname>
+        <address>
+          <addressline>Abteilung Militärarchiv</addressline>
+          <addressline>Wiesentalstraße 10</addressline>
+          <addressline>79115 Freiburg</addressline>
+          <addressline>militaerarchiv@bundesarchiv.de</addressline>
+        </address>
+        <extref xlink:role="url_archive" xlink:href="http://www.bundesarchiv.de">Bundesarchiv</extref>
+      </repository>
+      <langmaterial encodinganalog="3.4.3">
+        <language langcode="ger">German</language>
+      </langmaterial>
+    </did>
+    <otherfindaid>
+      <extref xlink:role="url_archivalunit" xlink:href="https://invenio.bundesarchiv.de/basys2-invenio/direktlink/d777039a-1c4c-479f-8e29-d7e2b2dc635e/">Titelaufnahme im Angebot des Archivs</extref>
+    </otherfindaid>
+  </archdesc>
+</ead>

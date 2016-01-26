@@ -58,3 +58,4 @@ fr.inria.aviz.tikaextensions.tika.xml.EAGParser
 fr.inria.aviz.tikaextensions.tika.xml.OAIPMHParser
 fr.inria.aviz.tikaextensions.tika.json.JSONParser
 fr.inria.aviz.tikaextensions.tika.xml.EDMParser
+fr.inria.aviz.tikaextensions.tika.xml.MODSParser
