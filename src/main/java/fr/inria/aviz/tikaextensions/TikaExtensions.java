@@ -1,10 +1,8 @@
 package fr.inria.aviz.tikaextensions;
 
-import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.util.Date;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.log4j.Logger;
@@ -14,9 +12,9 @@ import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
 import org.apache.tika.metadata.TikaCoreProperties;
 
-import edu.emory.mathcs.backport.java.util.Arrays;
 import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 import fr.inria.aviz.tikaextensions.tika.ExcludeCendariIndexer;
+import fr.inria.aviz.tikaextensions.utils.LocalDateParser;
 import fr.inria.aviz.tikaextensions.utils.TextCleaner;
 
 /**
@@ -142,6 +140,23 @@ public class TikaExtensions {
                 metadata.add(CendariProperties.REFERENCE, metadata.get(CendariProperties.POTENTIAL_REFERENCE));
             }
             metadata.remove(CendariProperties.POTENTIAL_REFERENCE.getName());
+
+            //Now parse date string at once
+            String[] extractedDates = metadata.getValues(CendariProperties.DATE);
+            if (extractedDates.length>0){
+                    metadata.remove(CendariProperties.DATE.getName());
+                    for (String dateStrings : extractedDates) {
+                        //Split some values again (if these still exists, e.g. , )
+                        String[] splittedDateStr = dateStrings.split("[,/;]");
+                        for (String dateStr : splittedDateStr ){
+                            Date dateDate = LocalDateParser.parseDate(dateStr);
+                            if (dateDate != null) {
+                                metadata.add(CendariProperties.DATE, dateDate.toString() );
+                            }
+                        }
+                    }
+            }
+            
         }
         catch (TikaException e) {
             logger.error("Tika parse exception for document "+name, e);

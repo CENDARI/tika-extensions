@@ -8,7 +8,6 @@ import org.apache.tika.parser.xml.ElementMetadataHandler;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
-import edu.emory.mathcs.backport.java.util.Arrays;
 import fr.inria.aviz.tikaextensions.utils.TextCleaner;
 
 /**

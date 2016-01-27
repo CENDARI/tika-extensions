@@ -5,6 +5,7 @@ import org.apache.tika.metadata.Property;
 import org.apache.tika.parser.xml.AttributeMetadataHandler;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
+
 import fr.inria.aviz.tikaextensions.utils.TextCleaner;
 
 /**

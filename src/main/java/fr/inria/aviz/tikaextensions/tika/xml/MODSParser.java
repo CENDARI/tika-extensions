@@ -3,7 +3,6 @@ package fr.inria.aviz.tikaextensions.tika.xml;
 import java.util.Collections;
 import java.util.Set;
 
-import org.apache.tika.metadata.DublinCore;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
 import org.apache.tika.mime.MediaType;

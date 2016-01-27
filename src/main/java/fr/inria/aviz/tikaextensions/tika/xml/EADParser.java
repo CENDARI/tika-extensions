@@ -1,24 +1,17 @@
 package fr.inria.aviz.tikaextensions.tika.xml;
 
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
 import org.apache.tika.mime.MediaType;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.xml.AttributeMetadataHandler;
-import org.apache.tika.parser.xml.ElementMetadataHandler;
 import org.apache.tika.sax.TeeContentHandler;
 import org.apache.tika.sax.TextContentHandler;
 import org.xml.sax.ContentHandler;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXNotRecognizedException;
-import org.xml.sax.SAXNotSupportedException;
 
-import edu.emory.mathcs.backport.java.util.Arrays;
 import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 
 /**
@@ -215,8 +208,9 @@ public class EADParser extends AbstractXMLParser {
                 {
                       protected void addMetadata(String date) {
                           String[] dates = date.split("/");
-                          for (String d : dates) 
+                          for (String d : dates) {
                               super.addMetadata(d);
+                          }
                       };
                   },
                   new ElementAttributeMetadataHandler( NAMESPACE_URI_EAD_EMPTY, "from",metadata, CendariProperties.DATE, "unitdate"),
