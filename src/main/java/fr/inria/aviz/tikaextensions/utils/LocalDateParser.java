@@ -8,6 +8,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
+import org.apache.tika.metadata.Metadata;
+
+import fr.inria.aviz.tikaextensions.tika.CendariProperties;
+
 
 /** LocalDateParserTextCleaner
  * 
@@ -113,5 +117,31 @@ public class LocalDateParser {
             }
             return parsedDates;
 
+          }
+          
+          public static Metadata parseDatesInMetadata (Metadata metadata){
+          String[] extractedDates = metadata.getValues(CendariProperties.DATE);
+          if (extractedDates.length>0){
+                  metadata.remove(CendariProperties.DATE.getName());
+                  for (String dateStrings : extractedDates) {
+                      //do not get parse dates with less than 4 characters (year minimum) 
+                      if (dateStrings.length()<4){
+                        continue;
+                      }
+                      //Split some values again (if these still exists, e.g. , )
+                      String[] splittedDateStr = dateStrings.split("[,/;]");
+                      for (String dateStr : splittedDateStr ){
+                          if (dateStr.length() <4){
+                            continue;
+                          }
+                          List<Date> dateDateList = LocalDateParser.parseDates(dateStr);
+                          for (Date dateDate:dateDateList){
+                              metadata.add(CendariProperties.DATE, dateDate.toString() );
+                          }
+                      }
+                  }
+            }
+          
+           return metadata;
           }
 }

@@ -1,6 +1,8 @@
 package fr.inria.aviz.tikaextensions;
 
+import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,6 +15,11 @@ import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
 import org.apache.tika.metadata.TikaCoreProperties;
+import org.apache.tika.mime.MediaType;
+import org.apache.tika.mime.MimeTypes;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 import fr.inria.aviz.tikaextensions.tika.ExcludeCendariIndexer;
@@ -79,7 +86,6 @@ public class TikaExtensions {
             metadata.add(Metadata.CONTENT_TYPE, contentType);
         }
         
-        
         try {
           String parsedContent = tika.parseToString(content, metadata, maxLength);
           
@@ -116,19 +122,20 @@ public class TikaExtensions {
           //System.out.println("REALLY PARSING 2 "+name);
           
           if ( !ExcludeCendariIndexer.shouldExclude(metadata.getValues(CendariProperties.PROVIDER))){
+                
                 String nerdString =
                     metadata.getValues(CendariProperties.NERD).length > 0 ?
                        getString(metadata.getValues(CendariProperties.NERD)) :"";
-                
+                //URLs and JSON will be only striped from NERD and text fields
                 if (!nerdString.equals("")) {
-                   nerdString = TextCleaner.cleanup(nerdString);
+                   nerdString = TextCleaner.cleanupFull(nerdString);
                    metadata.set(CendariProperties.NERD, nerdString);
                    metadata.add("text", nerdString);
                 }
                 else
                 {
                  
-                   metadata.add("text", TextCleaner.cleanup(parsedContent));
+                   metadata.add("text", TextCleaner.cleanupFull(parsedContent));
                 }
           
            }
@@ -144,27 +151,10 @@ public class TikaExtensions {
             metadata.remove(CendariProperties.POTENTIAL_REFERENCE.getName());
             
             //Now parse date string at once
-            String[] extractedDates = metadata.getValues(CendariProperties.DATE);
-            if (extractedDates.length>0){
-                    metadata.remove(CendariProperties.DATE.getName());
-                    for (String dateStrings : extractedDates) {
-                        if (dateStrings.length()<4){
-                          continue;
-                        }
-                        //Split some values again (if these still exists, e.g. , )
-                        String[] splittedDateStr = dateStrings.split("[,/;]");
-                        for (String dateStr : splittedDateStr ){
-                            if (dateStr.length() <4){
-                              continue;
-                            }
-                            List<Date> dateDateList = LocalDateParser.parseDates(dateStr);
-                            for (Date dateDate:dateDateList){
-                                //Tika adds same values more times to the Metadata
-                                metadata.add(CendariProperties.DATE, dateDate.toString() );
-                            }
-                        }
-                    }
-            }
+            //Parsers may return more strings for dates
+            //In addition, returned string may be in format date1/date2 or date1-date2
+            //Here additional processing for all DATES irrelevant of parser invoked
+            LocalDateParser.parseDatesInMetadata(metadata);
             
             //Remove duplicate values
             shuffleDoubleMetadataValues (metadata);

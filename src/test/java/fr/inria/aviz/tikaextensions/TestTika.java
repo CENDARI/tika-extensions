@@ -148,8 +148,8 @@ public class TestTika extends TestCase {
   public void test1() throws IOException, SAXException, TikaException {
       
       List<String> fileNames = new ArrayList<String>();
-      fileNames = getFileNames(fileNames, Paths.get("C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples") );
-      fileNames = getFileNames(fileNames, Paths.get("C:/Users/natasab/Documents/Cendari/Design/Data Services/TikaIndexerSamples") );
+      fileNames = getFileNames(fileNames, Paths.get("C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples\\OwnTikaExtensionExamples") );
+      fileNames = getFileNames(fileNames, Paths.get("C:/Users/natasab/Documents/Cendari/Design/Data Services/TikaIndexerSamples/OwnTikaExtensionExamples") );
 
       List<String> allKeys = new ArrayList();
       TikaExtensions tika = TikaExtensions.instance();
@@ -165,7 +165,7 @@ public class TestTika extends TestCase {
             }
         }
 
-        String pathStr = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples\\";
+        String pathStr = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples\\OwnTikaExtensionExamples";
         fileNames = new ArrayList<String>();
         fileNames = getFileNames(fileNames, Paths.get(pathStr) );
 
@@ -215,7 +215,7 @@ public class TestTika extends TestCase {
 }
 
 
-/*public void testDatesToParseTestMethod(){
+public void testDatesToParseTestMethod(){
       for (String dateStr1:datesToParseTest){
           String[] intDateString = dateStr1.split("[,/;]");
 
@@ -237,7 +237,7 @@ public class TestTika extends TestCase {
             }
           }
   }
-}*/
+}
 
    
   
