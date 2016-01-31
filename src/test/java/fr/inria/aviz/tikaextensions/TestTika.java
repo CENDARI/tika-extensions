@@ -98,8 +98,8 @@ public class TestTika extends TestCase {
      * @throws SAXException 
      * @throws IOException 
      */
-/*    @Test
-    public void test() throws IOException, SAXException, TikaException {
+   /*    @Test
+   public void test() throws IOException, SAXException, TikaException {
       
         List<String> allKeys = new ArrayList();
         TikaExtensions tika = TikaExtensions.instance();
@@ -142,58 +142,9 @@ public class TestTika extends TestCase {
         }
  
 }
-*/    
-/*  
-    public void testDates() throws IOException, SAXException, TikaException {
-      
-      List<String> allKeys = new ArrayList();
-      TikaExtensions tika = TikaExtensions.instance();
     
-      assertNotNull(tika);
-      
-      for (String name : fileName) {
-        System.out.println("PARSING "+name);
-        
-        InputStream in =  getClass().getResourceAsStream(name);
-        Metadata info = tika.parseDocument(name, null, in, -1);
-        if (info != null) {
-            for (String key : info.names()) {
-              if (key.equals("cendari:date")){
-                  for (String keyStr:Arrays.asList(info.getValues(key))) {
-//                    DateTime dt1 = new DateTime("01.01.1001");
-//                    if (keyStr.length()==4){
-//                    }
-//                    else {
-//                      dt1=new DateTime(keyStr);
-//                    }
-//                   
+*/
 
-//                    DateTimeFormatter fmt = ISODateTimeFormat.basicDate();
-//                    
-//                    try {
-//                    DateTime  dt1 = fmt.parseDateTime(keyStr);
-//                    System.out.println("String From Date="+dt1.toString());
-//                    }
-//                    catch (Exception e){
-//                      System.out.println("Coudl not parse "+keyStr);
-//                    }
-                    Object result;
-                    try {
-                        result = parseDate(keyStr);
-                    } catch (IllegalArgumentException e) {
-                        result = e;
-                    }
-                    if (result.toString().contains("Exception")) {
-                      System.out.println(keyStr + " => " + result);
-                    }
-                 }
-              }
-              }
-      
-            }
-        }
-    }*/
-    
   public void test1() throws IOException, SAXException, TikaException {
       
       List<String> fileNames = new ArrayList<String>();
@@ -264,64 +215,32 @@ public class TestTika extends TestCase {
 }
 
 
-public void testDatesToParseTestMethod(){
+/*public void testDatesToParseTestMethod(){
       for (String dateStr1:datesToParseTest){
           String[] intDateString = dateStr1.split("[,/;]");
 
           for (String dateStr: intDateString ){
-          Date date=LocalDateParser.parseDate(dateStr);
-            if (date == null ) {
-                System.out.println("Could not parse ["+dateStr+"]");
+            if (dateStr.length() < 4) {
+                  continue;
+            }
+            System.out.println("NOW PARSING STRING "+dateStr);
+            List<Date> dates=LocalDateParser.parseDates(dateStr);
+            if (dates.size()==0) {
+              System.out.println("Could not parse ["+dateStr+"]");
             }
             else
             {
-                SimpleDateFormat sdf =  new SimpleDateFormat("dd-MM-yyyy");
-                System.out.println(dateStr1+"====>"+dateStr+"====>  "+ sdf.format(date));
+              for (Date parsedDate :dates){
+                    SimpleDateFormat sdf =  new SimpleDateFormat("dd-MM-yyyy");
+                    System.out.println(dateStr1+"====>"+dateStr+"====>  "+ sdf.format(parsedDate));
+              }
             }
           }
   }
-}
+}*/
 
    
-   public static Date parseDate(String dateStr) throws IllegalArgumentException {
-     // optionally change the separator
-     //dateStr = dateStr.replaceAll("\\D+", "/");
-     String formatPatterns = "dd/MM/yy,yyyy/MM/dd,dd/MM/yyyy,yyyyMMdd,dd MMMM yyyy,yyyy,yyyy-yyyy,EEE MMM dd HH:mm:ss zzzz yyyy, EEE MMM dd HH:mm:ss zzz yyyy";
-     //List of locales
-     for (String fmt : formatPatterns.split(",")) {
-         ParsePosition pp = new ParsePosition(0);
-         
-         //Do this for English, German or Italian etc.. 
-         SimpleDateFormat sdf =  new SimpleDateFormat(fmt);
-         if (fmt.contains("EEE") || fmt.contains("MMM")){
-             Locale[] supportedLocales = sdf.getAvailableLocales();
-             for (Locale currL : supportedLocales){
-                sdf =  new SimpleDateFormat(fmt, currL);
-                sdf. setLenient(false);
-               try {
-                 return sdf.parse(dateStr);
-               } catch (ParseException e) {
-                 // TODO Auto-generated catch block
-                 //System.out.println("For PATTERN= "+fmt);
-               }
-             }
-         }
-         else
-         {
-           sdf. setLenient(false);
-           Date returnDate;
-          try {
-            return sdf.parse(dateStr);
-          } catch (ParseException e) {
-            // TODO Auto-generated catch block
-            //System.out.println("For PATTERN= "+fmt);
-          }
-         }
-     }
-     throw new IllegalArgumentException("Unable to parse date '" + dateStr + "'");
- }
-   
-   
+  
    static String[]  datesToParseTest={
      "01.01.1916",
      "01.02.1915",
@@ -646,7 +565,7 @@ public void testDatesToParseTestMethod(){
      "15 August 1937",
      "15 februari 1918.",
      "15 February 1917",
-     "15 januari 1919.",
+    "15 januari 1919.",
      "15 June 1917",
      "15 June 1926",
      "15 Maart 1918.",
@@ -735,7 +654,7 @@ public void testDatesToParseTestMethod(){
      "1810-1938",
      "18.11.1916",
      "18.11.1917",
-     "18.12.1916",
+    "18.12.1916",
      "18.12.1917",
      "18.12.1918",
      "1813/1822",
@@ -822,7 +741,7 @@ public void testDatesToParseTestMethod(){
      "18720211/19291218",
      "1872-1919",
      "1872-1976",
-     "1872-1992",
+    "1872-1992",
      "1873/1874",
      "1873/1884",
      "1873/1907",

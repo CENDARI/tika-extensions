@@ -78,7 +78,7 @@ public class EADParser extends AbstractXMLParser {
                 getEADHandler(metadata, CendariProperties.RIGHTS, "licence"),
                 getEADHandler(metadata, CendariProperties.PLACE, "geogname", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.KEYWORDS, "subject", "controlaccess"),
-                //getEADHandler(metadata, CendariProperties.DATE, "unitdate", "did"),
+                getEADHandler(metadata, CendariProperties.DATE, "unitdate", "did"),
                 
                 getEADHandler(metadata, CendariProperties.NERD, "archref"),
                 getEADHandler(metadata, CendariProperties.NERD, "eventgrp"),
@@ -155,7 +155,7 @@ public class EADParser extends AbstractXMLParser {
                 getEADEmptyHandler(metadata, CendariProperties.RIGHTS, "licence"),
                 getEADEmptyHandler(metadata, CendariProperties.PLACE, "geogname", "controlaccess"),
                 getEADEmptyHandler(metadata, CendariProperties.KEYWORDS, "subject", "controlaccess"),
-                //getEADEmptyHandler(metadata, CendariProperties.DATE, "unitdate", "did"),
+                getEADEmptyHandler(metadata, CendariProperties.DATE, "unitdate", "did"),
                 
                 getEADEmptyHandler(metadata, CendariProperties.NERD, "archref"),
                 getEADEmptyHandler(metadata, CendariProperties.NERD, "eventgrp"),

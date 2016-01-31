@@ -2,7 +2,9 @@ package fr.inria.aviz.tikaextensions;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.log4j.Logger;
@@ -140,23 +142,34 @@ public class TikaExtensions {
                 metadata.add(CendariProperties.REFERENCE, metadata.get(CendariProperties.POTENTIAL_REFERENCE));
             }
             metadata.remove(CendariProperties.POTENTIAL_REFERENCE.getName());
-
+            
             //Now parse date string at once
             String[] extractedDates = metadata.getValues(CendariProperties.DATE);
             if (extractedDates.length>0){
                     metadata.remove(CendariProperties.DATE.getName());
                     for (String dateStrings : extractedDates) {
+                        if (dateStrings.length()<4){
+                          continue;
+                        }
                         //Split some values again (if these still exists, e.g. , )
                         String[] splittedDateStr = dateStrings.split("[,/;]");
                         for (String dateStr : splittedDateStr ){
-                            Date dateDate = LocalDateParser.parseDate(dateStr);
-                            if (dateDate != null) {
+                            if (dateStr.length() <4){
+                              continue;
+                            }
+                            List<Date> dateDateList = LocalDateParser.parseDates(dateStr);
+                            for (Date dateDate:dateDateList){
+                                //Tika adds same values more times to the Metadata
                                 metadata.add(CendariProperties.DATE, dateDate.toString() );
                             }
                         }
                     }
             }
             
+            //Remove duplicate values
+            shuffleDoubleMetadataValues (metadata);
+            
+
         }
         catch (TikaException e) {
             logger.error("Tika parse exception for document "+name, e);
@@ -192,4 +205,25 @@ public class TikaExtensions {
       
     }
 
+    //Otherwise double values are created in the property strange for Tika (?)
+    private void shuffleDoubleMetadataValues (Metadata metadata) {
+      for (String propertyName : metadata.names()) {
+      if (metadata.getValues(propertyName) != null && metadata.getValues(propertyName).length>0) {
+           List<String> values = new ArrayList<String>();
+           for (int i= 0; i<metadata.getValues(propertyName).length;i++){
+               //to not add duplicate values (somtimes tika internals do it even for same values)
+               if (!values.contains(metadata.getValues(propertyName)[i]))
+                   values.add(metadata.getValues(propertyName)[i]);
+               }
+           Property myProp = Property.get(propertyName);
+           if (myProp!= null) {
+             //Check above necessary because of the "text" field
+             metadata.remove(propertyName);
+             metadata.set(myProp, values.toArray(new String[0]));
+           }
+          }
+      }
+     }
+      
+    
 }
