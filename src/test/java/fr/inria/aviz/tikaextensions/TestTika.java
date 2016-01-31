@@ -215,7 +215,7 @@ public class TestTika extends TestCase {
 }
 
 
-public void testDatesToParseTestMethod(){
+/*public void testDatesToParseTestMethod(){
       for (String dateStr1:datesToParseTest){
           String[] intDateString = dateStr1.split("[,/;]");
 
@@ -240,7 +240,7 @@ public void testDatesToParseTestMethod(){
 }
 
    
-  
+  */
    static String[]  datesToParseTest={
      "01.01.1916",
      "01.02.1915",
