@@ -12,9 +12,8 @@
    </mime-type>
    <mime-type type="application/eag+xml">
      <sub-class-of type="application/xml"/>
-     <root-XML localName="eag"/>
-     <sub-class-of type="application/xml"/>
-     <glob pattern="*.eag.xml"/>
+     <root-XML localName="eag" namespaceURI="http://www.ministryculture.es/"/>
+     <glob pattern="*.xml"/>
    </mime-type>
    <mime-type type="application/eac+xml">
      <root-XML localName="eac"/>

@@ -60,7 +60,6 @@ private static final String NAMESPACE_URI_EAG = "http://www.ministryculture.es/"
                 getEAGHandler(metadata, CendariProperties.IDENTIFIER, "repositorid"),
                 getEAGHandler(metadata, CendariProperties.PLACE, "country", "location"),
                 getEAGHandler(metadata, CendariProperties.PLACE, "municipality", "location"),
-                getEAGHandler(metadata, CendariProperties.PLACE, "street", "location"),
                 TEIParser.getTEIHandler(metadata, CendariProperties.CONTRIBUTOR,"persName", "respevent", "person"),
                 getEAGHandler(metadata, CendariProperties.ORGANIZATION, "autform", "identity"),
                 getEAGHandler(metadata, CendariProperties.NERD, "repositorhist"),
