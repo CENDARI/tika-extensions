@@ -11,9 +11,6 @@ import org.apache.tika.metadata.Property;
  * @author Jean-Daniel Fekete
  */
 public class CendariProperties {
-    //private static final String NAMESPACE_URI_XML = "http://www.w3.org/XML/1998/namespace";
-    private static final String PREFIX_XML = "xml";
-    
     private static final String PREFIX_CENDARI = "cendari";
     
     public static final String DOMAIN_CENDARI = "cendari.dariah.eu";
