@@ -8,36 +8,21 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.ParsePosition;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import junit.framework.TestCase;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.filefilter.DirectoryFileFilter;
-import org.apache.commons.io.filefilter.RegexFileFilter;
-import org.apache.commons.lang.time.FastDateFormat;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
-import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
-import org.joda.time.format.ISODateTimeFormat;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
 import edu.emory.mathcs.backport.java.util.Collections;
 import fr.inria.aviz.tikaextensions.tika.CendariProperties;
-import fr.inria.aviz.tikaextensions.utils.LocalDateParser;
 
 /**
  * Class TestTika
@@ -45,7 +30,7 @@ import fr.inria.aviz.tikaextensions.utils.LocalDateParser;
 public class TestTika extends TestCase {
 
  static final String[] fileName = {
-   "/data/ajaloarchiv-ead.xml",
+/*  "/data/ajaloarchiv-ead.xml",
    "/data/B360446201_B343_2_tei.xml",
    "/data/bundesarchiv.ead.xml",
    "/data/crispienartur.ead.xml",
@@ -72,7 +57,7 @@ public class TestTika extends TestCase {
    "/data/someoai.xml",
    "/data/tallinna-linnaarhiiv-ead.xml",
    "/data/tel-europeana-1.edm.rdf",
-   "/data/tel-europeana-2-lod.rdf",
+   "/data/tel-europeana-2-lod.rdf",*/
    "/data/titleeag.eag.xml",
    };
 
@@ -93,15 +78,15 @@ public class TestTika extends TestCase {
  
    }
     /**
-     * Test the Tika indexer.
+     * Test the Tika indexer with internal files
      * @throws TikaException 
      * @throws SAXException 
      * @throws IOException 
      */
-   /*    @Test
+     @Test
    public void test() throws IOException, SAXException, TikaException {
       
-        List<String> allKeys = new ArrayList();
+        List<String> allKeys = new ArrayList<String>();
         TikaExtensions tika = TikaExtensions.instance();
       
         assertNotNull(tika);
@@ -143,13 +128,20 @@ public class TestTika extends TestCase {
  
 }
     
-*/
+     
+     /**
+      * Test the Tika indexer with files from directory (subdirectories possible as well)
+      * pathStr shall be modified accordingly.
+      * @throws TikaException 
+      * @throws SAXException 
+      * @throws IOException 
+      */
 
-  public void test1() throws IOException, SAXException, TikaException {
+/*@Test
+public void test1() throws IOException, SAXException, TikaException {
       
       List<String> fileNames = new ArrayList<String>();
-      fileNames = getFileNames(fileNames, Paths.get("C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples\\OwnTikaExtensionExamples") );
-      fileNames = getFileNames(fileNames, Paths.get("C:/Users/natasab/Documents/Cendari/Design/Data Services/TikaIndexerSamples/OwnTikaExtensionExamples") );
+      String pathStr = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples";
 
       List<String> allKeys = new ArrayList();
       TikaExtensions tika = TikaExtensions.instance();
@@ -165,7 +157,6 @@ public class TestTika extends TestCase {
             }
         }
 
-        String pathStr = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples\\OwnTikaExtensionExamples";
         fileNames = new ArrayList<String>();
         fileNames = getFileNames(fileNames, Paths.get(pathStr) );
 
@@ -212,7 +203,7 @@ public class TestTika extends TestCase {
 //        out.close();
 //        System.out.println("THESE ARE MY DATES FINISHED ");
         
-}
+}*/
 
 
 /*public void testDatesToParseTestMethod(){
