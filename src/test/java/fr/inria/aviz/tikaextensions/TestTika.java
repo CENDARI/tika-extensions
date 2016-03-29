@@ -1,28 +1,21 @@
 package fr.inria.aviz.tikaextensions;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.PrintWriter;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
+import java.util.Collections;
 import java.util.List;
 
 import junit.framework.TestCase;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.junit.Test;
 import org.xml.sax.SAXException;
-
-import edu.emory.mathcs.backport.java.util.Collections;
-import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 
 /**
  * Class TestTika
@@ -41,8 +34,8 @@ public class TestTika extends TestCase {
    "/data/frlacinemathequedetoulouse.eag.xml",
    "/data/jdc-items-instead-ead.xml",
    "/data/kalliope_mods.mods.xml",
-   "/data/kalliope-dc.dc.xml",
-   "/data/kalliope-ead-ns.xml",
+   "/data/kalliope-dc.dc.xml",*/
+   "/data/kalliope-ead-ns.xml",/*
    "/data/landesarchiv-nrw.ead.xml",
    "/data/library-of-castle-mikulov_draft;ead.xml",
    "/data/newjsonfile.json",
@@ -57,13 +50,16 @@ public class TestTika extends TestCase {
    "/data/someoai.xml",
    "/data/tallinna-linnaarhiiv-ead.xml",
    "/data/tel-europeana-1.edm.rdf",
-   "/data/tel-europeana-2-lod.rdf",*/
-   "/data/titleeag.eag.xml",
+   "/data/tel-europeana-2-lod.rdf",
+   "/data/titleeag.eag.xml",*/
    };
 
  
    public static List<String> getFileNames(List<String> fileNames, Path dir) {
-       try(DirectoryStream<Path> stream = Files.newDirectoryStream(dir)) {
+     DirectoryStream<Path> stream;
+      
+     try{
+           stream = Files.newDirectoryStream(dir);   
            for (Path path : stream) {
                if(path.toFile().isDirectory()) {
                    getFileNames(fileNames, path);
@@ -71,11 +67,11 @@ public class TestTika extends TestCase {
                    fileNames.add(path.toAbsolutePath().toString());
                }
            }
+           stream.close();
        } catch(IOException e) {
            e.printStackTrace();
        }
        return fileNames;
- 
    }
     /**
      * Test the Tika indexer with internal files
@@ -83,7 +79,8 @@ public class TestTika extends TestCase {
      * @throws SAXException 
      * @throws IOException 
      */
-     @Test
+ 
+   @Test
    public void test() throws IOException, SAXException, TikaException {
       
         List<String> allKeys = new ArrayList<String>();
@@ -127,7 +124,6 @@ public class TestTika extends TestCase {
         }
  
 }
-    
      
      /**
       * Test the Tika indexer with files from directory (subdirectories possible as well)
@@ -149,27 +145,31 @@ public void test1() throws IOException, SAXException, TikaException {
       
         assertNotNull(tika);
         
-        //Delete previously generated files
+        fileNames = new ArrayList<String>();
+        fileNames = getFileNames(fileNames, Paths.get(pathStr) );
         
+        System.out.println("DELETE OLD ENTRIES ");
         for (String name:fileNames){
-            if (name.endsWith(".t.TXT")) {
+            System.out.println("DELETE = "+name);
+            if (name.endsWith(".t.TXT") ) {
+              System.out.println("DELETE 1111 = "+name);
               FileUtils.deleteQuietly(new File(name));
             }
         }
+        
+        System.out.println("START NEW PARSING ");
 
-        fileNames = new ArrayList<String>();
-        fileNames = getFileNames(fileNames, Paths.get(pathStr) );
-
-        for (String name:fileNames){
+       for (String name:fileNames){
           
           InputStream in = Files.newInputStream(Paths.get(name));  
           if (in != null){
-              System.out.println("PARSING "+name +" start = "+new Date(System.currentTimeMillis()));
+              long startDate = System.currentTimeMillis();
               Metadata info = tika.parseDocument(name, null, in, -1);
               PrintWriter out = new PrintWriter(name+".t.TXT");
               out.println(info.toString());
-              System.out.println("PARSING "+name +" end = "+new Date(System.currentTimeMillis()));
               out.close();
+              long endDate = System.currentTimeMillis();
+              System.out.println("PARSING "+name +" SIZE="+Files.size(Paths.get(name))+" bytes in = "+ (endDate-startDate)+" ms." );
               
               for (String key : info.names()) {
                 if (!allKeys.contains(key) && info.get(key) != "" && info.get(key) != null && !key.equals("text")) {
@@ -202,10 +202,73 @@ public void test1() throws IOException, SAXException, TikaException {
 //        out.println(allDates);
 //        out.close();
 //        System.out.println("THESE ARE MY DATES FINISHED ");
-        
-}*/
+     
+}
+   */
+   /**
+    * This test generates only NERD entries
+   * @throws IOException
+   * @throws SAXException
+   * @throws TikaException
+   */
+/*
+   @Test
+public void test2() throws IOException, SAXException, TikaException {
+ 
+ List<String> fileNames = new ArrayList<String>();
+ String pathStr = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples";
+ 
+ List<String> allKeys = new ArrayList();
+ TikaExtensions tika = TikaExtensions.instance();
+ List<String> allDates = new ArrayList();
+ 
+   assertNotNull(tika);
+   
+   //Delete previously generated files
+   fileNames = new ArrayList<String>();
+   fileNames = getFileNames(fileNames, Paths.get(pathStr) );
+   
+   System.out.println("DELETE OLD ENTRIES ");
+   int i =0;
+   for (String name:fileNames){
+       if (name.contains(".t.") ) {
+         Files.delete(Paths.get(name));
+         i++;
+       }
+   }
+   
+   System.out.println("DELETED OLD ENTRIES "+i);
 
-
+  System.out.println("START NEW PARSING ");
+    fileNames = new ArrayList<String>();
+    fileNames = getFileNames(fileNames, Paths.get(pathStr) );
+   
+ long time= 0;  
+ for (String name:fileNames){
+   
+     InputStream in = Files.newInputStream(Paths.get(name));  
+     
+     if (in != null){
+         long startDate = System.currentTimeMillis();
+         Metadata info = tika.parseDocument(name, null, in, -1);
+         PrintWriter out = new PrintWriter(name+".t.TXT");
+         out.println(Arrays.toString(info.getValues(CendariProperties.NERD)));
+         out.close();
+         long endDate = System.currentTimeMillis();
+         //System.out.println("PARSING "+name +" SIZE="+Files.size(Paths.get(name))+" bytes in = "+ (endDate-startDate)+" ms." );
+         System.out.println("PARSING "+(endDate-startDate) );
+         time=time+(endDate-startDate);
+     }
+     else
+     {
+         System.out.println("No INPUT STREAM for "+name);
+     }
+     
+   }
+ 
+ //System.out.println("FINISHED for "+ time);
+}
+*/
 /*public void testDatesToParseTestMethod(){
       for (String dateStr1:datesToParseTest){
           String[] intDateString = dateStr1.split("[,/;]");

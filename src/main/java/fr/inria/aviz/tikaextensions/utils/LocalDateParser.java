@@ -121,6 +121,8 @@ public class LocalDateParser {
           
           public static Metadata parseDatesInMetadata (Metadata metadata){
           String[] extractedDates = metadata.getValues(CendariProperties.DATE);
+          String fmt = "yyyy-MM-dd";
+          SimpleDateFormat sdf =  new SimpleDateFormat(fmt);
           if (extractedDates.length>0){
                   metadata.remove(CendariProperties.DATE.getName());
                   for (String dateStrings : extractedDates) {
@@ -136,7 +138,7 @@ public class LocalDateParser {
                           }
                           List<Date> dateDateList = LocalDateParser.parseDates(dateStr);
                           for (Date dateDate:dateDateList){
-                              metadata.add(CendariProperties.DATE, dateDate.toString() );
+                              metadata.add(CendariProperties.DATE, sdf.format(dateDate));
                           }
                       }
                   }
