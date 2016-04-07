@@ -1,10 +1,13 @@
 package fr.inria.aviz.tikaextensions;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -12,10 +15,13 @@ import java.util.List;
 
 import junit.framework.TestCase;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.junit.Test;
 import org.xml.sax.SAXException;
+
+import fr.inria.aviz.tikaextensions.tika.CendariProperties;
 
 /**
  * Class TestTika
@@ -32,10 +38,12 @@ public class TestTika extends TestCase {
    "/data/eadarhiveshub.ead.xml",
    "/data/europeana.xml",
    "/data/frlacinemathequedetoulouse.eag.xml",
-   "/data/jdc-items-instead-ead.xml",
-   "/data/kalliope_mods.mods.xml",
-   "/data/kalliope-dc.dc.xml",*/
-   "/data/kalliope-ead-ns.xml",/*
+   "/data/jdc-items-instead-ead.xml",*/
+   "/data/somefile.mets.xml",/*
+   "/data/kalliope-dc.dc.xml",
+   "/data/somefile.mets.xml",*/
+   /*
+   "/data/kalliope-ead-ns.xml",
    "/data/landesarchiv-nrw.ead.xml",
    "/data/library-of-castle-mikulov_draft;ead.xml",
    "/data/newjsonfile.json",
@@ -46,7 +54,7 @@ public class TestTika extends TestCase {
    "/data/providedCHO_3.rdf",
    "/data/providedCHO_4.rdf",
    "/data/providedCHO_5.rdf",
-   "/data/sloveniaeag.eag.xml",
+   "/data/sloveniaeag.eag.xml", 
    "/data/someoai.xml",
    "/data/tallinna-linnaarhiiv-ead.xml",
    "/data/tel-europeana-1.edm.rdf",
@@ -80,7 +88,7 @@ public class TestTika extends TestCase {
      * @throws IOException 
      */
  
-   @Test
+  @Test
    public void test() throws IOException, SAXException, TikaException {
       
         List<String> allKeys = new ArrayList<String>();
@@ -133,7 +141,7 @@ public class TestTika extends TestCase {
       * @throws IOException 
       */
 
-/*@Test
+@Test
 public void test1() throws IOException, SAXException, TikaException {
       
       List<String> fileNames = new ArrayList<String>();
@@ -141,7 +149,7 @@ public void test1() throws IOException, SAXException, TikaException {
 
       List<String> allKeys = new ArrayList();
       TikaExtensions tika = TikaExtensions.instance();
-      List<String> allDates = new ArrayList();
+      List<String> allDates = new ArrayList<String>();
       
         assertNotNull(tika);
         
@@ -158,6 +166,8 @@ public void test1() throws IOException, SAXException, TikaException {
         }
         
         System.out.println("START NEW PARSING ");
+        fileNames = new ArrayList<String>();
+        fileNames = getFileNames(fileNames, Paths.get(pathStr) );
 
        for (String name:fileNames){
           
@@ -204,7 +214,7 @@ public void test1() throws IOException, SAXException, TikaException {
 //        System.out.println("THESE ARE MY DATES FINISHED ");
      
 }
-   */
+   
    /**
     * This test generates only NERD entries
    * @throws IOException

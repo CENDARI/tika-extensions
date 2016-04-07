@@ -20,6 +20,7 @@ public class TextCleaner {
     private static final Pattern AMPERSAND = Pattern.compile("&");
     //private static final Pattern URL = Pattern.compile ("((https?|ftp|gopher|telnet|file|Unsure|http):((//)|(\\\\))+[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*)");
     private static final Pattern URL = Pattern.compile ("(((https?|ftp|gopher|telnet|file|Unsure|http):)*((/)|(//)|(\\\\))+[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*)");
+    private static final Pattern BRACKETS = Pattern.compile("[\\[|\\]]");
 
     /**
      * Cleanup a specified string, removing extra spaces
@@ -31,6 +32,7 @@ public class TextCleaner {
         value = SPACES.matcher(value).replaceAll(" "); 
         value = LINES.matcher(value).replaceAll("\n");
         value = AMPERSAND.matcher(value).replaceAll("&amp;");
+        value = BRACKETS.matcher(value).replaceAll(" ");
         value = Jsoup.clean(value, Whitelist.none());
         
         return value;

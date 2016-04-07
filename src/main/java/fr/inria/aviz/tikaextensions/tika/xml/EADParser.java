@@ -77,6 +77,7 @@ public class EADParser extends AbstractXMLParser {
                 getEADHandler(metadata, CendariProperties.DESCRIPTION, "unittitle"),
                 getEADHandler(metadata, CendariProperties.RIGHTS, "licence"),
                 getEADHandler(metadata, CendariProperties.PLACE, "geogname", "controlaccess"),
+                getEADHandler(metadata, CendariProperties.PERSON, "persname", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.KEYWORDS, "subject", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.DATE, "unitdate", "did"),
                 
@@ -121,6 +122,7 @@ public class EADParser extends AbstractXMLParser {
                 getEADHandler(metadata, CendariProperties.NERD, "name", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.NERD, "geogname", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.NERD, "subject", "controlaccess"),
+                getEADHandler(metadata, CendariProperties.NERD, "persname", "controlaccess"),
                 getEADHandler(metadata, CendariProperties.NERD, "unittitle"),
              
                 //COMMON ATTRIBUTES for both empty and URN Namespace elements
@@ -155,6 +157,7 @@ public class EADParser extends AbstractXMLParser {
                 getEADEmptyHandler(metadata, CendariProperties.RIGHTS, "licence"),
                 getEADEmptyHandler(metadata, CendariProperties.PLACE, "geogname", "controlaccess"),
                 getEADEmptyHandler(metadata, CendariProperties.KEYWORDS, "subject", "controlaccess"),
+                getEADEmptyHandler(metadata, CendariProperties.PERSON, "persname", "controlaccess"),
                 getEADEmptyHandler(metadata, CendariProperties.DATE, "unitdate", "did"),
                 
                 getEADEmptyHandler(metadata, CendariProperties.NERD, "archref"),
@@ -198,6 +201,7 @@ public class EADParser extends AbstractXMLParser {
                 getEADEmptyHandler(metadata, CendariProperties.NERD, "name", "controlaccess"),
                 getEADEmptyHandler(metadata, CendariProperties.NERD, "geogname", "controlaccess"),
                 getEADEmptyHandler(metadata, CendariProperties.NERD, "subject", "controlaccess"),
+                getEADEmptyHandler(metadata, CendariProperties.NERD, "persname", "controlaccess"),
                 getEADEmptyHandler(metadata, CendariProperties.NERD, "unittitle"),
 
              

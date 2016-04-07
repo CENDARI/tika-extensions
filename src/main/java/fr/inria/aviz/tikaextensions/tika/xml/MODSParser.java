@@ -54,12 +54,20 @@ public class MODSParser extends AbstractXMLParser {
         
         return new TeeContentHandler(
                 defaultContentHandler,
-                getHandler(metadata, CendariProperties.TITLE, "title"),
+                getHandler(metadata, CendariProperties.TITLE, "titleInfo"),
                 getHandler(metadata, CendariProperties.PLACE, "placeTerm"),
-                getHandler(metadata, CendariProperties.DESCRIPTION, "recordContentSource"),
+                getHandler(metadata, CendariProperties.PUBLISHER, "recordContentSource"),
                 getHandler(metadata, CendariProperties.REFERENCE, "url", "location"),
-                getHandler(metadata, CendariProperties.DATE, "dateCreated", "originInfo")
-                //NO NERD FIELDS ARE POPULATED as the MAPPING IS WEAK , THIS WILL BE AUTOMATICALLY TAKEN FROM DEFAULT PArsER FOR NERDING
+                getHandler(metadata, CendariProperties.DATE, "dateCreated", "originInfo"),
+                getHandler(metadata, CendariProperties.DATE, "dateIssued", "originInfo"),
+                getHandler(metadata, CendariProperties.PROVIDER, "publisher"),
+                getHandler(metadata, CendariProperties.TYPE, "typeOfResource"),
+                getHandler(metadata, CendariProperties.IDENTIFIER, "shelfLocator"),
+                getHandler(metadata, CendariProperties.NERD, "titleInfo"),
+                getHandler(metadata, CendariProperties.NERD, "namePart"),
+                getHandler(metadata, CendariProperties.NERD, "placeTerm"),
+                getHandler(metadata, CendariProperties.NERD, "dateCreated", "originInfo"),
+                getHandler(metadata, CendariProperties.NERD, "dateIssued", "originInfo")
             );
     }
 }

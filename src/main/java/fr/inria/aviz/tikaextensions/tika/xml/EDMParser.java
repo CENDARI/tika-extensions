@@ -27,6 +27,7 @@ public class EDMParser extends AbstractXMLParser {
 private static final String NAMESPACE_URI_EDM = "http://www.europeana.eu/schemas/edm/";
 private static final String NAMESPACE_URI_RDF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 private static final String NAMESPACE_URI_FOAF = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+private static final String NAMESPACE_URI_RDAM = "http://rdaregistry.info/Elements/m/";
 
 private static final Set<MediaType> SUPPORTED_TYPES =
             Collections.singleton(MediaType.application("rdf+xml"));
@@ -71,6 +72,13 @@ private static final Set<MediaType> SUPPORTED_TYPES =
             metadata, property, context);
     }
     
+    private static ContentHandler getRDAMHandler(
+        Metadata metadata, Property property, String element, 
+        String ...context) {
+    return new ContextualElementMetadataHandler(
+            NAMESPACE_URI_RDAM, element,
+            metadata, property, context);
+    }
     
     private static ContentHandler getLocalContextHandler( String namespaceUri,
         Metadata metadata, Property property, String element, 
@@ -92,6 +100,7 @@ true);
         return new TeeContentHandler(
                 defaultContentHandler,
                 getHandler(metadata, CendariProperties.TITLE, "title"),
+                getRDAMHandler(metadata, CendariProperties.TITLE, "P30156"),
                 getHandler(metadata, CendariProperties.CONTRIBUTOR, "contributor"),
                 getHandler(metadata, CendariProperties.CREATOR, "creator"), 
                 getHandler(metadata, CendariProperties.PUBLISHER, "publisher"),
@@ -100,6 +109,7 @@ true);
                 getHandler(metadata, CendariProperties.DESCRIPTION, "description"),
                 getTermsHandler(metadata, CendariProperties.DESCRIPTION, "provenance"),
                 getFoafHandler(metadata, CendariProperties.ORGANIZATION, "Organization"),
+                getTermsHandler(metadata, CendariProperties.DESCRIPTION, "alternative"),
                 
                 //getHandler(metadata, CendariProperties.DATE, "date"),
                 //getHandler(metadata, CendariProperties.DATE, "year"),
@@ -135,7 +145,7 @@ true);
                   };
                   },  
             
-            getHandler(metadata, CendariProperties.SOURCE, "source"),
+                getHandler(metadata, CendariProperties.SOURCE, "source"),
                 getHandler(metadata, CendariProperties.KEYWORDS , "subject"),
                 getHandler(metadata, CendariProperties.COVERAGE, "coverage"),
                 getHandler(metadata, CendariProperties.TYPE, "type"),
@@ -171,6 +181,7 @@ true);
                 
                 //NERD
                 getHandler(metadata, CendariProperties.NERD, "title"),
+                getRDAMHandler(metadata, CendariProperties.NERD, "P30156"),
                 getHandler(metadata, CendariProperties.NERD, "contributor"),
                 getHandler(metadata, CendariProperties.NERD, "creator"), 
                 getHandler(metadata, CendariProperties.NERD, "date"),

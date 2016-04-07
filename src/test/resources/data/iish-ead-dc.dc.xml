@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/          http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+   <responseDate>2016-01-20T12:35:09Z</responseDate>
+   <request verb="GetRecord" metadataPrefix="oai_dc" identifier="oai:socialhistoryservices.org:10622/ARCH00251" />
+   <GetRecord>
+      <record>
+         <header>
+            <identifier>oai:socialhistoryservices.org:10622/ARCH00251</identifier>
+            <datestamp>2015-11-30T12:08:02Z</datestamp>
+            <setSpec>iisg_ead</setSpec>
+            <setSpec>iisg.archieven.1</setSpec>
+            <setSpec>iish</setSpec>
+            <setSpec>iish.archieven</setSpec>
+         </header>
+         <metadata>
+            <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+               <dc:language>fre</dc:language>
+               <dc:contributor>Cabet, Etiennecreator</dc:contributor>
+               <dc:title>Etienne Cabet PapersCa. 1826-1856 (-1863)1826-1856</dc:title>
+               <dc:publisher>International Institute of Social History</dc:publisher>
+               <dc:rights>Not restricted</dc:rights>
+               <dc:description>Files consisting of correspondence (some of which are copies) written but primarily received by Cabet and his son-in-law, Jean Pierre Beluze c. 1826-1863; correspondence between the Icarians in the USA and the liaison office in Paris headed by Beluze; various manuscripts by Cabet, including an illuminated manuscript: `Mon credo communiste' 1851; documents concerning`L'Association Libre pour l'éducation du peuple'; file on the conspiracy by Babeuf; printed material concerning Cabet's trial in 1851; notes; pamphlets; leaflets and some periodicals relating to this collection.</dc:description>
+               <dc:description>Etienne Cabet Paper , inventory number ..., International Institute of Social History, Amsterdam</dc:description>
+               <dc:relation>Security microfilm.  Complete Papers  digitized as part of the Centrale Project 2012-2016.</dc:relation>
+               <dc:description>Born in Dijon, France 1788, died in St. Louis, USA 1856; lawyer, theorist of Icarian communism, supporter of Robert Owen; practised law in Dijon until 1820; director of the Vente Suprême of the secret society Charbonnerie in Paris in 1822; after the revolution of 1830 attorney-general in Corsica, but dismissed on account of his criticism of the government; in exile in England from 1834; returned to France under the amnesty of 1839; took part in the 1848 uprisings; fled to the USA; founded the socialist colony Nauvoo, Illinois in 1849; together with Louis Blanc and Pierre Leroux founded the Union Socialiste in London 1851; returned to Nauvoo in 1852; when again dissensions arose in 1855 he left with 200 followers; his publications include `Histoire populaire de la révolution française' 1839-1840 and `Voyage en Icarie' 1840.</dc:description>
+               <dc:description>Inventory by Benjamin Guichard in 2011.  Inventory revised for purposes of digitization by Eva van Oene in 2015.</dc:description>
+               <dc:subject>Communist movements and parties</dc:subject>
+               <dc:coverage>fr</dc:coverage>
+               <dc:contributor>Beluze, J.-P.contributor</dc:contributor>
+               <dc:format>text/xmlhttp://hdl.handle.net/10622/ARCH00251?locatt=view:ead</dc:format>
+               <dc:format>image/jpeghttp://hdl.handle.net/10622/ARCH00251?locatt=view:level3</dc:format>
+            </oai_dc:dc>
+         </metadata>
+      </record>
+   </GetRecord>
+</OAI-PMH>

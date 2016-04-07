@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info>
   <mime-type type="application/ead+xml">
-    <root-XML localName="ead"/>
     <sub-class-of type="application/xml"/>
     <glob pattern="*.ead.xml"/>
    </mime-type>
    <mime-type type="application/ead+xml">
     <root-XML localName="ead" namespaceURI="urn:isbn:1-931666-22-9"/>
+    <sub-class-of type="application/xml"/>
+    <glob pattern="*.xml"/>
+   </mime-type>
+   <mime-type type="application/ead+xml">
+    <root-XML localName="ead"/>
     <sub-class-of type="application/xml"/>
     <glob pattern="*.xml"/>
    </mime-type>
@@ -30,8 +34,9 @@
      <root-XML localName="OAI-PMH" namespaceURI="http://www.openarchives.org/OAI/2.0/"/>
      <sub-class-of type="application/xml"/>
      <acronym>OAI-PMH/XML</acronym>
+     <glob pattern="*.dc.xml"/>
      <glob pattern="*.xml"/>
-   </mime-type>   
+   </mime-type>
    <mime-type type="application/mods+xml">
      <root-XML localName="mods" namespaceURI="http://www.loc.gov/mods/v3"/>
      <sub-class-of type="application/xml"/>
@@ -49,4 +54,11 @@
      <acronym>JSON</acronym>
      <glob pattern="*.json"/>
   </mime-type>
+
+  <mime-type type="application/mets+xml">
+     <root-XML localName="mets" namespaceURI="http://www.loc.gov/METS/"/>
+     <sub-class-of type="application/xml"/>
+     <acronym>METS/XML</acronym>
+     <glob pattern="*.mets.xml"/>
+  </mime-type>   
 </mime-info>
