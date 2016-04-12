@@ -64,6 +64,7 @@ public class METSParser extends AbstractXMLParser {
                 defaultContentHandler,
                 getDCHandler(metadata, CendariProperties.TITLE, "title"),
                 getDCHandler(metadata, CendariProperties.IDENTIFIER, "identifier"),
+                getDCHandler(metadata, CendariProperties.KEYWORDS, "subject"),
                 getMODSHandler(metadata, CendariProperties.DESCRIPTION, "titleInfo"),
                 getMODSHandler(metadata, CendariProperties.PLACE, "placeTerm"),
                 getMODSHandler(metadata, CendariProperties.SOURCE, "recordContentSource"),

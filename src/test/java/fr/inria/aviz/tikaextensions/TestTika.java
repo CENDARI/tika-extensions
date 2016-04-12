@@ -38,11 +38,12 @@ public class TestTika extends TestCase {
    "/data/eadarhiveshub.ead.xml",
    "/data/europeana.xml",
    "/data/frlacinemathequedetoulouse.eag.xml",
-   "/data/jdc-items-instead-ead.xml",*/
-   "/data/somefile.mets.xml",/*
-   "/data/kalliope-dc.dc.xml",
+   "/data/jdc-items-instead-ead.xml",
    "/data/somefile.mets.xml",*/
+   "/data/kallipe-dc.xml",
+   "/data/de611hs100075.xml",
    /*
+   "/data/somefile.mets.xml",
    "/data/kalliope-ead-ns.xml",
    "/data/landesarchiv-nrw.ead.xml",
    "/data/library-of-castle-mikulov_draft;ead.xml",
@@ -59,7 +60,8 @@ public class TestTika extends TestCase {
    "/data/tallinna-linnaarhiiv-ead.xml",
    "/data/tel-europeana-1.edm.rdf",
    "/data/tel-europeana-2-lod.rdf",
-   "/data/titleeag.eag.xml",*/
+   "/data/titleeag.eag.xml",
+   "/data/iish-ead-dc.xml"*/
    };
 
  
@@ -141,7 +143,7 @@ public class TestTika extends TestCase {
       * @throws IOException 
       */
 
-@Test
+/*@Test
 public void test1() throws IOException, SAXException, TikaException {
       
       List<String> fileNames = new ArrayList<String>();
@@ -214,7 +216,7 @@ public void test1() throws IOException, SAXException, TikaException {
 //        System.out.println("THESE ARE MY DATES FINISHED ");
      
 }
-   
+*/   
    /**
     * This test generates only NERD entries
    * @throws IOException

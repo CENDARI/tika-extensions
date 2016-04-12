@@ -77,6 +77,7 @@ public class OAIPMHParser extends AbstractXMLParser {
                 getHandler(metadata, CendariProperties.LANG, "language"),
                 getHandler(metadata, CendariProperties.COVERAGE, "coverage"),
                 getHandler(metadata, CendariProperties.SOURCE, "source"),
+                getHandler(metadata, CendariProperties.KEYWORDS, "subject"),
                 //a very strange stuff, but appears obviously in Heidelberg library- data
                 getHandler(metadata, CendariProperties.RELATION, "ispartof"),
 
@@ -87,7 +88,7 @@ public class OAIPMHParser extends AbstractXMLParser {
                 getHandler(metadata, CendariProperties.NERD, "date"),
                 getHandler(metadata, CendariProperties.NERD, "coverage"),
                 getHandler(metadata, CendariProperties.NERD, "creator"),
-                getHandler(metadata, CendariProperties.NERD, "source"),
+                getHandler(metadata, CendariProperties.NERD, "source"),                
                 
                 //METS in OAI (HA!)
                 getMODSHandler(metadata, CendariProperties.DESCRIPTION, "titleInfo"),

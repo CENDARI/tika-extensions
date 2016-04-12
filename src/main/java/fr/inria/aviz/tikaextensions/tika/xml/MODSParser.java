@@ -63,11 +63,16 @@ public class MODSParser extends AbstractXMLParser {
                 getHandler(metadata, CendariProperties.PROVIDER, "publisher"),
                 getHandler(metadata, CendariProperties.TYPE, "typeOfResource"),
                 getHandler(metadata, CendariProperties.IDENTIFIER, "shelfLocator"),
+                getHandler(metadata, CendariProperties.KEYWORDS, "topic", "subject"),
+                getHandler(metadata, CendariProperties.KEYWORDS, "hierarchicalGeographic", "subject"),
+                
                 getHandler(metadata, CendariProperties.NERD, "titleInfo"),
                 getHandler(metadata, CendariProperties.NERD, "namePart"),
                 getHandler(metadata, CendariProperties.NERD, "placeTerm"),
                 getHandler(metadata, CendariProperties.NERD, "dateCreated", "originInfo"),
-                getHandler(metadata, CendariProperties.NERD, "dateIssued", "originInfo")
+                getHandler(metadata, CendariProperties.NERD, "dateIssued", "originInfo"),
+                getHandler(metadata, CendariProperties.NERD, "topic", "subject"),
+                getHandler(metadata, CendariProperties.NERD, "hierarchicalGeographic", "subject")
             );
     }
 }
