@@ -80,6 +80,7 @@ public class OAIPMHParser extends AbstractXMLParser {
                 getHandler(metadata, CendariProperties.KEYWORDS, "subject"),
                 //a very strange stuff, but appears obviously in Heidelberg library- data
                 getHandler(metadata, CendariProperties.RELATION, "ispartof"),
+                getHandler(metadata, CendariProperties.RELATION, "relation"),
 
                 //
                 getHandler(metadata, CendariProperties.NERD, "title"),

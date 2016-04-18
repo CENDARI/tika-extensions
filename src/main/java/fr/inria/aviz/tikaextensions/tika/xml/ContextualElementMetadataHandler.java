@@ -124,9 +124,9 @@ public class ContextualElementMetadataHandler extends ElementMetadataHandler {
     public void endElement(String arg0, String arg1, String arg2) {
         //Hack for stupid inline EAD line break element (lb)
         // will not do any harm, only adds a space
-        if (stack.get(stack.size()-1).equals("lb")){
+        //if (stack.get(stack.size()-1).equals("lb")){
           characters(SPACE, 0, SPACE.length);
-        }
+        //}
         stack.remove(stack.size()-1);
         super.endElement(arg0, arg1, arg2);
     }

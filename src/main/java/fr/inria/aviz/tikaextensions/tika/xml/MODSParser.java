@@ -65,7 +65,8 @@ public class MODSParser extends AbstractXMLParser {
                 getHandler(metadata, CendariProperties.IDENTIFIER, "shelfLocator"),
                 getHandler(metadata, CendariProperties.KEYWORDS, "topic", "subject"),
                 getHandler(metadata, CendariProperties.KEYWORDS, "hierarchicalGeographic", "subject"),
-                
+                getHandler(metadata, CendariProperties.LANG, "languageTerm", "languageOfCataloging"),
+                //getHandler(metadata, CendariProperties.PERSON, "namePart", "name"),
                 getHandler(metadata, CendariProperties.NERD, "titleInfo"),
                 getHandler(metadata, CendariProperties.NERD, "namePart"),
                 getHandler(metadata, CendariProperties.NERD, "placeTerm"),
