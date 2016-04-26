@@ -60,3 +60,4 @@ fr.inria.aviz.tikaextensions.tika.json.JSONParser
 fr.inria.aviz.tikaextensions.tika.xml.EDMParser
 fr.inria.aviz.tikaextensions.tika.xml.MODSParser
 fr.inria.aviz.tikaextensions.tika.xml.METSParser
+fr.inria.aviz.tikaextensions.tika.xml.EncyclopediaParser

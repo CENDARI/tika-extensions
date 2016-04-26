@@ -111,8 +111,6 @@ public class TikaExtensions {
           shuffleMetadata(metadata, TikaCoreProperties.TITLE.getName(), CendariProperties.TITLE);
           
           
-          //System.out.println("REALLY PARSING 2 "+name);
-          
           if ( !ExcludeCendariIndexer.shouldExclude(metadata.getValues(CendariProperties.PROVIDER))){
                 
                 String nerdString =

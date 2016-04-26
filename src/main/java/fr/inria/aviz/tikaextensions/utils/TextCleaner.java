@@ -21,6 +21,8 @@ public class TextCleaner {
     //private static final Pattern URL = Pattern.compile ("((https?|ftp|gopher|telnet|file|Unsure|http):((//)|(\\\\))+[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*)");
     private static final Pattern URL = Pattern.compile ("(((https?|ftp|gopher|telnet|file|Unsure|http):)*((/)|(//)|(\\\\))+[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*)");
     private static final Pattern BRACKETS = Pattern.compile("[\\[|\\]]");
+    private static final Pattern LT_GT = Pattern.compile("(<|>)");
+    
 
     /**
      * Cleanup a specified string, removing extra spaces
@@ -33,6 +35,7 @@ public class TextCleaner {
         value = LINES.matcher(value).replaceAll("\n");
         value = AMPERSAND.matcher(value).replaceAll("&amp;");
         value = BRACKETS.matcher(value).replaceAll(" ");
+        value = LT_GT.matcher(value).replaceAll(" ");
         value = Jsoup.clean(value, Whitelist.none());
         
         return value;
@@ -63,7 +66,7 @@ public class TextCleaner {
     public static String cleanJSON (String value){
         JSONParser parser = new JSONParser();
         try{
-          Object obj = parser.parse(value);
+          parser.parse(value);
           return "";
           //Reset the text to nothing if the string is JSON !!! 
           }

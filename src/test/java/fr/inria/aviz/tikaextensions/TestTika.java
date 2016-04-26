@@ -39,17 +39,18 @@ public class TestTika extends TestCase {
    "/data/europeana.xml",
    "/data/frlacinemathequedetoulouse.eag.xml",
    "/data/jdc-items-instead-ead.xml",
-   "/data/somefile.mets.xml",*/
-   "/data/kallipe-dc.xml",
+   "/data/somefile.mets.xml",
+   "/data/d6-6582-47b7-8c09-33e8a2764af0",
    "/data/de611hs100075.xml",
-   /*
+   "/data/de611hs100068",
+   "/data/de611hs100068.xml",
    "/data/somefile.mets.xml",
    "/data/kalliope-ead-ns.xml",
    "/data/landesarchiv-nrw.ead.xml",
    "/data/library-of-castle-mikulov_draft;ead.xml",
-   "/data/newjsonfile.json",
    "/data/oai-pmh.xml",
    "/data/package.json",
+   "/data/newjsonfile.json", 
    "/data/providedCHO_1.rdf",
    "/data/providedCHO_2.rdf",
    "/data/providedCHO_3.rdf",
@@ -90,7 +91,14 @@ public class TestTika extends TestCase {
      * @throws IOException 
      */
  
-  @Test
+ /* Uncomment if you wish to parse internal test files only
+  * 
+  * 
+  *
+  * 
+  */
+   
+   @Test
    public void test() throws IOException, SAXException, TikaException {
       
         List<String> allKeys = new ArrayList<String>();
@@ -108,7 +116,7 @@ public class TestTika extends TestCase {
                 if (!allKeys.contains(key) && info.get(key) != "" && info.get(key) != null && !key.equals("text")) {
                     allKeys.add(key);
                 }
-                // System.out.println("ELEMENT VALUE "+key.toUpperCase()+":"+" "+info.get(key));
+                //System.out.println("ELEMENT VALUE "+key.toUpperCase()+":"+" "+info.get(key));
                 if (!key.equals("text") && !key.equals("cendari:nerd")){
                   String printStr = Arrays.asList(info.getValues(key)).toString();
                   
@@ -143,7 +151,10 @@ public class TestTika extends TestCase {
       * @throws IOException 
       */
 
-/*@Test
+/*
+ * Uncomment if you wish to parse a directory and its subdirectories and change the Path String
+ * 
+ * @Test
 public void test1() throws IOException, SAXException, TikaException {
       
       List<String> fileNames = new ArrayList<String>();
@@ -215,24 +226,19 @@ public void test1() throws IOException, SAXException, TikaException {
 //        out.close();
 //        System.out.println("THESE ARE MY DATES FINISHED ");
      
-}
-*/   
+}*/
    /**
-    * This test generates only NERD entries
-   * @throws IOException
-   * @throws SAXException
-   * @throws TikaException
-   */
-/*
+    * This test generates only NERD entries, uncomment if you wish to parse for NERD all files in a directory and its subdirectories.
+    * Change the PATH 
    @Test
-public void test2() throws IOException, SAXException, TikaException {
+  public void test2() throws IOException, SAXException, TikaException {
  
- List<String> fileNames = new ArrayList<String>();
- String pathStr = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples";
+   List<String> fileNames = new ArrayList<String>();
+   String pathStr = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples";
  
- List<String> allKeys = new ArrayList();
- TikaExtensions tika = TikaExtensions.instance();
- List<String> allDates = new ArrayList();
+   List<String> allKeys = new ArrayList();
+   TikaExtensions tika = TikaExtensions.instance();
+   List<String> allDates = new ArrayList();
  
    assertNotNull(tika);
    
@@ -281,7 +287,10 @@ public void test2() throws IOException, SAXException, TikaException {
  //System.out.println("FINISHED for "+ time);
 }
 */
-/*public void testDatesToParseTestMethod(){
+/*
+ * Uncomment and mark as Test if you wish to parse datesToParse string 
+ * 
+ * public void testDatesToParseTestMethod(){
       for (String dateStr1:datesToParseTest){
           String[] intDateString = dateStr1.split("[,/;]");
 

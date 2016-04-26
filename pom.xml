@@ -4,7 +4,7 @@
   <artifactId>tika-extensions</artifactId>
   <packaging>jar</packaging>
   <name>Cendari Tika Extensions</name>
-  <version>2.0.4-SNAPSHOT</version>
+  <version>2.0.6-SNAPSHOT</version>
   <url>http://github.com/CENDARI/tika-extensions</url>
   <inceptionYear>2015</inceptionYear>
 

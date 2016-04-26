@@ -44,7 +44,7 @@
      <glob pattern="*.xml"/>
    </mime-type>   
    <mime-type type="application/rdf+xml">
-     <root-XML localName="RDF" namespaceURI="http://www.europeana.eu/schemas/edm/"/>
+     <root-XML localName="RDF" namespaceURI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
      <sub-class-of type="application/xml"/>
      <acronym>RDF/XML</acronym>
      <glob pattern="*.xml"/>
@@ -61,4 +61,21 @@
      <acronym>METS/XML</acronym>
      <glob pattern="*.mets.xml"/>
   </mime-type>   
+
+ <mime-type type="application/enc+xml">
+     <root-XML namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <root-XML localName="E1418_Encyclopedic_Entry_Organizations" namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <root-XML localName="E1418_Encyclopedic_Entry_Events" namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <root-XML localName="E1418_Encyclopedic_Entry_Objects" namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <root-XML localName="E1418_Encyclopedic_Entry_Persons" namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <root-XML localName="E1418_Encyclopedic_Entry_Spaces" namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <root-XML localName="E1418_Encyclopedic_Entry_Concepts_Practices_and_Policies" namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <root-XML localName="E1418_Survey_Article_Regional" namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <root-XML localName="E1418_Survey_Article_Thematic" namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <root-XML localName="E1418_Regional_Thematic_Article" namespaceURI="http://encyclopedia.1914-1918-online.net/lod/schema#" />
+     <sub-class-of type="application/xml"/>
+     <acronym>RDF/XML</acronym>
+     <glob pattern="*.xml"/>
+  </mime-type>
+
 </mime-info>

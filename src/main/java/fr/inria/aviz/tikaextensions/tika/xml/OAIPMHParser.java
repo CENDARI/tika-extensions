@@ -30,7 +30,6 @@ public class OAIPMHParser extends AbstractXMLParser {
     private static final Set<MediaType> SUPPORTED_TYPES =
             Collections.singleton(MediaType.application("oai-pmh+xml"));
     
-    private static final String NAMESPACE_URI_OAI_PMH = "http://www.openarchives.org/OAI/2.0/";
     private static final String NAMESPACE_URI_MODS = "http://www.loc.gov/mods/v3";
 
     

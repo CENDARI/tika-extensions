@@ -48,10 +48,12 @@ public class MODSParser extends AbstractXMLParser {
                 metadata, property, context);
     }
 
+    
+    
     protected ContentHandler getContentHandler(
             ContentHandler handler, Metadata metadata, ParseContext context) {
         ContentHandler defaultContentHandler = new TextContentHandler(handler, true);
-        
+
         return new TeeContentHandler(
                 defaultContentHandler,
                 getHandler(metadata, CendariProperties.TITLE, "titleInfo"),
@@ -73,7 +75,10 @@ public class MODSParser extends AbstractXMLParser {
                 getHandler(metadata, CendariProperties.NERD, "dateCreated", "originInfo"),
                 getHandler(metadata, CendariProperties.NERD, "dateIssued", "originInfo"),
                 getHandler(metadata, CendariProperties.NERD, "topic", "subject"),
-                getHandler(metadata, CendariProperties.NERD, "hierarchicalGeographic", "subject")
+                getHandler(metadata, CendariProperties.NERD, "hierarchicalGeographic", "subject"),
+                new ElementByAttributeValueHandler(metadata, "namePart", "type", "personal", CendariProperties.PERSON)
+
+
             );
     }
 }
