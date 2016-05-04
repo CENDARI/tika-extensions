@@ -73,12 +73,6 @@ public class CendariProperties {
             PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "potential_reference");
 
     /**
-     * Tag names.
-     */
-    public static final Property TAG = Property.internalTextBag(
-            PREFIX_CENDARI + Metadata.NAMESPACE_PREFIX_DELIMITER + "tag");
-    
-    /**
      * NERDing names.
      */
     public static final Property NERD =  Property.internalTextBag(

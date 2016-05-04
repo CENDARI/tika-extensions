@@ -94,10 +94,10 @@ private static final Set<MediaType> SUPPORTED_TYPES =
                       
                 getENCHandler(metadata, CendariProperties.IDENTIFIER, "E1418_P_DOI_URN"),
                 
-                getENCHandler(metadata, CendariProperties.TAG, "E1418_P_DdcSubjectCatalogue"),
-                getENCHandler(metadata, CendariProperties.TAG, "E1418_P_AuthorKeyword"),    
-                getENCHandler(metadata, CendariProperties.TAG, "E1418_P_Related_Theme"),
-                getENCHandler(metadata, CendariProperties.TAG, "E1418_P_Related_Subject"),    
+                getENCHandler(metadata, CendariProperties.KEYWORDS, "E1418_P_DdcSubjectCatalogue"),
+                getENCHandler(metadata, CendariProperties.KEYWORDS, "E1418_P_AuthorKeyword"),    
+                getENCHandler(metadata, CendariProperties.KEYWORDS, "E1418_P_Related_Theme"),
+                getENCHandler(metadata, CendariProperties.KEYWORDS, "E1418_P_Related_Subject"),    
                 
                 
                 getENCHandler(metadata, CendariProperties.PLACE, "E1418_P_Related_Place"),
