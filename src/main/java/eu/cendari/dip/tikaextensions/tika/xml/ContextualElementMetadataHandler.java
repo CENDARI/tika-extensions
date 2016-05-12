@@ -1,4 +1,4 @@
-package fr.inria.aviz.tikaextensions.tika.xml;
+package eu.cendari.dip.tikaextensions.tika.xml;
 
 import java.util.ArrayList;
 
@@ -8,7 +8,7 @@ import org.apache.tika.parser.xml.ElementMetadataHandler;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
-import fr.inria.aviz.tikaextensions.utils.TextCleaner;
+import eu.cendari.dip.tikaextensions.utils.TextCleaner;
 
 /**
  * Class ContextualElementMetadataHandler

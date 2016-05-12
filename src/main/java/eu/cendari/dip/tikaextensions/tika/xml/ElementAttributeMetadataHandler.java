@@ -1,4 +1,4 @@
-package fr.inria.aviz.tikaextensions.tika.xml;
+package eu.cendari.dip.tikaextensions.tika.xml;
 
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
@@ -6,7 +6,7 @@ import org.apache.tika.parser.xml.AttributeMetadataHandler;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 
-import fr.inria.aviz.tikaextensions.utils.TextCleaner;
+import eu.cendari.dip.tikaextensions.utils.TextCleaner;
 
 /**
  * Class ElementAttributeMetadataHandler

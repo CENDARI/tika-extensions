@@ -1,4 +1,4 @@
-package fr.inria.aviz.tikaextensions.tika;
+package eu.cendari.dip.tikaextensions.tika;
 
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;

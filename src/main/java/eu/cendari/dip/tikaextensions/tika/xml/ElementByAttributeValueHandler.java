@@ -1,11 +1,11 @@
-package fr.inria.aviz.tikaextensions.tika.xml;
+package eu.cendari.dip.tikaextensions.tika.xml;
 
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.metadata.Property;
 import org.apache.tika.parser.xml.AttributeDependantMetadataHandler;
 import org.xml.sax.Attributes;
 
-import fr.inria.aviz.tikaextensions.utils.TextCleaner;
+import eu.cendari.dip.tikaextensions.utils.TextCleaner;
 
 
 /**

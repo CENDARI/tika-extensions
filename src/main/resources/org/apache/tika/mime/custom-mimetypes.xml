@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mime-info>
+
   <mime-type type="application/ead+xml">
     <sub-class-of type="application/xml"/>
+    <magic priority="80">
+    	<match value="ead.xsd" type="string" offset="0"/>
+    </magic>
     <glob pattern="*.ead.xml"/>
    </mime-type>
+   
    <mime-type type="application/ead+xml">
     <root-XML localName="ead" namespaceURI="urn:isbn:1-931666-22-9"/>
+    <root-XML localName="ead"/>
     <sub-class-of type="application/xml"/>
+    <glob pattern="*.ead.xml"/>
     <glob pattern="*.xml"/>
    </mime-type>
-   <mime-type type="application/ead+xml">
+<!--    <mime-type type="application/ead+xml">
     <root-XML localName="ead"/>
     <sub-class-of type="application/xml"/>
     <glob pattern="*.xml"/>
    </mime-type>
-   <mime-type type="application/eag+xml">
+ -->   <mime-type type="application/eag+xml">
      <sub-class-of type="application/xml"/>
      <root-XML localName="eag" namespaceURI="http://www.ministryculture.es/"/>
      <glob pattern="*.xml"/>
    </mime-type>
+   
    <mime-type type="application/eac+xml">
      <root-XML localName="eac"/>
      <sub-class-of type="application/xml"/>
      <glob pattern="*.eac.xml"/>
-   </mime-type>   
+   </mime-type>  
+    
    <mime-type type="application/tei+xml">
      <root-XML localName="TEI" namespaceURI="http://www.tei-c.org/ns/1.0"/>
      <sub-class-of type="application/xml"/>
@@ -31,9 +40,12 @@
      <glob pattern="*.tei"/>
    </mime-type>   
    <mime-type type="application/oai-pmh+xml">
-     <root-XML localName="OAI-PMH" namespaceURI="http://www.openarchives.org/OAI/2.0/"/>
-     <sub-class-of type="application/xml"/>
+     <magic priority="70">
+    	<match value="OAI-PMH.xsd" type="string" offset="0"/>
+     </magic>
+    <!--  <root-XML localName="OAI-PMH" namespaceURI="http://www.openarchives.org/OAI/2.0/"/> -->
      <acronym>OAI-PMH/XML</acronym>
+     <sub-class-of type="application/xml"/>
      <glob pattern="*.dc.xml"/>
      <glob pattern="*.xml"/>
    </mime-type>

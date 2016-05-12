@@ -1,4 +1,6 @@
-package fr.inria.aviz.tikaextensions;
+package eu.cendari.dip.tikaextensions;
+
+import static org.junit.Assert.assertNotNull;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,28 +10,38 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
-
-import junit.framework.TestCase;
+import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.xml.sax.SAXException;
+import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
 
-import fr.inria.aviz.tikaextensions.tika.CendariProperties;
+import eu.cendari.dip.tikaextensions.TikaExtensions;
+import eu.cendari.dip.tikaextensions.tika.CendariProperties;
+import eu.cendari.dip.tikaextensions.utils.LocalDateParser;
 
 /**
- * Class TestTika
+ * Class TestTika 
+ * 
  */
-public class TestTika extends TestCase {
+
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class TestTika {
 
  static final String[] fileName = {
-/*  "/data/ajaloarchiv-ead.xml",
+  "/data/ajaloarchiv-ead.xml",
    "/data/B360446201_B343_2_tei.xml",
    "/data/bundesarchiv.ead.xml",
    "/data/crispienartur.ead.xml",
@@ -62,11 +74,17 @@ public class TestTika extends TestCase {
    "/data/tel-europeana-1.edm.rdf",
    "/data/tel-europeana-2-lod.rdf",
    "/data/titleeag.eag.xml",
-   "/data/iish-ead-dc.xml"*/
+   "/data/iish-ead-oai.ead.xml"
    };
 
  
-   public static List<String> getFileNames(List<String> fileNames, Path dir) {
+   /**
+   * retrieves all filenames from a given path (directory)  
+   * @param fileNames
+   * @param dir
+   * @return
+   */
+  public static List<String> getFileNames(List<String> fileNames, Path dir) {
      DirectoryStream<Path> stream;
       
      try{
@@ -84,22 +102,17 @@ public class TestTika extends TestCase {
        }
        return fileNames;
    }
-    /**
-     * Test the Tika indexer with internal files
+
+   
+  /**
+     * Parse files internally attached as test resources within the TikaExtensions project
      * @throws TikaException 
      * @throws SAXException 
      * @throws IOException 
-     */
- 
- /* Uncomment if you wish to parse internal test files only
-  * 
-  * 
-  *
-  * 
   */
-   
-   @Test
-   public void test() throws IOException, SAXException, TikaException {
+
+  @Test 
+   public void parseInternalResources() throws IOException, SAXException, TikaException {
       
         List<String> allKeys = new ArrayList<String>();
         TikaExtensions tika = TikaExtensions.instance();
@@ -121,6 +134,7 @@ public class TestTika extends TestCase {
                   String printStr = Arrays.asList(info.getValues(key)).toString();
                   
                   System.out.println("ELEMENT VALUES "+key.toUpperCase() +":   "+ ( printStr.length()<250 ? printStr:printStr.substring(0, 249)));
+                  //Stupid Hack to Avoid messy display in Eclipse :(
                   if (printStr.length()>249){
                     for (int i= 0; i< printStr.length(); i= i+249){
                         System.out.println(printStr.substring(i, ( printStr.length()> i+249?i+249:printStr.length()-1)));
@@ -135,34 +149,45 @@ public class TestTika extends TestCase {
         
           }
         }
-        System.out.println("THIS IS WHAT I POPULATE FROM TIKA");
-        Collections.sort(allKeys);
-        for (String keyS : allKeys ){
-            System.out.println(keyS);
+
+        if (allKeys.size()>0) {
+            System.out.println("THIS IS WHAT I POPULATE FROM TIKA");
+            Collections.sort(allKeys);
+            for (String keyS : allKeys ){
+                System.out.println(keyS);
+            }
+            System.out.println("\n NOTE, NERD and TEXT fields were not displayed in the output.");
+        }
+        else
+        {
+          System.out.println("Nothing was parsed, check if the fileName Array is populated!");
         }
  
 }
      
-     /**
-      * Test the Tika indexer with files from directory (subdirectories possible as well)
-      * pathStr shall be modified accordingly.
-      * @throws TikaException 
-      * @throws SAXException 
-      * @throws IOException 
-      */
 
-/*
- * Uncomment if you wish to parse a directory and its subdirectories and change the Path String
- * 
- * @Test
-public void test1() throws IOException, SAXException, TikaException {
+  /**
+ * Parses all files in a single directory (and all of its subdirectories). 
+ * For each file which it produces it writes a <filename>.t.TXT file, containing extracted metadata.
+ * Multiple runs delete old entries of .t.TXT files
+ * @throws IOException
+ * @throws SAXException
+ * @throws TikaException
+ */
+@Test 
+@Ignore
+public void parseDirectory() throws IOException, SAXException, TikaException {
       
       List<String> fileNames = new ArrayList<String>();
+      //NOTE: PROVIDE HERE YOUR OWN PATH
       String pathStr = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples";
 
-      List<String> allKeys = new ArrayList();
+      List<String> allKeys = new ArrayList<String>();
       TikaExtensions tika = TikaExtensions.instance();
       List<String> allDates = new ArrayList<String>();
+      Map<String, Integer> usedParsers = new HashMap<String, Integer>();
+      List<String> filesWithMoreRefs = new ArrayList<String>();
+      List<String> filesWithNoneRefs = new ArrayList<String>();
       
         assertNotNull(tika);
         
@@ -171,23 +196,47 @@ public void test1() throws IOException, SAXException, TikaException {
         
         System.out.println("DELETE OLD ENTRIES ");
         for (String name:fileNames){
-            System.out.println("DELETE = "+name);
             if (name.endsWith(".t.TXT") ) {
-              System.out.println("DELETE 1111 = "+name);
               FileUtils.deleteQuietly(new File(name));
             }
         }
-        
         System.out.println("START NEW PARSING ");
+
         fileNames = new ArrayList<String>();
         fileNames = getFileNames(fileNames, Paths.get(pathStr) );
 
+       int totalParsed = 0;
        for (String name:fileNames){
           
           InputStream in = Files.newInputStream(Paths.get(name));  
           if (in != null){
               long startDate = System.currentTimeMillis();
               Metadata info = tika.parseDocument(name, null, in, -1);
+              totalParsed++;
+              
+              //Check files which has no references, and files which has references (quality of extraction text)
+              if (info.getValues(CendariProperties.REFERENCE).length>1 ){
+                  filesWithMoreRefs.add(name);
+              }
+              else if (info.get(CendariProperties.REFERENCE) == null)
+              {
+                  filesWithNoneRefs.add(name);
+              }
+              
+              for (String parserName : info.getValues("X-Parsed-By")) {
+                 if (! parserName.contains("Default") ) {
+                     if (usedParsers.containsKey(parserName)) {
+                         usedParsers.put(parserName, usedParsers.get(parserName)+1);
+                         
+                     }
+                     else {
+                         usedParsers.put(parserName, 1);
+                     }
+                     //Print the parser (apart from the DefaultParser) which was used for the file
+                     System.out.println("PARSER ----> "+parserName);
+                 }   
+              }
+              
               PrintWriter out = new PrintWriter(name+".t.TXT");
               out.println(info.toString());
               out.close();
@@ -206,39 +255,75 @@ public void test1() throws IOException, SAXException, TikaException {
           }
           else
           {
-              System.out.println("No INPUT STREAM for "+name);
+             //inform about non-existing file only 
+             System.out.println("No INPUT STREAM for "+name);
           }
           
         }
         
         
-        Collections.sort(allKeys);
-        String tikaKeys = "TIKA-KEYS-GENERATED.TXT";
+        //Save generated metadata keys (for all files) into a separate file 
+        //(may be useful to check the mapping for sending data to other services), 
+        //uncomment code below if needed
+       
+/*       Collections.sort(allKeys);
+        String tikaKeys = "TIKA-KEYS-GENERATED.KEYS.TXT";
         PrintWriter out = new PrintWriter(pathStr+tikaKeys);
         out.println(allKeys);
         out.close();
-        System.out.println("Keys populated from Tika you can check at "+pathStr+tikaKeys);
+        System.out.println("Keys populated from Tika you can check at "+pathStr+tikaKeys);*/
         
-//        System.out.println("THESE DATE FORMATS ARE POPULATED ");
-//        Collections.sort(allDates);
-//        out = new PrintWriter(pathStr+"DATES-PARSED.TXT");
-//        out.println(allDates);
-//        out.close();
-//        System.out.println("THESE ARE MY DATES FINISHED ");
-     
-}*/
-   /**
-    * This test generates only NERD entries, uncomment if you wish to parse for NERD all files in a directory and its subdirectories.
-    * Change the PATH 
-   @Test
-  public void test2() throws IOException, SAXException, TikaException {
+        //Print out files which have more than single reference
+        //NOTE: this is handled by the library, but here just in case
+        if (filesWithMoreRefs.size()>0){
+            System.out.println("\nBEGIN OF MULTIPLE REFS");
+            System.out.println("There are several files with multiple REF values, this is WRONG!");
+            for (String fileName:filesWithMoreRefs){
+                System.out.println(fileName);
+            }
+            System.out.println("END OF MULTIPLE REFS");
+        }
+        
+        //Check which files have no reference at all, possibly better parser logic may be implemented
+        if (filesWithNoneRefs.size()>0){
+          System.out.println("\nBEGIN OF NONREFS REFS");
+          System.out.println("There are several files without References, check them pls. !");
+          for (String fileName:filesWithNoneRefs){
+              System.out.println(fileName);
+          }
+          System.out.println("END OF NONREFS REFS");
+       }
+
+        //Which parsers were used in general and on how many files
+        System.out.println("Parsers Used :");
+        int viaParsers=0;
+        for (String parserName : usedParsers.keySet()) {
+          System.out.println(parserName+" PARSED "+usedParsers.get(parserName)+" documents ");
+          viaParsers += usedParsers.get(parserName);
+        }
+        
+        //How many files were parsed
+        System.out.println("Total Parsed Documents = "+totalParsed + " from within Parsers "+viaParsers);
+}
+
+
+  /**
+   * Parses all files in a single directory (and all of its subdirectories). 
+   * For each file which it produces it writes a <filename>.t.TXT file, containing extracted text which can be sent to NERD service only..
+   * Multiple runs delete old entries of .t.TXT files
+   * @throws IOException
+   * @throws SAXException
+   * @throws TikaException
+   */
+ @Ignore 
+ @Test 
+ public void parseNERDEntries() throws IOException, SAXException, TikaException {
  
    List<String> fileNames = new ArrayList<String>();
+  //NOTE: PROVIDE HERE YOUR OWN PATH
    String pathStr = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples";
  
-   List<String> allKeys = new ArrayList();
    TikaExtensions tika = TikaExtensions.instance();
-   List<String> allDates = new ArrayList();
  
    assertNotNull(tika);
    
@@ -247,22 +332,18 @@ public void test1() throws IOException, SAXException, TikaException {
    fileNames = getFileNames(fileNames, Paths.get(pathStr) );
    
    System.out.println("DELETE OLD ENTRIES ");
-   int i =0;
    for (String name:fileNames){
        if (name.contains(".t.") ) {
          Files.delete(Paths.get(name));
-         i++;
        }
    }
-   
-   System.out.println("DELETED OLD ENTRIES "+i);
-
   System.out.println("START NEW PARSING ");
-    fileNames = new ArrayList<String>();
-    fileNames = getFileNames(fileNames, Paths.get(pathStr) );
+
+  fileNames = new ArrayList<String>();
+  fileNames = getFileNames(fileNames, Paths.get(pathStr) );
    
- long time= 0;  
- for (String name:fileNames){
+  long time= 0;  
+  for (String name:fileNames){
    
      InputStream in = Files.newInputStream(Paths.get(name));  
      
@@ -284,13 +365,81 @@ public void test1() throws IOException, SAXException, TikaException {
      
    }
  
- //System.out.println("FINISHED for "+ time);
+  System.out.println("FINISHED for "+ time);
 }
-*/
-/*
- * Uncomment and mark as Test if you wish to parse datesToParse string 
- * 
- * public void testDatesToParseTestMethod(){
+
+
+  /**
+   * Compares parsed outputs of files from one target directory with another target directory (asuming they have same structure)
+   * Differing outputs will be written into a third target directory, with "old/new" suffix respectively, for easier comparison.
+   * @throws IOException
+   */
+
+@Test 
+@Ignore
+public void z_compareResults() throws IOException  {
+      
+      List<String> fileNames = new ArrayList<String>();
+      //NOTE: PROVIDE HERE YOUR OWN PATHS
+      String pathStrOld = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples - pre-custom-mimes\\";
+      String pathStrNew = "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerSamples\\";
+      String pathCompare= "C:\\Users\\natasab\\Documents\\Cendari\\Design\\Data Services\\TikaIndexerComparison\\";
+
+      TikaExtensions tika = TikaExtensions.instance();
+      
+        assertNotNull(tika);
+        
+        fileNames = new ArrayList<String>();
+        fileNames = getFileNames(fileNames, Paths.get(pathStrNew) );
+        
+        Collections.sort(fileNames);
+        
+        List<String> differentFileNames = new ArrayList<String>();
+        
+        int i = 0;
+        for (String name:fileNames){
+            
+          if (!name.toLowerCase().endsWith("t.txt")) {
+            continue;
+          }
+          i++;
+
+          //In the new dir generated file
+          File file1 = new File(name);
+          
+          //In the old dir generated file
+          File file2 = new File(name.replace(pathStrNew, pathStrOld));
+          
+          //check difference of files
+            if (!FileUtils.contentEquals(file1, file2) ) {
+                    differentFileNames.add(name);
+                    File fileNew = new File (name.replace(pathStrNew, pathCompare)+"-NEW");
+                    FileUtils.copyFile(file1, fileNew);
+                    File fileOld = new File (name.replace(pathStrNew, pathStrOld).replace(pathStrOld, pathCompare)+"-OLD");
+                    FileUtils.copyFile(file2, fileOld);
+                  }
+       }
+        
+        //NOW PRINT WHICH NEW FILES ARE DIFFERENT FROM OLD FILES
+        if (differentFileNames.size()>0) {
+             System.out.println("THERE ARE SOME DIFFERENCES CHECK OUTPUT OF FOLLOWING FILES:");
+             for (String diffName : differentFileNames) {
+                 System.out.println(diffName);
+             }
+        }
+        else
+        {
+          System.out.println("No comparison differences are found among "+i +" files!");
+        }
+  }
+
+
+/**
+ * Checks variety of date-like-strings and checks if these can be parsed as dates (locale specific, ranges etc.)
+ */
+@Test
+@Ignore
+ public void checkDatesToParseTestMethod(){
       for (String dateStr1:datesToParseTest){
           String[] intDateString = dateStr1.split("[,/;]");
 
@@ -314,8 +463,7 @@ public void test1() throws IOException, SAXException, TikaException {
   }
 }
 
-   
-  */
+//Variety of date strings used in test (add new if needed)
    static String[]  datesToParseTest={
      "01.01.1916",
      "01.02.1915",

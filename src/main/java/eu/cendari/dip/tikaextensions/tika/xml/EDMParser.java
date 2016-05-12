@@ -1,4 +1,4 @@
-package fr.inria.aviz.tikaextensions.tika.xml;
+package eu.cendari.dip.tikaextensions.tika.xml;
 
 import java.util.Collections;
 import java.util.Set;
@@ -13,7 +13,7 @@ import org.apache.tika.sax.TeeContentHandler;
 import org.apache.tika.sax.TextContentHandler;
 import org.xml.sax.ContentHandler;
 
-import fr.inria.aviz.tikaextensions.tika.CendariProperties;
+import eu.cendari.dip.tikaextensions.tika.CendariProperties;
 
 /**
  * Class EAGParser
@@ -100,13 +100,25 @@ true);
         return new TeeContentHandler(
                 defaultContentHandler,
                 getHandler(metadata, CendariProperties.TITLE, "title"),
+                //
+                getTermsHandler(metadata, CendariProperties.TITLE, "title"),
+                //
                 getRDAMHandler(metadata, CendariProperties.TITLE, "P30156"),
+                
                 getHandler(metadata, CendariProperties.CONTRIBUTOR, "contributor"),
                 getHandler(metadata, CendariProperties.CREATOR, "creator"), 
                 getHandler(metadata, CendariProperties.PUBLISHER, "publisher"),
                 getHandler(metadata, CendariProperties.IDENTIFIER, "identifier"),
                 getHandler(metadata, CendariProperties.RIGHTS, "rights"),
                 getHandler(metadata, CendariProperties.DESCRIPTION, "description"),
+                //
+                getTermsHandler(metadata, CendariProperties.CONTRIBUTOR, "contributor"),
+                getTermsHandler(metadata, CendariProperties.CREATOR, "creator"), 
+                getTermsHandler(metadata, CendariProperties.PUBLISHER, "publisher"),
+                getTermsHandler(metadata, CendariProperties.IDENTIFIER, "identifier"),
+                getTermsHandler(metadata, CendariProperties.RIGHTS, "rights"),
+                getTermsHandler(metadata, CendariProperties.DESCRIPTION, "description"),
+                //
                 getTermsHandler(metadata, CendariProperties.DESCRIPTION, "provenance"),
                 getFoafHandler(metadata, CendariProperties.ORGANIZATION, "Organization"),
                 getTermsHandler(metadata, CendariProperties.DESCRIPTION, "alternative"),
@@ -150,15 +162,33 @@ true);
                 getHandler(metadata, CendariProperties.COVERAGE, "coverage"),
                 getHandler(metadata, CendariProperties.TYPE, "type"),
                 getHandler(metadata, CendariProperties.TYPE, "type"),
+                
+                //
+                
+                getTermsHandler(metadata, CendariProperties.SOURCE, "source"),
+                getTermsHandler(metadata, CendariProperties.KEYWORDS , "subject"),
+                getTermsHandler(metadata, CendariProperties.COVERAGE, "coverage"),
+                getTermsHandler(metadata, CendariProperties.TYPE, "type"),
+                getTermsHandler(metadata, CendariProperties.TYPE, "type"),
+                //
+                
                 getTermsHandler(metadata, CendariProperties.RELATION, "isPartOf"),
                 getTermsHandler(metadata, CendariProperties.FORMAT, "medium"),
+
                 getHandler(metadata, CendariProperties.LANG, "language"),
+                //
+                getTermsHandler(metadata, CendariProperties.LANG, "language"),
+                
+
                 getLocalHandler(NAMESPACE_URI_EDM, metadata, CendariProperties.PLACE, "country"),
                 getLocalHandler(NAMESPACE_URI_EDM, metadata, CendariProperties.PROVIDER, "dataProvider"),
                 new ElementAttributeMetadataHandler(NAMESPACE_URI_RDF, "about", metadata, CendariProperties.REFERENCE, "ProvidedCHO"),
+                new ElementAttributeMetadataHandler(NAMESPACE_URI_RDF, "resource", metadata, CendariProperties.REFERENCE, "isDefinedBy"),
+                
 
                 //NOT REALLY IN EDM DATA, but in data wchich use EDM ontology
                 getLocalContextHandler("http://www.w3.org/2004/02/skos/core#", metadata, CendariProperties.PLACE, "prefLabel", "Place"),
+                //Get ID FROM LOD of TEL
                 getLocalContextHandler("http://www.w3.org/2004/02/skos/core#", metadata, CendariProperties.DESCRIPTION, "note", "Place"),
                 
                 getLocalContextHandler("http://www.w3.org/2004/02/skos/core#", metadata, CendariProperties.EVENT, "prefLabel", "Event"),
@@ -181,14 +211,30 @@ true);
                 
                 //NERD
                 getHandler(metadata, CendariProperties.NERD, "title"),
+                //
+                getTermsHandler(metadata, CendariProperties.NERD, "title"),
+                
                 getRDAMHandler(metadata, CendariProperties.NERD, "P30156"),
+                
                 getHandler(metadata, CendariProperties.NERD, "contributor"),
                 getHandler(metadata, CendariProperties.NERD, "creator"), 
                 getHandler(metadata, CendariProperties.NERD, "date"),
                 getHandler(metadata, CendariProperties.NERD, "description"),
+                
+                getTermsHandler(metadata, CendariProperties.NERD, "contributor"),
+                getTermsHandler(metadata, CendariProperties.NERD, "creator"), 
+                getTermsHandler(metadata, CendariProperties.NERD, "date"),
+                getTermsHandler(metadata, CendariProperties.NERD, "description"),
+                
+                
                 getEDMHandler(metadata, CendariProperties.NERD, "year"),
+                
                 getHandler(metadata, CendariProperties.NERD , "subject"),
                 getHandler(metadata, CendariProperties.NERD, "coverage"),
+                //
+                getTermsHandler(metadata, CendariProperties.NERD , "subject"),
+                getTermsHandler(metadata, CendariProperties.NERD, "coverage"),
+                //
                 getTermsHandler(metadata, CendariProperties.NERD, "created"),
                 getEDMHandler(metadata, CendariProperties.NERD, "country"),
                 getEDMHandler(metadata, CendariProperties.NERD, "Event"),

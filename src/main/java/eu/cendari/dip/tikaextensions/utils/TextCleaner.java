@@ -1,4 +1,4 @@
-package fr.inria.aviz.tikaextensions.utils;
+package eu.cendari.dip.tikaextensions.utils;
 
 import java.util.regex.Pattern;
 
@@ -74,6 +74,10 @@ public class TextCleaner {
              return value;
              //Do Nothing here it is fine if string is not JSON
           }                
+    }
+    
+    public static boolean isURL(String valueForUrl) {
+           return URL.matcher(valueForUrl).matches();
     }
 
 }

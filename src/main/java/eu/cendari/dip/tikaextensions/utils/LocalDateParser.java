@@ -1,4 +1,4 @@
-package fr.inria.aviz.tikaextensions.utils;
+package eu.cendari.dip.tikaextensions.utils;
 
 import java.text.ParseException;
 import java.text.ParsePosition;
@@ -10,7 +10,7 @@ import java.util.Locale;
 
 import org.apache.tika.metadata.Metadata;
 
-import fr.inria.aviz.tikaextensions.tika.CendariProperties;
+import eu.cendari.dip.tikaextensions.tika.CendariProperties;
 
 
 /** LocalDateParserTextCleaner

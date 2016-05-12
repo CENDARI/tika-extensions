@@ -1,4 +1,4 @@
-package fr.inria.aviz.tikaextensions.tika.json;
+package eu.cendari.dip.tikaextensions.tika.json;
 
 import java.io.IOException;
 import java.io.InputStream;

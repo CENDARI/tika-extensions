@@ -1,4 +1,4 @@
-package fr.inria.aviz.tikaextensions.tika.xml;
+package eu.cendari.dip.tikaextensions.tika.xml;
 
 import java.util.Collections;
 import java.util.Set;
@@ -12,7 +12,7 @@ import org.apache.tika.sax.TeeContentHandler;
 import org.apache.tika.sax.TextContentHandler;
 import org.xml.sax.ContentHandler;
 
-import fr.inria.aviz.tikaextensions.tika.CendariProperties;
+import eu.cendari.dip.tikaextensions.tika.CendariProperties;
 
 /**
  * Class EAGParser

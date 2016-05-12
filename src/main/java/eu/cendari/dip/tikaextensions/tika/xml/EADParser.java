@@ -1,4 +1,4 @@
-package fr.inria.aviz.tikaextensions.tika.xml;
+package eu.cendari.dip.tikaextensions.tika.xml;
 
 import java.util.Collections;
 import java.util.Set;
@@ -12,7 +12,7 @@ import org.apache.tika.sax.TeeContentHandler;
 import org.apache.tika.sax.TextContentHandler;
 import org.xml.sax.ContentHandler;
 
-import fr.inria.aviz.tikaextensions.tika.CendariProperties;
+import eu.cendari.dip.tikaextensions.tika.CendariProperties;
 
 /**
  * Class EADParser
@@ -208,6 +208,8 @@ public class EADParser extends AbstractXMLParser {
                 new AttributeMetadataHandler(NAMESPACE_URI_XML, "lang", metadata, CendariProperties.LANG),
                 new AttributeMetadataHandler(NAMESPACE_URI_EAD_EMPTY, "langcode", metadata, CendariProperties.LANG),
                 new ElementAttributeMetadataHandler(NAMESPACE_URI_EAD_EMPTY, "url", metadata, CendariProperties.REFERENCE, "eadid"),
+                getEADHandler(metadata, CendariProperties.REFERENCE, "eadid", "eadheader"),
+                getEADEmptyHandler(metadata, CendariProperties.REFERENCE, "eadid", "eadheader"),
                 new ElementAttributeMetadataHandler( NAMESPACE_URI_EAD_EMPTY, "normal",metadata, CendariProperties.DATE, "unitdate") 
                 {
                       protected void addMetadata(String date) {
