@@ -181,7 +181,7 @@ public class TestTika {
  * @throws TikaException
  */
 @Test 
-//@Ignore
+@Ignore
 public void parseDirectory() throws IOException, SAXException, TikaException {
       
       List<String> fileNames = new ArrayList<String>();
