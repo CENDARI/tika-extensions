@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -22,6 +24,8 @@ import java.util.Map;
 import org.apache.commons.io.FileUtils;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Whitelist;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.xml.sax.SAXException;
@@ -31,6 +35,7 @@ import org.junit.runners.MethodSorters;
 import eu.cendari.dip.tikaextensions.TikaExtensions;
 import eu.cendari.dip.tikaextensions.tika.CendariProperties;
 import eu.cendari.dip.tikaextensions.utils.LocalDateParser;
+import eu.cendari.dip.tikaextensions.utils.TextCleaner;
 
 /**
  * Class TestTika 
@@ -112,6 +117,7 @@ public class TestTika {
   */
 
   @Test 
+  @Ignore
    public void parseInternalResources() throws IOException, SAXException, TikaException {
       
         List<String> allKeys = new ArrayList<String>();
@@ -175,7 +181,7 @@ public class TestTika {
  * @throws TikaException
  */
 @Test 
-@Ignore
+//@Ignore
 public void parseDirectory() throws IOException, SAXException, TikaException {
       
       List<String> fileNames = new ArrayList<String>();
@@ -461,6 +467,20 @@ public void z_compareResults() throws IOException  {
             }
           }
   }
+}
+
+
+/**
+ *  Only stupid internal test, to make sure URL is OK .. Can be used on case to case basis.
+ *  If further string replacement is needed, you need to modify TikaExtensions.cleanReferences method. 
+ */
+@Test
+@Ignore
+ public void testTranslatedReferences() {
+  String referenceString = "http://ais.ra.ee/index.php?module=202&amp;op=4&amp;tyyp=2&amp;kokku=1&amp;id=200100002962";
+  String targetString = "http://ais.ra.ee/index.php?module=202&op=4&tyyp=2&kokku=1&id=200100002962";
+
+  System.out.println( "AMPERSAND REPLACE FINE = "+referenceString.replaceAll("&amp;", "&").equals(targetString));
 }
 
 //Variety of date strings used in test (add new if needed)

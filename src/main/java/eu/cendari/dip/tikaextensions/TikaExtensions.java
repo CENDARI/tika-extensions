@@ -229,7 +229,10 @@ public class TikaExtensions {
 
         for (String value:metadata.getValues(CendariProperties.REFERENCE)) {
                 if (TextCleaner.isURL(value)){
-                    firstUrl = value;
+                    //In addition here URL needs some "custom" decode, as some URLs were noticed to have "&amp;" instead of "&" as value
+                    //http://ais.ra.ee/index.php?module=202&amp;op=4&amp;tyyp=2&amp;kokku=1&amp;id=200100002962
+                    //URLDecoder does not catch this case
+                    firstUrl = value.replaceAll("&amp;", "&");
                     break;
                 }
     
