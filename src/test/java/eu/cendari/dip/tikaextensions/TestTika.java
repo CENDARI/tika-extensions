@@ -321,7 +321,7 @@ public void parseDirectory() throws IOException, SAXException, TikaException {
    * @throws SAXException
    * @throws TikaException
    */
- @Ignore 
+ @Ignore
  @Test 
  public void parseNERDEntries() throws IOException, SAXException, TikaException {
  
@@ -348,7 +348,11 @@ public void parseDirectory() throws IOException, SAXException, TikaException {
   fileNames = new ArrayList<String>();
   fileNames = getFileNames(fileNames, Paths.get(pathStr) );
    
-  long time= 0;  
+  long time= 0;
+  int moreThan500 = 0;
+  int moreThan1000 = 0;
+  int moreThan1500 = 0;
+  int upTo500 = 0;
   for (String name:fileNames){
    
      InputStream in = Files.newInputStream(Paths.get(name));  
@@ -361,8 +365,15 @@ public void parseDirectory() throws IOException, SAXException, TikaException {
          out.close();
          long endDate = System.currentTimeMillis();
          //System.out.println("PARSING "+name +" SIZE="+Files.size(Paths.get(name))+" bytes in = "+ (endDate-startDate)+" ms." );
-         System.out.println("PARSING "+(endDate-startDate) );
+         System.out.println("PARSING IN "+(endDate-startDate) +"ms");
          time=time+(endDate-startDate);
+         int wordC = Arrays.toString(info.getValues(CendariProperties.NERD)).split("\\s+").length;
+         moreThan500 = wordC >500?moreThan500+1:moreThan500;
+         moreThan1000 = wordC >1000?moreThan1000+1:moreThan1000;
+         moreThan1500 = wordC >1500?moreThan1500+1:moreThan1500;
+         upTo500 = wordC <=500?upTo500+1:upTo500;
+         
+         System.out.println( "WORD LENGTH for "+name+"= "+Arrays.toString(info.getValues(CendariProperties.NERD)).split("\\s+").length);
      }
      else
      {
@@ -371,7 +382,12 @@ public void parseDirectory() throws IOException, SAXException, TikaException {
      
    }
  
-  System.out.println("FINISHED for "+ time);
+  System.out.println("FINISHED for "+ time+" for "+fileNames.size()+" files ");
+  System.out.println(">500="+moreThan500);
+  System.out.println(">1000="+moreThan1000);
+  System.out.println(">1500="+moreThan1500);
+  System.out.println("<=500="+upTo500);
+
 }
 
 
